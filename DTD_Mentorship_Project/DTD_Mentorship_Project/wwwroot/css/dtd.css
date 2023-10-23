@@ -1,0 +1,757 @@
+﻿/* custom css dtd */
+
+.img-cover {
+    object-fit: cover;
+}
+
+.embed-responsive-3by4::before {
+    padding-top: 125%;
+}
+
+.bg-darker {
+    background-color: #040402;
+}
+
+
+.dtd_su_btn {
+    background-color : #fdb927;
+    color: #5406a5;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border-color: #ffffff;
+    font-weight:bold;
+    font-size:18px;
+    box-shadow:0px 0px 10px 5px ;
+    cursor: pointer;
+  }
+.dtd_font_orange{
+    color: #ffbc00 !important;
+}
+.btn-xlarge {
+    padding: 18px 50px;
+    font-size: 25px; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+}
+
+.dtd_pathways {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.btn-xlarge:active {
+    padding: 18px 50px;
+    font-size: 25px;
+    //change this to your desired size line-height: normal;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+#dtd_su_btn_container {
+    position: fixed;
+    bottom: -4px;
+    right: 10px;
+    z-index: 9;
+}
+
+  /* create own btn block */
+  .dtd-btn-block{
+      display: block;
+      width:100% !important
+  }
+
+  /* custom min height class for cards */
+  .dtd-mh-300{
+      min-height: 300px;
+  }
+.dtd-mh-350 {
+    min-height: 350px;
+}
+  .dtd-mh-420{
+    min-height: 420px;
+    }
+    .dtd-mh-450{
+        min-height: 450px;
+    }
+/* navbar active state*/
+.navbar .active a{
+    color:#ffbc00 !important;
+}
+
+  /* social media ribbon */
+.sidebarSocial {
+    position: fixed;
+    right: -10px;
+    height: 384px; /* 64 times 6 logos */
+    width: 50px; /* assuming 64px for logos */
+    z-index: 9;
+    margin: auto 0 !important;
+    top: 40%;
+}
+
+.box {
+    float: left;
+    height: 50px;
+    width: 50px;
+    font-size:20px;
+    color:white;
+     background-color:#0e0e0e !important;
+}
+
+.box i{
+  margin-right:0px !important;
+  margin-left:-10px !important;
+  font-size:30px !important
+ 
+}
+.shares {
+    background-color: #d0d0d0;
+}
+
+.facebook {
+    background-color: #3060a0;
+}
+
+.twitter {
+    background-color: #30b0f0;
+}
+
+.stumble {
+    background-color: #ff4000;
+}
+
+.linkedin {
+    background-color: #0080d0;
+}
+
+.other {
+    background-color: #1050c0;
+}
+
+.dtd-wp-normal{
+    white-space:normal !important;
+}
+.dtd-badge{
+    border: 2px solid;
+    border-image-slice: 1;
+    padding:3px;
+    border-width: 2px; 
+    margin-left: 5px;
+}
+.dtd-link-alt{
+    color:rgb(124, 4, 124) !important;
+}
+
+.dtd_info_box_sm {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 3px;
+   
+}
+
+.dtd_info_box{
+
+    border: 10px solid;
+    
+    border-image-slice: 1;
+    
+    border-width: 5px;
+    
+    min-height: 300px;
+    }
+    
+    .dtd_info_box .dtd_matrix_st{
+      font-size:14px;
+    }
+    
+    .dtd_info_box .custom-control{
+      margin-bottom:10px
+    }
+    .border-gradient-purple {
+        border-image-source: linear-gradient(to left,#FDB927, #5406a5);
+      }
+.dtd_img_75 {
+    width: 75px !important
+}
+.dtd_img_100 {
+    width: 100px !important
+}
+      .dtd_img_150{
+          width:150px !important
+      }
+      .dtd_img_300{
+        width:3000px !important
+    }
+
+      /* link policy */
+      .dtd_link_policy {
+        background-color: black;
+        min-height: 150px;
+        z-index: 1001;
+        bottom: 0;
+        transition: all .8s;
+    }
+    
+    .dtd_link_policy_backdrop {
+        background: rgba(22, 22, 22, 0.5) !important;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: none;
+    }
+    
+    .dtd_link_policy_hide {
+        transform: translateY(100%);
+    }
+    
+    .dtd_link_policy_show {
+        transform: translateY(0%);
+    }
+      /* end link policy */
+
+      /*Translation tool*/
+
+
+a.gflag {
+    vertical-align: middle;
+    font-size: 16px;
+    padding: 1px 0;
+    background-repeat: no-repeat;
+    background-image: url(//gtranslate.net/flags/16.png);
+}
+
+    a.gflag img {
+        border: 0;
+    }
+
+    a.gflag:hover {
+        background-image: url(//gtranslate.net/flags/16a.png);
+    }
+
+#goog-gt-tt {
+    display: none !important;
+}
+
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+.goog-te-menu-value:hover {
+    text-decoration: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
+#google_translate_element2 {
+    display: none !important;
+}
+
+.dtd-btn{
+
+    border: 2px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    background-color: black;
+    color:white;
+
+    }
+    
+ 
+    .dtd-btn-color{
+        
+        border-image-source: linear-gradient(to left,#FDB927, #5406a5);
+      }
+      .dtdarrow {
+        
+        z-index: 9;
+       
+        bottom: 0px;
+        position: absolute;
+        width: 100%;
+        color: #efbb00 !important;
+        font-size: 80px;
+        
+    }
+    .dtdarrow-fixed {
+      z-index: 9;
+      /* bottom: 0px; */
+      position: absolute;
+      width: 97%;
+      color: #efbb00 !important;
+      font-size: 80px;
+      /* border: solid; */
+      height: 100px;
+      margin-top: -77px;
+  }
+    .dtd_arrow_text{
+        margin-bottom:-20px;
+        font-size:25px !important;
+      }
+ 
+    @-webkit-keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateX(0);
+      }
+        40% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+      }
+        60% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+      }
+    }
+    
+    @-moz-keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+        40% {
+        transform: translateY(-30px);
+      }
+        60% {
+        transform: translateY(-15px);
+      }
+    }
+    
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+      }
+        40% {
+        -ms-transform: translateY(-30px);
+        transform: translateY(-30px);
+      }
+        60% {
+        -ms-transform: translateY(-15px);
+        transform: translateY(-15px);
+      }
+    }
+    
+    
+
+    
+    .bounce {
+      -webkit-animation: bounce 3s infinite;
+      animation: bounce 3s infinite;
+    }
+
+
+     @media (min-width: 768px) and (max-width: 1024px) {
+  
+        .dtdarrow {
+        
+            z-index: 9;
+           
+            bottom: 0px;
+            position: absolute;
+            width: 100%;
+            color: #efbb00 !important;
+            font-size: 20px;
+            
+        }
+        .dtd_arrow_text{
+            margin-bottom:-5px;
+            font-size:15px !important;
+          }
+          .btn-xlarge {
+            padding: 18px 30px;
+            font-size: 16px;
+            line-height: normal;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+            
+        }
+    
+      }
+        
+      
+      
+      /* 
+        ##Device = Tablets, Ipads (landscape)
+        ##Screen = B/w 768px to 1024px
+      */
+      
+      @media (min-width: 768px) and (max-width: 1024px) {
+        
+        .dtdarrow {
+        
+            z-index: 9;
+           
+            bottom: 0px;
+            position: absolute;
+            width: 100%;
+            color: #efbb00 !important;
+            font-size: 30px;
+            
+        }
+        .dtd_arrow_text{
+            margin-bottom:-5px;
+            font-size:15px !important;
+          }
+          .btn-xlarge {
+            padding: 18px 30px;
+            font-size: 16px;
+            line-height: normal;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+            
+        }
+    
+      }
+        
+      
+      
+      /* 
+        ##Device = Low Resolution Tablets, Mobiles (Landscape)
+        ##Screen = B/w 481px to 767px
+      */
+      
+      @media (min-width: 481px) and (max-width: 767px) {
+        
+        .dtdarrow {
+        
+            z-index: 9;
+           
+            bottom: 0px;
+            position: absolute;
+            width: 100%;
+            color: #efbb00 !important;
+            font-size: 20px;
+            
+        }
+        .dtd_arrow_text{
+            margin-bottom:-5px;
+            font-size:15px !important;
+          }
+          .btn-xlarge {
+            padding: 18px 30px;
+            font-size: 16px;
+            line-height: normal;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+            
+        }
+    
+      }
+        
+      
+      
+      /* 
+        ##Device = Most of the Smartphones Mobiles (Portrait)
+        ##Screen = B/w 320px to 479px
+      */
+      
+      @media (max-width: 480px) {
+        
+        .dtdarrow {
+        
+            z-index: 9;
+           
+            bottom: 0px;
+            position: absolute;
+            width: 100%;
+            color: #efbb00 !important;
+            font-size: 20px;
+            
+        }
+        .dtd_arrow_text{
+            margin-bottom:-5px;
+            font-size:15px !important;
+          }
+    
+          .btn-xlarge {
+            padding: 18px 30px;
+            font-size: 16px;
+            line-height: normal;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+            
+        }
+      
+        
+      }
+
+    
+.dtd_social_login{
+
+  display:flex;
+  justify-content:center;
+}
+
+.dtd_social_login .socialLogin{
+
+  margin-right:5px;
+
+}
+
+.dtd_social_login .socialLogin:hover{
+
+  cursor:pointer;
+
+}
+
+/* share btn classes*/
+.share-btn {
+    width: 100%;
+    background-color: #fdb927 !important;
+    color: black !important;
+}
+.resp-sharing-button__link,
+.resp-sharing-button__icon {
+    display: inline-block
+}
+
+.resp-sharing-button__link {
+    text-decoration: none;
+    color: #fff;
+    margin: 0.5em
+}
+
+.resp-sharing-button {
+    border-radius: 5px;
+    transition: 25ms ease-out;
+    padding: 0.5em 0.75em;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif
+}
+
+.resp-sharing-button__icon svg {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.4em;
+    vertical-align: top
+}
+
+.resp-sharing-button--small svg {
+    margin: 0;
+    vertical-align: middle
+}
+
+/* Non solid icons get a stroke */
+.resp-sharing-button__icon {
+    stroke: #fff;
+    fill: none
+}
+
+/* Solid icons get a fill */
+.resp-sharing-button__icon--solid,
+.resp-sharing-button__icon--solidcircle {
+    fill: #fff;
+    stroke: none
+}
+
+.resp-sharing-button--twitter {
+    background-color: #55acee
+}
+
+    .resp-sharing-button--twitter:hover {
+        background-color: #2795e9
+    }
+
+.resp-sharing-button--pinterest {
+    background-color: #bd081c
+}
+
+    .resp-sharing-button--pinterest:hover {
+        background-color: #8c0615
+    }
+
+.resp-sharing-button--facebook {
+    background-color: #3b5998
+}
+
+    .resp-sharing-button--facebook:hover {
+        background-color: #2d4373
+    }
+
+.resp-sharing-button--tumblr {
+    background-color: #35465C
+}
+
+    .resp-sharing-button--tumblr:hover {
+        background-color: #222d3c
+    }
+
+.resp-sharing-button--reddit {
+    background-color: #5f99cf
+}
+
+    .resp-sharing-button--reddit:hover {
+        background-color: #3a80c1
+    }
+
+.resp-sharing-button--google {
+    background-color: #dd4b39
+}
+
+    .resp-sharing-button--google:hover {
+        background-color: #c23321
+    }
+
+.resp-sharing-button--linkedin {
+    background-color: #0077b5
+}
+
+    .resp-sharing-button--linkedin:hover {
+        background-color: #046293
+    }
+
+.resp-sharing-button--email {
+    background-color: #777
+}
+
+    .resp-sharing-button--email:hover {
+        background-color: #5e5e5e
+    }
+
+.resp-sharing-button--xing {
+    background-color: #1a7576
+}
+
+    .resp-sharing-button--xing:hover {
+        background-color: #114c4c
+    }
+
+.resp-sharing-button--whatsapp {
+    background-color: #25D366
+}
+
+    .resp-sharing-button--whatsapp:hover {
+        background-color: #1da851
+    }
+
+.resp-sharing-button--hackernews {
+    background-color: #FF6600
+}
+
+    .resp-sharing-button--hackernews:hover, .resp-sharing-button--hackernews:focus {
+        background-color: #FB6200
+    }
+
+.resp-sharing-button--vk {
+    background-color: #507299
+}
+
+    .resp-sharing-button--vk:hover {
+        background-color: #43648c
+    }
+
+.resp-sharing-button--facebook {
+    background-color: #3b5998;
+    border-color: #3b5998;
+}
+
+    .resp-sharing-button--facebook:hover,
+    .resp-sharing-button--facebook:active {
+        background-color: #2d4373;
+        border-color: #2d4373;
+    }
+
+.resp-sharing-button--twitter {
+    background-color: #55acee;
+    border-color: #55acee;
+}
+
+    .resp-sharing-button--twitter:hover,
+    .resp-sharing-button--twitter:active {
+        background-color: #2795e9;
+        border-color: #2795e9;
+    }
+
+.resp-sharing-button--email {
+    background-color: #777777;
+    border-color: #777777;
+}
+
+    .resp-sharing-button--email:hover,
+    .resp-sharing-button--email:active {
+        background-color: #5e5e5e;
+        border-color: #5e5e5e;
+    }
+
+
+.rBar {
+   /* position: absolute */
+}
+
+@media(max-width: 1199px) {
+    .rBar {
+        position: relative;
+    }
+}
+.dtd-li li {
+    list-style-type: none;
+}
+.dtd-li li:before {
+    content: '✓';
+    margin-left: -20px;
+    margin-right: 10px;
+}
+
+.pathwayDetail {
+    transition: width 600ms ease-out, height 600ms ease-out;
+}
+
+.clipDetail {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.clipDetail-10 {
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.dtd_pledge {
+
+    height: 75vh;
+    overflow-y: auto;
+
+}
+.dtd_img_H_150 {
+height:150px !important;
+max-height:150px !important;
+
+max-width:250px !important;
+}
+.dtd_partner_item {
+overflow:hidden;
+}
+
+.pimage {
+    height: 150px;
+    width: 250px !important;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.newsImage {
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.topBox_news {
+    height: 75px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+
