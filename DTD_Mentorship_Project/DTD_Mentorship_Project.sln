@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD_Mentorship_Project", "DTD_Mentorship_Project\DTD_Mentorship_Project.csproj", "{BDB0F247-B222-4CC4-B74A-737D566D60EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTD_Mentorship_Project", "DTD_Mentorship_Project\DTD_Mentorship_Project.csproj", "{BDB0F247-B222-4CC4-B74A-737D566D60EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
