@@ -5,8 +5,24 @@
       "PackagePath": "staticwebassets\\DTD_Mentorship_Project.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\css\\default.css",
+      "PackagePath": "staticwebassets\\css\\default.css"
+    },
+    {
+      "Id": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\css\\dtd.css",
+      "PackagePath": "staticwebassets\\css\\dtd.css"
+    },
+    {
+      "Id": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
       "Id": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\css\\theme-orange.css",
+      "PackagePath": "staticwebassets\\css\\theme-orange.css"
     },
     {
       "Id": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\favicon.ico",
@@ -243,6 +259,30 @@
     {
       "Id": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\vendors\\css\\animation.min.css",
+      "PackagePath": "staticwebassets\\vendors\\css\\animation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\vendors\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\vendors\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\vendors\\css\\cookie-notice.min.css",
+      "PackagePath": "staticwebassets\\vendors\\css\\cookie-notice.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\vendors\\css\\gallery.min.css",
+      "PackagePath": "staticwebassets\\vendors\\css\\gallery.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\vendors\\css\\icons.min.css",
+      "PackagePath": "staticwebassets\\vendors\\css\\icons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\vendors\\css\\slider.min.css",
+      "PackagePath": "staticwebassets\\vendors\\css\\slider.min.css"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.DTD_Mentorship_Project.Microsoft.AspNetCore.StaticWebAssets.props",

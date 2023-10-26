@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "tkct2tfQPNJIiIgjwv7G2LlML13uKbKHHI+DQeAleGq1YX1L0aquBAsYjSJjoVj8qGOvogJSEY3NKO46V9EXJQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Miki\\Source\\Repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
-=======
   "dgSpecHash": "OUF+pDmeYpIgXRk9j0mDQVYjGFGV40I0olNAl7uYU2XJKPBjSMr2TpjeiQfua5yG8aUXG5an0t4/5nqj2npBPg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
->>>>>>> Stashed changes
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

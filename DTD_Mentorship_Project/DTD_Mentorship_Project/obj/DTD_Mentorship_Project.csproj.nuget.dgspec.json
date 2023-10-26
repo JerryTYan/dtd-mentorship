@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< Updated upstream
-    "C:\\Users\\Miki\\Source\\Repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Miki\\Source\\Repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Miki\\Source\\Repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
-        "projectName": "DTD_Mentorship_Project",
-        "projectPath": "C:\\Users\\Miki\\Source\\Repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
-        "packagesPath": "C:\\Users\\Miki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Miki\\Source\\Repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
-=======
     "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj": {}
   },
   "projects": {
@@ -25,7 +12,6 @@
         "projectPath": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
         "packagesPath": "C:\\Users\\Eduardo Galvez\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Eduardo Galvez\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
->>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Eduardo Galvez\\AppData\\Roaming\\NuGet\\NuGet.Config",

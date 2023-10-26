@@ -6,6 +6,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        .form-row {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-row label {
+            flex: 1;
+            margin-right: 10px; 
+        }
+
+        .form-row input {
+            flex: 1;
+        }
+
+        .form-cols {
+            display: flex;
+            flex-direction: row;
+        }
+
+  
+
+    </style>
+
     <title>Dropdown Example</title>
 </head>
 <body>
@@ -14,8 +38,14 @@
     <div>
         <select id="identity">
             <option value="">Select One</option>
-            <option value="y">Youth (Ages 12-17)</option>
-            <option value="ya">Young Adult (Ages 18-24)</option>
+            <option value="youth">Youth (Ages 12-17)</option>
+            <option value="young_adult">Young Adult (Ages 18-24)</option>
+            <option value="adult">Adult (Ages 25-59)</option>
+            <option value="older_adult">Older Adult (Ages 60+)</option>
+            <option value="org">Organization Participant or Member</option>
+            <option value="small_business">Small Business Owner</option>
+            <option value="educator">Educator</option>
+            <option value="partner">Partner</option>
             <option value="mentor">Mentor</option>
             <option value="other">Other</option>
 
@@ -25,30 +55,109 @@
 
     <div>donate imagery</div>
 
-    <form method="post">
-        <label for="Name">Name:</label>
-        <input type="text" id="Name" name="Name" />
+    <form method="post" id="form-data">
 
-        <label for="Address">Address:</label>
-        <input type="text" id="Address" name="Address" />
+        <div class="entire-form">
+            <div class="form-row">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" />
+            </div>
 
-        <label for="City">City:</label>
-        <input type="text" id="City" name="City" />
+            <div class="form-row">
+                <label for="address">Street Address where you reside</label>
+                <input type="text" id="address" name="address" />
+            </div>
 
-        <label for="State">State:</label>
-        <input type="text" id="State" name="State" />
+            <div class="form-cols">
 
-        <label for="Zip">Zip:</label>
-        <input type="text" id="Zip" name="Zip" />
+                <div class="form-row">
+                    <label for="city">*City</label>
+                    <input type="text" id="city" name="city" />
 
-        <!-- Other form fields go here -->
+                    <label for="state">*State</label>
+                    <input type="text" id="state" name="state" />
+                </div>
 
-        <input type="submit" value="Submit" />
+                <div class="form-row">
+                    <label for="zip">*Zip</label>
+                    <input type="text" id="zip" name="zip" />
+
+                    <label for="dob">*Date of Birth</label>
+                    <input type="text" id="dob" name="dob" />
+                </div>
+
+
+            </div>
+
+            <div class="form-cols">
+                <div class="form-row">
+                    <label for="work_type">*Field of work</label>
+                    <input type="text" id="work_type" name="work_type" />
+
+                    <label for="degree">*Degree</label>
+                    <input type="text" id="degree" name="degree" />
+                </div>
+
+                <div class="form-row">
+                    <label for="company">*Company</label>
+                    <input type="text" id="company" name="company" />
+
+                    <label for="avail">*Availability</label>
+                    <input type="text" id="avail" name="avail" />
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div>
+                <input type="checkbox" id="tac" name="tac">
+                <label for="tac">When applying as a Mentor, I agree to the <a href="/tac">Terms and Conditions</a> of Delete the Divide*</label>
+            </div>
+            <input type="submit" value="Apply" />
+        </div>
     </form>
 
 
 
+
+
     <script>
+
+        document.getElementById("form-data").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Access the form elements
+            const name = document.getElementById("name").value;
+            const address = document.getElementById("address").value;
+            const city = document.getElementById("city").value;
+            const state = document.getElementById("state").value;
+            const zip = document.getElementById("zip").value;
+            const dob = document.getElementById("dob").value;
+            const workType = document.getElementById("work_type").value;
+            const degree = document.getElementById("degree").value;
+            const company = document.getElementById("company").value;
+            const availability = document.getElementById("avail").value;
+            const tacCheckbox = document.getElementById("tac");
+
+            const tacAgreed = tacCheckbox.checked;
+
+            console.log("Name: " + name);
+            console.log("Address: " + address);
+            console.log("City: " + city);
+            console.log("State: " + state);
+            console.log("Zip: " + zip);
+            console.log("Date of Birth: " + dob);
+            console.log("Work Type: " + workType);
+            console.log("Degree: " + degree);
+            console.log("Company: " + company);
+            console.log("Availability: " + availability);
+            console.log("Terms and Conditions Agreed: " + tacAgreed);
+
+        });
+
+
         document.getElementById("identity").addEventListener("change", function () {
             var id_type = this.value;
             console.log(id_type)
