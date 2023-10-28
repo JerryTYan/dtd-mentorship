@@ -45,9 +45,10 @@
     --hero-bg-color: #111111;
     --footer-brand-height: 80px;
 
-    --primary-color: #dd1e4b;
-    --secondary-color: #E0040B;
-    
+    /* --primary-color: #dd1e4b;
+    --secondary-color: #E0040B; */
+    --primary-color: #FDB927;
+    --secondary-color: #5406a5;
     --white-color: #f9f9f9;
     --black-color: #040402;
     --dark-grey-color: #191919;

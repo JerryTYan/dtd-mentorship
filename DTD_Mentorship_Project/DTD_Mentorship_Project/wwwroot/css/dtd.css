@@ -92,6 +92,9 @@
     margin: auto 0 !important;
     top: 40%;
 }
+.share-list{
+    display: -webkit-inline-box;
+}
 
 .box {
     float: left;
