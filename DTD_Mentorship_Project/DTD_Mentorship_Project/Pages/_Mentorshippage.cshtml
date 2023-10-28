@@ -6,7 +6,7 @@
 <html>
 
 <head>
-	<title>Login and signup</title>
+	<title>Mentorship</title>
 	<meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,13 +14,26 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="~/vendors/css/icons.min.css">
+    <link rel="stylesheet" href="~/vendors/css/bootstrap.min.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="shortcut icon" href="/assets/images/DTDLogo_GoldPMS_LOGO_ONLY.png">
+
+ 
 	
 	
 </head>
-
+<style>
+        .dark-button-active {
+            padding: 10px 25px;
+            background-color: var(--primary-color) !important;
+            background-image: -webkit-linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%) !important;
+            background-image: linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%) !important;
+            color: var(--white-color) !important;
+        }
+    </style>
 <body>
 	<!-- Top Nav Start -->
 	<!-- Header -->
@@ -36,7 +49,9 @@
 				<ul class="navbar-nav action">
 					<li class="nav-item ml-3">
 						<a class="btn dark-button" href="/Profile/Dashboard"><iconify-icon icon="cil:user" style="font-size: 20px;margin-right: 5px;
-							"></iconify-icon>
+							"></iconify-icon> 
+               
+
 							My Profile</a>
 					</li>
 				</ul>
@@ -143,6 +158,11 @@
 
                                 </li>
                                 <li class="list-group-item">
+                                    <a class="custom" href="/Profile/Mentorship"><iconify-icon icon="teenyicons:screen-alt-outline"></iconify-icon>
+										<h5>Mentorship</h5></a>
+
+                                </li>
+                                <li class="list-group-item">
                                     <a class="custom" href="/Profile/MyPathways"><iconify-icon icon="simple-line-icons:direction" ></iconify-icon>
 										<h5>My Pathways</h5></a>
 
@@ -152,11 +172,7 @@
 										<h5>Services</h5></a>
 
                                 </li>
-								<li class="list-group-item">
-                                    <a class="custom" href="/Profile/Mentorship"><iconify-icon icon="teenyicons:screen-alt-outline"></iconify-icon>
-										<h5>Mentorship</h5></a>
-
-                                </li>
+								
                                 <li class="list-group-item">
                                     <a class="custom" href="/Profile/Resources"><iconify-icon icon="teenyicons:screen-alt-outline"></iconify-icon>
 										<h5>Resources</h5></a>
@@ -186,15 +202,58 @@
 			
 
 
-<!--<h2 class="featured ml-0">Profile Home</h2>-->
 
-<div class="row mt-4 mt-md-0">
+<h1 style="font-size: 50px; color:white;">
+Mentorship
+</h1>
 
-<div class="col-4 col-md-3 mb-4 text-center text-white">
-MENTORSHIP PAGE
+<div class="row">
+  <div class="col-md-12 col-sm-12 mb-12 text-white">
+        
+        <ul class="list-group">
+        <a href="">
+            <li class="list-group-item p-3 text-white" style="font-size: 15px;">
+            <h3 class="mb-2" style="font-size: 30px;">Become a mentor today!</h3>
+            <div class="col-15 d-flex justify-content-end align-items-center">
+            We are always on the lookout for talented individuals who are willing to share their time and experiences to those who fell lost or want support in their journey.
+            <iconify-icon icon="ic:baseline-keyboard-arrow-right" style="font-size: 80px;"></iconify-icon>
+        
+ 
+                
+               </div>
+            </li>
+            </a>
+            <a href="">
+            <li class="list-group-item p-3 text-white" style="font-size: 15px;">
+            <h3 class="mb-2" style="font-size: 30px;">Find a mentor that works!</h3>
+                            <div class="col-15 d-flex justify-content-end align-items-center">
+
+                We are lucky to have a wide variety of mentors that you get to choose from. Find someone you think you can connect with and reach out to see if they're available! 
+                        <iconify-icon icon="ic:baseline-keyboard-arrow-right" style="font-size: 80px;"></iconify-icon>
 </div>
-		</div>
-	</div>
+            </li>
+            </a>
+             <a href="">
+            <li class="list-group-item p-3 text-white" style="font-size: 15px;">
+            <h3 class="mb-2" style="font-size: 30px;">Project Feedback</h3>
+            <div class="col-15 d-flex justify-content-end align-items-center">
+                After connect with a mentor for 3 months, you have the option to provide internal feedback to Delete the Divide. All information is anonymous.
+            <iconify-icon icon="ic:baseline-keyboard-arrow-right" style="font-size: 80px;"></iconify-icon>
+</div>
+            </li>
+            </a>
+             <a href="">
+            <li class="list-group-item p-3 text-white" style="font-size: 15px;">
+            <h3 class="mb-2" style="font-size: 30px;">My Dashboard</h3>
+            <div class="col-15 d-flex align-items-center">
+                Drop and add Mentees currently on your project.
+                <iconify-icon icon="ic:baseline-keyboard-arrow-right" style="font-size: 80px;"></iconify-icon>
+</div>
+            </li>
+            </a>
+        </ul>
+        </div>
+        </div>
 	</section>
 </body>
 <style>
@@ -212,7 +271,11 @@ MENTORSHIP PAGE
   
 } */
 
-
+.list-group-item p-3.text-white {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .widget-services li {
   display: flex;
   align-items: start;
