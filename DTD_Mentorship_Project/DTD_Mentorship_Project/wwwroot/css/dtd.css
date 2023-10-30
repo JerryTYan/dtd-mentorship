@@ -29,7 +29,7 @@
 }
 .btn-xlarge {
     padding: 18px 50px;
-    /* font-size: 25px; //change this to your desired size */
+    font-size: 25px; //change this to your desired size
     line-height: normal;
     -webkit-border-radius: 8px;
        -moz-border-radius: 8px;
@@ -45,12 +45,11 @@
 .btn-xlarge:active {
     padding: 18px 50px;
     font-size: 25px;
-    /* //change this to your desired size line-height: normal; */
+    //change this to your desired size line-height: normal;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
 }
-
 #dtd_su_btn_container {
     position: fixed;
     bottom: -4px;
@@ -91,9 +90,6 @@
     z-index: 9;
     margin: auto 0 !important;
     top: 40%;
-}
-.share-list{
-    display: -webkit-inline-box;
 }
 
 .box {
