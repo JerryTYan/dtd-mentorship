@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/wwwroot/fonts/icons/Simple-Line-Icons.woff2",
+      "PackagePath": "staticwebassets/fonts/icons/Simple-Line-Icons.woff2"
+    },
+    {
       "Id": "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

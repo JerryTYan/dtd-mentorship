@@ -20,6 +20,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <link rel="stylesheet" href="~/css/dtd.css">
+        <link rel="stylesheet" href="~/css/default.css">
+        <link rel="stylesheet" href="~/css/theme-orange.css">
     <style>
 
         .dark-button-active {
@@ -46,6 +48,19 @@
         .form-cols {
             display: flex;
             flex-direction: row;
+        }
+        .odd {
+            color: var(--secondary-p-color);
+        }
+        footer {
+            @* position: relative; *@
+            background-color: var(--footer-bg-color);
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            @* vertical-align: baseline; *@
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -328,7 +343,7 @@
                 </div>
                 <div class="form-group col-12 col-md-6">
                     <label for="State">* State</label>
-                    <select class="form-select text-white" id="State" name="State">
+                    <select class="form-select text-white" id="State" name="State" placeholder="California">
                         <option>California</option>
                     </select>
                     <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="State" data-valmsg-replace="true"></span>

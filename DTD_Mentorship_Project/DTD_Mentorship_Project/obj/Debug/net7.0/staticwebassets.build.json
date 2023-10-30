@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6lEN5/t2Nb+qg16Rzia9LO6RZ3e7Jr87VKHdOD3JMc4=",
+  "Hash": "ak8MsrXV3bxY+Nej/9zyNuTCMJaLxEV8MjZrDLsdi0o=",
   "Source": "DTD_Mentorship_Project",
   "BasePath": "_content/DTD_Mentorship_Project",
   "Mode": "Default",
@@ -151,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/wwwroot/fonts/icons/Simple-Line-Icons.woff2",
+      "SourceId": "DTD_Mentorship_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/wwwroot/",
+      "BasePath": "_content/DTD_Mentorship_Project",
+      "RelativePath": "fonts/icons/Simple-Line-Icons.woff2",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/fonts/icons/Simple-Line-Icons.woff2"
     },
     {
       "Identity": "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/wwwroot/js/site.js",
