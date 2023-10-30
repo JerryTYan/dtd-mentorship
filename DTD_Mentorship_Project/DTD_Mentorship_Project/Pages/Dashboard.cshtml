@@ -5,16 +5,40 @@
 
 <!DOCTYPE html>
 <html>
+<
 <head>
     <title>Sample</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
+
+<
 <body>
+    <div class="jumbotron text-center">
+        <h1 class="display-4">@Model.Name</h1>
+        <p class="lead">@Model.District</p>
+    </div>
 
+    <div class="container">
+        <div class="row">
+            @foreach(var mentee in Model.CurrentMentees)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@mentee.Name</h5>
+                        <p class="card-text">Some info about this mentee...</p>
+                    </div>
+                </div>
+            </div>
+        }
+        </div>
+    </div>
 
-    <div>Current Mentees</div>
-
-    <div>About me</div>
-
+    <div class="container">
+        <h2>About me</h2>
+        <p>@Model.AboutMe</p>
+    </div>
 
 </body>
+
 </html>
