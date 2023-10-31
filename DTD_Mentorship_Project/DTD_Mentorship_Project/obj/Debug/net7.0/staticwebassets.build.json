@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ak8MsrXV3bxY+Nej/9zyNuTCMJaLxEV8MjZrDLsdi0o=",
+  "Hash": "afExdaXHoiu+ihpEVsArQaFFwOd6FYoGtn1wdNAaC9Q=",
   "Source": "DTD_Mentorship_Project",
   "BasePath": "_content/DTD_Mentorship_Project",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/font-awesome.min.css"
+    },
+    {
+      "Identity": "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/wwwroot/css/main.css",
+      "SourceId": "DTD_Mentorship_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/wwwroot/",
+      "BasePath": "_content/DTD_Mentorship_Project",
+      "RelativePath": "css/main.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/main.css"
     },
     {
       "Identity": "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/wwwroot/css/site.css",
