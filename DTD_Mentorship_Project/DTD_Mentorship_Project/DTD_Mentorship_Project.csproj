@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\assets\DTDLogo_GoldPMS_HORIZ.png" />
+  </ItemGroup>
+
 </Project>
