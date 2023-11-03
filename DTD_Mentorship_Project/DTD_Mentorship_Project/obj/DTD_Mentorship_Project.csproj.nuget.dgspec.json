@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/DTD_Mentorship_Project.csproj": {}
+    "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj": {}
   },
   "projects": {
-    "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/DTD_Mentorship_Project.csproj": {
+    "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/DTD_Mentorship_Project.csproj",
+        "projectUniqueName": "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
         "projectName": "DTD_Mentorship_Project",
-        "projectPath": "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/DTD_Mentorship_Project.csproj",
-        "packagesPath": "/Users/jorgelopez/.nuget/packages/",
-        "outputPath": "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/obj/",
+        "projectPath": "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
+        "packagesPath": "C:\\Users\\e685579\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jorgelopez/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\e685579\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -56,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.403/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
