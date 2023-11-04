@@ -45,6 +45,10 @@ project.lock.json
 project.fragment.lock.json
 artifacts/
 
+.dll
+.pdb
+
+
 # Tye
 .tye/
 
@@ -95,3 +99,4 @@ DTD_Mentorship_Project/.vs/DTD_Mentorship_Project/v17/.futdcache.v2
 DTD_Mentorship_Project/.vs/DTD_Mentorship_Project/v17/.suo
 DTD_Mentorship_Project/.vs/ProjectEvaluation/dtd_mentorship_project.metadata.v7.bin
 DTD_Mentorship_Project/.vs/ProjectEvaluation/dtd_mentorship_project.projects.v7.bin
+DTD_Mentorship_Project/DTD_Mentorship_Project/obj/Debug/net7.0/project.razor.vscode.bin
