@@ -149,3 +149,8 @@ badge.tag {
     color: #f5f5f5;
     background-color: #191919 !important;
 }
+
+.col-12 {
+    position: relative;
+    width: 100%;
+}
