@@ -1,16 +1,20 @@
-﻿@page "/signup"
+@page "/signup"
 @model DTD_Mentorship_Project.Pages._SignupModel
-
-
+@{
+   Layout = null;
+}
 
 <!DOCTYPE html>
+
 <html>
+
 <head>
     <title>Sign-Up</title>
 	<meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -18,8 +22,27 @@
         <link rel="stylesheet" href="~/vendors/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <link rel="stylesheet" href="~/css/dtd.css">
+         <link rel="stylesheet" href="~/css/main.css">
+        <link rel="stylesheet" href="~/css/default.css">
+        <link rel="stylesheet" href="~/css/theme-orange.css">
+       
     <style>
+        :root{
+            --header-bg-color: #040402;
+            --nav-item-color: #f5f5f5;
+            --top-nav-item-color: #f5f5f5;
+            --hero-bg-color: #040402;
+            --card-bg-color: #fff;
+            --section-1-bg-color: #111111;
+            --section-2-bg-color: #191919;
+            --section-3-bg-color: #040402;
+            --section-4-bg-color: #111111;
+            --section-5-bg-color: #191919;
+            --section-6-bg-color: #040402;
+            --section-7-bg-color: #111111;
+            --primary-p-color: #a3a3a3;
+            --footer-bg-color: #191919;
+        }
         .dark-button-active {
             padding: 10px 25px;
             background-color: var(--primary-color) !important;
@@ -45,10 +68,27 @@
             display: flex;
             flex-direction: row;
         }
+        body{
+            background-color: var(--section-3-bg-color);
+            @* background-image: var(--section-3bg-im); *@
+        }
+        input[type=checkbox] { 
+            vertical-align: middle; 
+            display: inline-block;
+            @* align: center; *@
+            @* cursor: pointer;  *@
+        }
+        @* #TOSCheck{
+            display: block;
+        }  *@
+        .id{
+            padding: 0px;
+        }
     </style>
 </head>
+
 <body>
-    <div class ="sidebarSocial share-list">
+    @* <div class ="sidebarSocial share-list">
         <a href="https://www.youtube.com/deletethedivide" target="_blank">
             <div class ="box text-center nav-link">
                 <i class="icon-social-youtube"></i>
@@ -79,18 +119,18 @@
                 <i class="icon-envelope-open"></i>
             </div>
         </a>
-    </div>
+    </div> *@
 
     <header id="header">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand aos-init aos-animate visible">
+    <nav class="navbar navbar-expand aos-init aos-animate visible navbar-sticky">
         <div class="container header">
 
             <!-- Navbar Brand-->
             <a class="navbar-brand" href="/">
 
-                <img src="/assets/images/DTDLogo_GoldPMS_HORIZ.png" alt="Delete the divide" style="width: 240px; height: auto !important;max-height: inherit;">
+                    <img src="https://members.deletethedivide.org/assets/images/DTDLogo_GoldPMS_HORIZ.png" alt="Delete the divide" style="width: 240px; height: auto !important;max-height: inherit;">
 
             </a>
 
@@ -123,8 +163,25 @@
     </nav>
 
     </header>
-    
-    <main>            
+       <section id="donate" style="background-color: #f5f5f5">
+            <div class="container smaller">
+                <div class="row text-center intro">
+                    <div class="col-12">
+                        <a class="mt-4 mr-auto ml-auto ml-lg-0  btn dark-button " href="/FISRedirect"><span style="font-size: 4em;"><i class="icon-credit-card"></i> Donate</span></a>
+                    </div>
+                </div>
+            </div>
+    </section> 
+    <main> 
+        @* <section id="donate">
+            <div class="container smaller">
+                <div class="row text-center intro">
+                    <div class="col-12">
+                        <a class="mt-4 mr-auto ml-auto ml-lg-0  btn dark-button " href="/FISRedirect"><span style="font-size: 4em;"><i class="icon-credit-card"></i> Donate</span></a>
+                    </div>
+                </div>
+            </div>
+    </section>            *@
         <section class="section-3 odd highlights">
             <div class="container">
                 <div class="row">
@@ -135,7 +192,7 @@
                                 <div class="row">
                                     <div class="col-12 mt-3">
                                         <label class="dtd_font_bold p-0" for="dtd_usertype">Identify yourself.  I am a:</label>
-                                        <select class="form-control" id="dtd_usertype" data-url="/Account" data-val="true" data-val-required="The SelectedUserTypeId field is required." name="SelectedUserTypeId">
+                                        <select class="form-control" id="dtd_usertype" data-url="/Account" data-val="true" data-val-required="The SelectedUserTypeId field is required." placeholder="Mentor" name="SelectedUserTypeId">
                                             <option selected="selected" value="0">Select One</option>
                                             <option value="1">Youth (Ages 12 – 17)</option>
                                             <option value="2">Young Adult (Ages 18 – 24)</option>
@@ -145,7 +202,8 @@
                                             <option value="4">Small Business Owner</option>
                                             <option value="5">Educator</option>
                                             <option value="6">Partner</option>
-                                            <option value="7">Other</option>
+                                            <option value="7">Mentor</option>
+                                            <option value="8">Other</option>
                                         </select>
                                         <input type="hidden" id="SelectedUserTypeId" name="SelectedUserTypeId" value="2">
                                     </div>
@@ -153,12 +211,12 @@
 
 
                                 <div class="eligibility-form mt-3">
-        <div class="row">
-            <div class="col-12">
-                <h2>Young Adult Eligibility</h2>
-            </div>
-        </div>
-        <div class="row">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Mentor Eligibility</h2>
+                    </div>
+                </div>
+        @* <div class="row">
 
             <div class="col-12">
                 <h4>Do you have a sign up code from your school or other organization?</h4>
@@ -172,9 +230,9 @@
                     <div id="btnNoCode" class="btn btn-lg ml-lg-auto dark-button dtd_sb_type" data-type="no">No</div>
                 </div>
             </div>
-        </div>
+        </div> *@
 
-        <div id="codeForm" class="border border-dark p-5 mx-3" style="display:none;">
+        @* <div id="codeForm" class="border border-dark p-5 mx-3" style="display:none;">
             <div class="row">
                 <div class="form-inline col-12">
                     <div class="form-group">
@@ -188,7 +246,7 @@
                     <span class="text-danger d-block mt-2 font-weight-bold field-validation-valid" data-valmsg-for="SignUpCode" data-valmsg-replace="true"></span>
                 </div>
             </div>
-        </div>
+        </div> *@
 
         <div id="regularForm" style="">
             <div class="row mt-3">
@@ -197,11 +255,12 @@
                     <p>Enter the physical street address where you reside. Then click the ‘Check Eligibility’ button.</p>
                 </div>
             </div>
-            <div class="text-danger font-weight-bold ml-2 validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
-        </ul></div>
+        <div class="text-danger font-weight-bold ml-2 validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul>
+        </div>
 
             <div class="row">
-                <div class="form-group col-12 mt-3">
+                @* <div class="form-group col-12 mt-3">
                     <label class="dtd_font_bold p-0" for="YearOfBirthSelected">* Birth Year:</label>
                     <select class="form-control" id="YearOfBirthSelected" name="YearOfBirthSelected">
                         <option value="0">Select One</option>
@@ -307,17 +366,17 @@
                         <option value="2023">2023</option>
                     </select>
                     <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="YearOfBirthSelected" data-valmsg-replace="true"></span>
-                </div>
+                </div> *@
                 <div class="form-group col-12 py-1">
                     <label for="Address" class="col-form-label">* Street Address where you reside</label>
                     <input class="form-control" required="required" type="text" id="Address" name="Address" value="">
                     <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Address" data-valmsg-replace="true"></span>
                 </div>
-                <div class="form-group col-12 py-1">
+                @* <div class="form-group col-12 py-1">
                     <label for="Address2" class="col-form-label">Address Cont.</label>
                     <input class="form-control" type="text" id="Address2" name="Address2" value="">
                     <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Address2" data-valmsg-replace="true"></span>
-                </div>
+                </div> *@
                 <div class="form-group col-12 col-md-6">
                     <label for="City">* City</label>
                     <input class="form-control" type="text" id="City" name="City" value="">
@@ -325,7 +384,7 @@
                 </div>
                 <div class="form-group col-12 col-md-6">
                     <label for="State">* State</label>
-                    <select class="form-select text-white" id="State" name="State">
+                    <select class="form-select text-white" id="State" name="State" placeholder="California">
                         <option>California</option>
                     </select>
                     <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="State" data-valmsg-replace="true"></span>
@@ -335,11 +394,41 @@
                     <input class="form-control" type="text" id="Zip" name="Zip" value="">
                     <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Zip" data-valmsg-replace="true"></span>
                 </div>
+                <div class="form-group col-12 col-md-6">
+                    <label for="DOB">* Date of Birth</label>
+                    <input class="form-control" type="text" id="DOB" name="DOB" value="">
+                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="DOB" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group col-12 col-md-6">
+                    <label for="FieldofWork">* Field of Work</label>
+                    <input class="form-control" type="text" id="FieldofWork" name="FieldofWork" value="">
+                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="FieldofWork" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group col-12 col-md-6">
+                    <label for="Degree">* Degree</label>
+                    <input class="form-control" type="text" id="Degree" name="Degree" value="">
+                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Degree" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group col-12 col-md-6">
+                    <label for="Company">* Company</label>
+                    <input class="form-control" type="text" id="Company" name="Company" value="">
+                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Company" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group col-12 col-md-6">
+                    <label for="Availability">* Availability</label>
+                    <input class="form-control" type="text" id="Availability" name="Availablity" value="">
+                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Zip" data-valmsg-replace="true"></span>
+                </div>
             </div>
-
-            <div class="row">
+            <div class="row" style="text-align: center;">
+                <label for="TermsofService"> 
+                    <input class="form-control" type="checkbox"> When applying as a mentor, I agree to the <a href="/TOS">Terms and Conditions</a> of Delete the Divide*
+                </label>
+            </div>
+            <br>
+            <div class="row" style="text-align:center;">
                 <div class="form-group col-12">
-                    <button type="submit" class="btn dark-button float-right">Check Eligibility</button>
+                    <button type="submit" class="btn dark-button float-center">Check Eligibility</button>
                 </div>
             </div>
         </div></div>
@@ -370,7 +459,7 @@
         </div>
     </main>
 
-    <footer class="odd">
+   @*@ <footer class="odd">
             <!-- Footer [links] -->
             <section id="footer" class="footer">
                 <div class="container">
@@ -379,11 +468,11 @@
                             <div class="row">
                                 <div class="branding col-12 p-0 text-center  item">
                                     <div class="text-center mb-3">
-                                        <img src="/assets/images/logos/LA_County_Seal.png" alt="dtd" class="img-fluid dtd_img_100">
+                                    <img src="https://members.deletethedivide.org/assets/images/logos/LA_County_Seal.png" alt="dtd" class="img-fluid dtd_img_100">
                                     </div>
                                     <div class="text-center">
                                         <p class="">DELETE THE DIVIDE <br>Developed &amp; Administered by:</p>
-                                        <img src="/assets/images/logos/isd-logo-withoutletters.png" alt="dtd" class="img-fluid dtd_img_75">
+                                    <img src="https://members.deletethedivide.org/assets/images/logos/isd-logo-withoutletters.png" alt="dtd" class="img-fluid dtd_img_75">
                                     </div>
 
                                     <!--<ul class="navbar-nav social share-list mt-0 ml-auto">
@@ -457,7 +546,7 @@
 
 
 
-    </footer>
+    </footer>*@
     
     
     
