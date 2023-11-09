@@ -13,11 +13,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "C:\\Users\\e684527\\Source\\Repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
       "projectName": "DTD_Mentorship_Project",
       "projectPath": "C:\\Users\\e684527\\Source\\Repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
       "packagesPath": "C:\\Users\\e684527\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\e684527\\Source\\Repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\e684527\\source\\repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
+      "projectName": "DTD_Mentorship_Project",
+      "projectPath": "C:\\Users\\e684527\\source\\repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
+      "packagesPath": "C:\\Users\\e684527\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\e684527\\source\\repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\e684527\\AppData\\Roaming\\NuGet\\NuGet.Config",
