@@ -1,14 +1,25 @@
 {
   "version": 2,
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> 8b473c90b4595f036fca15761e3b50c2142ddb75
   "dgSpecHash": "PbgASoDIucITvTGVPqFwT4vRic8MSLikFfZlgJSnQx+QYSjYRbgAnLJl79q27ac4kwB2HI+O2lVyzejJyzXkCw==",
   "success": true,
   "projectFilePath": "C:\\Users\\e684527\\Source\\Repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
 =======
+<<<<<<< HEAD
   "dgSpecHash": "rN11oJvAeaDS8NXGyEz4GTIDI077Q+/AcNy3UBDN8X6ViouSP3UNI9fZnEWiqbyaj1BNmbPXSAER4hqvVjmRag==",
   "success": true,
   "projectFilePath": "C:\\Users\\e684527\\source\\repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
 >>>>>>> Stashed changes
+=======
+  "dgSpecHash": "LK2ZB+9KovfEg8LqIKE69A3UUuej0LaECH2wYCZnIwiby5grhDaPq5aDpYmX5sdrG+opXDRR9S62sPKpJ5N35w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
+>>>>>>> main
+>>>>>>> 8b473c90b4595f036fca15761e3b50c2142ddb75
   "expectedPackageFiles": [],
   "logs": []
 }

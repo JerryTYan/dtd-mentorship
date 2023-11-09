@@ -91,7 +91,7 @@
     padding: 10px 25px;
     background-color: var(--primary-color);
     border-radius: 2px;
-    color: var(--primary-b-color);
+    color: var(--primary-b-color); /*white */
     font-weight: 400;
 }
 
