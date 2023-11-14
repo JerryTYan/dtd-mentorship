@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj": {}
+    "C:\\Users\\katty\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj": {
+    "C:\\Users\\katty\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
+        "projectUniqueName": "C:\\Users\\katty\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
         "projectName": "DTD_Mentorship_Project",
-        "projectPath": "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
-        "packagesPath": "C:\\Users\\e685579\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
+        "projectPath": "C:\\Users\\katty\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
+        "packagesPath": "C:\\Users\\katty\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\katty\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\e685579\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\katty\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

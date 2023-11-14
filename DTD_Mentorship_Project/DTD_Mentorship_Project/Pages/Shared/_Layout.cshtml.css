@@ -67,13 +67,14 @@ footer {
     scroll-behavior: smooth;
     background-color: #191919;
     background-image: initial;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     display: block;
     vertical-align: baseline;
-    scroll-behavior: smooth;
+  
     padding: 40px;
+   
 }
 
 .dark-button-active {
