@@ -168,9 +168,20 @@
                                         <div class="card-body">
                                             <h5 class="card-title">@mentee.Name</h5>
                                             <p class="card-text">Some info about this mentee...</p>
+                                            <button class="btn btn-danger" onclick="showConfirmationPopup('@mentee.Name')">Remove</button>
                                         </div>
                                     </div>
 }
+                                    <script>
+                                        function showConfirmationPopup(menteeName) {
+                                            var reason = prompt("Why do you want to remove " + menteeName + "?");
+                                            if (reason) {
+                                                // The user entered a reason, perform the removal logic here
+                                                // For example, you can make an AJAX request to the server to remove the mentee
+                                            }
+                                        }
+                                    </script>
+
                                 </div>
                             </div>
                             <div class="container">
