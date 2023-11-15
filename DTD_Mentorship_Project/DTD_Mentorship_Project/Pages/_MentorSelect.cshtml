@@ -1,0 +1,375 @@
+﻿@page "/mentorselect"
+@model DTD_Mentorship_Project.Pages._MentorSelectModel
+@{
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Mentorship</title>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="~/vendors/css/icons.min.css">
+    <link rel="stylesheet" href="~/vendors/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/default.css">
+    <link rel="stylesheet" href="~/css/dtd.css">
+    <link rel="stylesheet" href="~/css/theme-orange.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="/assets/images/DTDLogo_GoldPMS_LOGO_ONLY.png">
+
+    <style>
+        :root {
+            --header-bg-color: #040402;
+            --nav-item-color: #f5f5f5;
+            --top-nav-item-color: #f5f5f5;
+            --hero-bg-color: #040402;
+            --card-bg-color: #fff;
+            --section-1-bg-color: #111111;
+            --section-2-bg-color: #191919;
+            --section-3-bg-color: #040402;
+            --section-4-bg-color: #111111;
+            --section-5-bg-color: #191919;
+            --section-6-bg-color: #040402;
+            --section-7-bg-color: #111111;
+            --primary-p-color: #a3a3a3;
+            --footer-bg-color: #191919;
+        }
+
+        .dark-button-active {
+            padding: 10px 25px;
+            background-color: black;
+            background-image: -webkit-linear-gradient(45deg, darkorchid 15%, #FDB927 65%) !important;
+            background-image: linear-gradient(45deg, darkorchid 15%, #FDB927 65%) !important;
+            color: var(--white-color) !important;
+        }
+
+
+
+        .custom h5 {
+            margin: 0.5rem 0;
+            font-size: 1.0rem;
+            font-weight: var(--h2-weight);
+            line-height: 2;
+            font-family: var(--h2-font);
+            color: var(--primary-t-color);
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+            color: white;
+        }
+
+        .custom .icon {
+            font-size: 24px;
+        }
+
+        .list-group-item {
+            border-color: #191919 !important;
+            background-color: black;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+
+
+
+        .btn {
+            width: max-content;
+            max-width: 100%;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0.5rem 1.25rem;
+            border-width: 0;
+            border-radius: 2px;
+            background: black;
+            color: orange;
+        }
+
+        .btn i {
+            margin-right: 0.5rem;
+        }
+
+        .list-group-item p-3.text-white {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .widget-services li {
+            display: flex;
+            align-items: start;
+        }
+
+        .list-group-item {
+            margin: 0;
+            background: none;
+            font-size: 1rem;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .sidebar ul li a:not(.btn) {
+            color: inherit;
+            overflow-wrap: break-word;
+        }
+
+        .list-group-item a:not(.btn) {
+            color: inherit;
+        }
+
+        h5 {
+            margin: 1.5rem 0;
+            font-size: 1.2rem;
+            font-weight: var(--h2-weight);
+            line-height: 1.2;
+            font-family: var(--h2-font);
+            color: var(--primary-t-color);
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .container {
+            max-width: 1170px;
+            padding: 0;
+        }
+
+        .widget-services li a {
+            display: flex;
+            align-items: start;
+        }
+
+        .sidebar .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .sidebar ol, .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+
+
+
+
+        .list-group .list-group-item iconify-icon {
+            color: #FDB927;
+            margin-right: 15px;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            padding: 130px 0;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        header {
+            position: relative;
+            z-index: 5;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            scroll-behavior: smooth;
+        }
+
+        html {
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        main {
+            padding: 0;
+        }
+
+        section.section-3 {
+            background-color: var(--section-3-bg-color);
+            background-image: var(--section-3-bg-image);
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            padding: 60px 0;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+    </style>
+	
+	
+</head>
+
+<body>
+
+
+	<!-- Top Nav Start -->
+	<!-- Header -->
+
+	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+	<!-- Top Nav End -->
+
+	
+	<section id="content" class="section-3 odd ">
+
+
+
+		<nav class="d-flex d-md-none navbar navbar-expand-lg navbar-dark primary-color w-100 d-flex justify-content-between">
+	
+			<!-- Navbar brand -->
+			<div>
+	
+				<!-- Collapse button -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+						aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+	
+	
+			<!-- Collapsible content -->
+			<!-- Collapsible content -->
+		</nav>
+
+	<div class="collapse navbar-collapse w-100 " style="z-index:1000;" id="basicExampleNav">
+
+        <!-- Links -->
+        <ul class="list-group position-absolute bg-dark  w-100 list-group-flush pl-3 pr-3" style="z-index:1000;">
+            <li class="list-group-item custom pr-3">
+                <a class="custom d-block" href="/Profile/Dashboard"><i class="icon icon-home d-inline ml-3"></i><h5>Home</h5></a>
+            </li>
+            <li class="list-group-item custom pr-3">
+                <a class="custom d-block" href="/Profile/Profile"><i class="icon icon-user d-inline ml-3"></i><h5>Edit Profile</h5></a>
+
+            </li>
+            <li class="list-group-item custom pr-3">
+                <a class="custom d-block" href="/Profile/MyPathways"><i class="icon icon-direction d-inline ml-3"></i><b class="text-white">My Pathways</b></a>
+
+            </li>
+            <li class="list-group-item">
+                <a class="custom d-block" href="/Profile/Services"><i class="icon icon-screen-desktop d-inline ml-3"></i><b class="text-white">Services</b></a>
+
+            </li>
+            <li class="list-group-item">
+                <a class="custom d-block" href="/Profile"><i class="icon icon-screen-desktop d-inline ml-3"></i><b class="text-white">Resources</b></a>
+
+            </li>
+            <li class="list-group-item custom pr-3">
+                <a class="custom d-block" href="/Account/Logout"><i class="icon icon-login d-inline ml-3"></i><b class="text-white">Logout</b></a>
+
+            </li>
+        </ul>
+    </div>
+	<div class="container">
+        <div class="row content">
+            <!-- Sidebar -->
+            <div class="d-none d-md-block col-12 col-md-3 pl-md-3 p-0 float-left sidebar">
+                <div class="row">
+                    <div class="col-12 align-self-center text-left">
+
+
+                        <!-- Widget [services] -->
+                        <div class="item widget-services">
+                            <ul class="list-group list-group-flush widget-services">
+                                <li class="list-group-item pt-0" style="border-top:0px !important">
+                                    <a class="ml-0 custom" href="/Profile/Dashboard"><i class="icon icon-home mr-3" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i><h5>Home</h5></a>
+
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="custom" href="/Profile/Profile"><i class="icon-user" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i> <h5>Edit Profile</h5></a>
+
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="custom" href="/Profile/Mentorship"><i class="icon-user" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i> <h5>Mentorship</h5></a>
+
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="custom" href="/Profile/MyPathways"><i class="icon icon-direction mr-3" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i>
+										<h5>My Pathways</h5></a>
+
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="custom" href="/Profile/Services"><i class="icon icon-screen-desktop mr-3" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i>
+										<h5>Services</h5></a>
+
+                                </li>
+								
+                                <li class="list-group-item">
+                                    <a class="custom" href="/Profile/Resources"><i class="icon icon-screen-desktop mr-3" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i>
+										<h5>Resources</h5></a>
+
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="custom" href="/Account/Logout"><i class="icon icon-login mr-3" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i><h5>Logout</h5></a>
+
+                                </li>
+
+
+                            </ul>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+
+
+	</section>
+</body>
+
+</html>
+
+
+
+
