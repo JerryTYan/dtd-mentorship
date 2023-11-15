@@ -1,7 +1,25 @@
+using System;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.DependencyInjection;
+using DTD_Mentorship_Project.Validators;
+using DTD_Mentorship_Project.Pages;
+using DTD_Mentorship_Project.Controllers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+// Add the PersonModel as a scoped service
+builder.Services.AddScoped<personModel>();
+
+// Configure HttpClient with required headers
+builder.Services.AddHttpClient<locationController>(client =>
+{
+    client.BaseAddress = new Uri("https://api.zippopotam.us/");
+    client.DefaultRequestHeaders.Add("HeaderName", "HeaderValue"); // Add your headers here
+});
 
 var app = builder.Build();
 
