@@ -1,5 +1,6 @@
 ﻿@page "/mentorselect"
 @model DTD_Mentorship_Project.Pages._MentorSelectModel
+
 @{
 }
 
@@ -355,13 +356,52 @@
                     <div class="row">
                         <div class="col-12 align-self-center">
                             <h1 style="font-size: 50px; color:white;">
-                                Mentorship
+                                Available Mentors
                             </h1>
 
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 mb-12 text-white">
+                            <div class="container overflow-auto">
+                                <h1 style="font-size: x-large; color: white;">UX/UI</h1>
+                                <div class="row text-white d-flex flex-nowrap">
 
+                                    @if (Model.Mentors != null){
+
+                                        @foreach (var mentor in Model.Mentors)
+                                        {
+                                            <div class="col-sm-3">
+                                                <h2>@mentor.Name</h2>
+                                                <p>@mentor.Description</p>
+                                                <p>@mentor.Title</p>
+                                                <p>@mentor.Area</p>
+                                                <img src = @mentor.Image alt="Cat">
+                                                <button>View</button>
+                                            </div>
+                                        }
+                                    }
                                 </div>
+                            
+                            </div>
+
+                            <div class="container overflow-auto">
+                                <h1 style="font-size: x-large; color: white;">UX/UI</h1>
+                                <div class="row text-white d-flex flex-nowrap">
+
+                                    @if (Model.Mentors != null)
+                                    {
+
+                                        @foreach (var mentor in Model.Mentors)
+                                        {
+                                            <div class="col-sm-3">
+                                                <h2>@mentor.Name</h2>
+                                                <p>@mentor.Description</p>
+                                                <p>@mentor.Title</p>
+                                                <p>@mentor.Area</p>
+                                                <img src=@mentor.Image alt="Cat">
+                                                <button>View</button>
+                                            </div>
+                                        }
+                                    }
+                                </div>
+
                             </div>
 
                         </div>
