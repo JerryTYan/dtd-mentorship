@@ -118,7 +118,6 @@ C:\Users\Eduardo Galvez\Documents\GitHub\DTDMentorship\DTD_Mentorship_Project\DT
 C:\Users\Eduardo Galvez\Documents\GitHub\DTDMentorship\DTD_Mentorship_Project\DTD_Mentorship_Project\obj\Debug\net7.0\DTD_Mentorship_Project.pdb
 C:\Users\Eduardo Galvez\Documents\GitHub\DTDMentorship\DTD_Mentorship_Project\DTD_Mentorship_Project\obj\Debug\net7.0\DTD_Mentorship_Project.genruntimeconfig.cache
 C:\Users\Eduardo Galvez\Documents\GitHub\DTDMentorship\DTD_Mentorship_Project\DTD_Mentorship_Project\obj\Debug\net7.0\ref\DTD_Mentorship_Project.dll
-C:\Users\e686178\Source\Repos\JerryTYan\DTDMentorship\DTD_Mentorship_Project\DTD_Mentorship_Project\obj\Debug\net7.0\DTD_Mentorship_Project.csproj.AssemblyReference.cache
 C:\Users\e686178\Source\Repos\JerryTYan\DTDMentorship\DTD_Mentorship_Project\DTD_Mentorship_Project\obj\Debug\net7.0\DTD_Mentorship_Project.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\e686178\Source\Repos\JerryTYan\DTDMentorship\DTD_Mentorship_Project\DTD_Mentorship_Project\obj\Debug\net7.0\DTD_Mentorship_Project.AssemblyInfoInputs.cache
 C:\Users\e686178\Source\Repos\JerryTYan\DTDMentorship\DTD_Mentorship_Project\DTD_Mentorship_Project\obj\Debug\net7.0\DTD_Mentorship_Project.AssemblyInfo.cs
@@ -126,6 +125,7 @@ C:\Users\e686178\Source\Repos\JerryTYan\DTDMentorship\DTD_Mentorship_Project\DTD
 C:\Users\e686178\Source\Repos\JerryTYan\DTDMentorship\DTD_Mentorship_Project\DTD_Mentorship_Project\obj\Debug\net7.0\DTD_Mentorship_Project.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\e686178\Source\Repos\JerryTYan\DTDMentorship\DTD_Mentorship_Project\DTD_Mentorship_Project\obj\Debug\net7.0\DTD_Mentorship_Project.RazorAssemblyInfo.cache
 C:\Users\e686178\Source\Repos\JerryTYan\DTDMentorship\DTD_Mentorship_Project\DTD_Mentorship_Project\obj\Debug\net7.0\DTD_Mentorship_Project.RazorAssemblyInfo.cs
+C:\Users\e686178\Source\Repos\JerryTYan\DTDMentorship\DTD_Mentorship_Project\DTD_Mentorship_Project\obj\Debug\net7.0\DTD_Mentorship_Project.csproj.AssemblyReference.cache
 C:\Users\e686178\Source\Repos\JerryTYan\DTDMentorship\DTD_Mentorship_Project\DTD_Mentorship_Project\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\e686178\Source\Repos\JerryTYan\DTDMentorship\DTD_Mentorship_Project\DTD_Mentorship_Project\bin\Debug\net7.0\appsettings.json
 C:\Users\e686178\Source\Repos\JerryTYan\DTDMentorship\DTD_Mentorship_Project\DTD_Mentorship_Project\bin\Debug\net7.0\DTD_Mentorship_Project.staticwebassets.runtime.json

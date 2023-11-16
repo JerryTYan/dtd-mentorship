@@ -13,6 +13,7 @@ namespace DTD_Mentorship_Project.Pages
         public _Signup(IValidator<personModel> personValidator)
         {
             _personValidator = personValidator;
+            Person = new personModel(); //initialize the Person property
         }
 
         [BindProperty]
@@ -43,6 +44,7 @@ namespace DTD_Mentorship_Project.Pages
                 {
                     ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
                 }
+                LoadCities(); // Load cities again to repopulate the dropdowns
                 return Page(); // Return the page with validation errors
             }
 
