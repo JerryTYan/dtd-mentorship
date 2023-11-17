@@ -196,6 +196,7 @@
             width: 100%;
             height: 100%;
             background-color: black;
+            scrollbar-width: thin;
         }
 
         html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -230,6 +231,25 @@
             background-attachment: fixed;
             background-position: center;
         }
+
+        /* Webkit browsers (Chrome, Safari) */
+        ::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #F3BA4A; 
+            border-radius: 9px;
+            border: 4px solid black; /* This acts as padding */
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #4C1A9E; 
+            border-radius: 10px;
+            border: 4px solid black; /* This acts as padding */
+        }
+
+
     </style>
 	
 	
@@ -367,9 +387,9 @@
 
                                         @foreach (var mentor in Model.Mentors_UX)
                                         {
-                                            <div class="col-lg-6">
-                                                <div class="card bg-warning">
-                                                    <div class="card-body">
+                                            <div class="col-lg-5">
+                                                <div class="card" style="background-color: #FEF1DC">
+                                                    <div class="card-body" >
 
                                                         <div class="d-flex justify-content-center">
                                                             <h5 class="card-title">@mentor.Name</h5>
@@ -379,13 +399,12 @@
                                                                 <img src=@mentor.Image class="img-fluid" alt="Mentor Image">
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <p class="card-text">@mentor.Description</p>
+                                                                <p class="card-text" style="color:black;">@mentor.Description</p>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex justify-content-center">
-                                                            <button class="btn btn-primary" style="background-color: #7B3EDF; color: black;">View</button>
+                                                            <button class="btn btn-primary" style="background-color: #e28ce3; color: black;">View</button>
                                                         </div>
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -406,8 +425,8 @@
 
                                         @foreach (var mentor in Model.Mentors_CB)
                                         {
-                                            <div class="col-lg-6">
-                                                <div class="card bg-warning">
+                                            <div class="col-lg-5">
+                                                <div class="card" style="background-color: #FEF1DC">
                                                     <div class="card-body">
 
                                                         <div class="d-flex justify-content-center">
@@ -418,12 +437,13 @@
                                                                 <img src=@mentor.Image class="img-fluid" alt="Mentor Image">
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <p class="card-text">@mentor.Description</p>
+                                                                <p class="card-text" style="color:black;">@mentor.Description</p>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex justify-content-center">
-                                                            <button class="btn btn-primary" style="background-color: #7B3EDF; color: black;">View</button>
+                                                            <button class="btn btn-primary" style="background-color: #e28ce3; color: black;">View</button>
                                                         </div>
+
 
                                                     </div>
                                                 </div>
@@ -445,8 +465,8 @@
 
                                         @foreach (var mentor in Model.Mentors_IT)
                                         {
-                                            <div class="col-lg-6">
-                                                <div class="card bg-warning">
+                                            <div class="col-lg-5">
+                                                <div class="card" style="background-color: #FEF1DC">
                                                     <div class="card-body">
 
                                                         <div class="d-flex justify-content-center">
@@ -457,11 +477,11 @@
                                                                 <img src=@mentor.Image class="img-fluid" alt="Mentor Image">
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <p class="card-text">@mentor.Description</p>
+                                                                <p class="card-text" style="color:black;">@mentor.Description</p>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex justify-content-center">
-                                                            <button class="btn btn-primary" style="background-color: #7B3EDF; color: black;">View</button>
+                                                            <button class="btn btn-primary" style="background-color: #e28ce3; color: black;">View</button>
                                                         </div>
 
                                                     </div>
@@ -473,6 +493,7 @@
 
                             </div>
 
+                            <div class="mt-5 col-md-12"></div>
 
                         </div>
                     </div>
