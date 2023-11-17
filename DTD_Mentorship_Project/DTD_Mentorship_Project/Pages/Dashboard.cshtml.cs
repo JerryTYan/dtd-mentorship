@@ -3,6 +3,14 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace DTD_Mentorship_Project.Pages
 {
+    public class Mentee
+    {
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        public string? Title { get; set; }
+        public string? Area { get; set; }
+        public string? Image { get; set; }
+    }
     public class DashboardModel : PageModel
     {
         private readonly ILogger<DashboardModel> _logger;
@@ -32,3 +40,4 @@ namespace DTD_Mentorship_Project.Pages
             AboutMe = "About me...";
         }
     }
+}

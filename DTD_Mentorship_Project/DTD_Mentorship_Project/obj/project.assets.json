@@ -8,45 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\e684527\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\e685579\\.nuget\\packages\\": {}
->>>>>>> main
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
->>>>>>> 8b473c90b4595f036fca15761e3b50c2142ddb75
-      "projectUniqueName": "C:\\Users\\e684527\\Source\\Repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
-      "projectName": "DTD_Mentorship_Project",
-      "projectPath": "C:\\Users\\e684527\\Source\\Repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
-      "packagesPath": "C:\\Users\\e684527\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\e684527\\Source\\Repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
-=======
       "projectUniqueName": "C:\\Users\\e684527\\source\\repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
       "projectName": "DTD_Mentorship_Project",
       "projectPath": "C:\\Users\\e684527\\source\\repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
       "packagesPath": "C:\\Users\\e684527\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\e684527\\source\\repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
->>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\e684527\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
-      "projectName": "DTD_Mentorship_Project",
-      "projectPath": "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
-      "packagesPath": "C:\\Users\\e685579\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\e685579\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> main
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -93,5 +67,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\e684527\\source\\repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
