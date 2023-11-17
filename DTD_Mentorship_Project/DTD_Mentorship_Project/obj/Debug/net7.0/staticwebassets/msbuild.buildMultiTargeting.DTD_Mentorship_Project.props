@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\DTD_Mentorship_Project.props" />
-</Project>

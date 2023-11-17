@@ -1,0 +1,275 @@
+@page "/feedback"
+@model DTD_Mentorship_Project.Pages._FeedbackModel
+@{
+   Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>Feedback</title>
+	<meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	
+    <link rel="stylesheet" href="~/vendors/css/icons.min.css">
+    <link rel="stylesheet" href="~/vendors/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/default.css">
+    <link rel="stylesheet" href="~/css/dtd.css">
+    <link rel="stylesheet" href="~/css/theme-orange.css">
+    <link rel="stylesheet" href="~/css/main.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	
+	<link rel="shortcut icon" href="/assets/images/DTDLogo_GoldPMS_LOGO_ONLY.png">
+
+ 
+	
+	
+    </head>
+    <style>
+            :root {
+                --header-bg-color: #040402;
+                --nav-item-color: #f5f5f5;
+                --top-nav-item-color: #f5f5f5;
+                --hero-bg-color: #040402;
+                --card-bg-color: #fff;
+                --section-1-bg-color: #111111;
+                --section-2-bg-color: #191919;
+                --section-3-bg-color: #040402;
+                --section-4-bg-color: #111111;
+                --section-5-bg-color: #191919;
+                --section-6-bg-color: #040402;
+                --section-7-bg-color: #111111;
+                --primary-p-color: #a3a3a3;
+                --footer-bg-color: #191919;
+            }
+        
+        .dark-button-active {
+            padding: 10px 25px;
+            background-color: black;
+            background-image: -webkit-linear-gradient(45deg, darkorchid 15%, #FDB927 65%) !important;
+            background-image: linear-gradient(45deg, darkorchid 15%, #FDB927 65%) !important;
+            color: var(--white-color) !important;
+        }
+    </style>
+
+    <body>
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+	<!-- Top Nav End -->
+	    @* <style>
+
+		    .custom h5 {
+			margin: 0.5rem 0;
+			font-size: 1.0rem;
+			font-weight: var(--h2-weight);
+			line-height: 2;
+			font-family: var(--h2-font);
+			color: var(--primary-t-color);
+			-ms-word-wrap: break-word;
+			word-wrap: break-word;
+			color: white;
+		    }
+	
+		    .custom .icon {
+			    font-size: 24px;
+		    }
+	
+		    .list-group-item {
+			    border-color: #191919 !important;
+			    background-color: black;
+			
+		    }
+		    a:hover {
+                text-decoration: none;
+            }
+	    </style> *@
+    <header id="header">
+<nav class="navbar navbar-expand aos-init aos-animate visible navbar-sticky">
+            <div class="container header">
+
+            <!-- Navbar Brand-->
+            <a class="navbar-brand" href="/">
+
+                    <img src="https://members.deletethedivide.org/assets/images/DTDLogo_GoldPMS_HORIZ.png" alt="Delete the divide" style="width: 240px; height: auto !important;max-height: inherit;">
+
+            </a>
+
+            <!-- Nav holder -->
+            <div class="ml-auto"></div>
+
+            <!-- Navbar Items -->
+            <!--TODO: Re-add this when given the new links for wordpress-->
+            <!-- Navbar Toggle -->
+
+            <ul class="navbar-nav action">
+                <li class="nav-item ml-3">
+                        <a class="btn ml-lg-auto dark-button" href="/Account/Login"><i class="icon-user"></i>My Profile</a>
+
+                </li>
+            </ul>
+
+            <!-- Navbar Action
+            <ul class="navbar-nav action">
+                <li class="nav-item ml-3">
+                    <a href="/buy-at-themeforest" target="_blank" class="btn ml-lg-auto dark-button"><i class="icon-rocket"></i>BUY NOW</a>
+                        Suggestion: Replace the purchase button above with a contact button.
+
+                        <a href="#contact" class="smooth-anchor btn ml-lg-auto dark-button"><i class="icon-rocket"></i>CONTACT US</a>
+
+                </li>
+            </ul>
+            -->
+            </div>
+        </nav>
+    </header>    
+      
+    <section id="content" class="section-3 odd ">
+
+		@* <nav class="d-flex d-md-none navbar navbar-expand-lg navbar-dark primary-color w-100 d-flex justify-content-between">
+	
+			<!-- Navbar brand -->
+			<div>
+	
+				<!-- Collapse button -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+						aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+	
+	
+			<!-- Collapsible content -->
+			<!-- Collapsible content -->
+		</nav> *@
+      
+	<div class="collapse navbar-collapse w-100 " style="z-index:1000;" id="basicExampleNav">
+
+        <!-- Links -->
+        <ul class="list-group position-absolute bg-dark  w-100 list-group-flush pl-3 pr-3" style="z-index:1000;">
+            <li class="list-group-item custom pr-3">
+                <a class="custom d-block" href="/Profile/Dashboard"><i class="icon icon-home d-inline ml-3"></i><h5>Home</h5></a>
+            </li>
+            <li class="list-group-item custom pr-3">
+                <a class="custom d-block" href="/Profile/Profile"><i class="icon icon-user d-inline ml-3"></i><h5>Edit Profile</h5></a>
+
+            </li>
+            <li class="list-group-item custom pr-3">
+                <a class="custom d-block" href="/Profile/MyPathways"><i class="icon icon-direction d-inline ml-3"></i><b class="text-white">My Pathways</b></a>
+
+            </li>
+            <li class="list-group-item">
+                <a class="custom d-block" href="/Profile/Services"><i class="icon icon-screen-desktop d-inline ml-3"></i><b class="text-white">Services</b></a>
+
+            </li>
+            <li class="list-group-item">
+                <a class="custom d-block" href="/Profile"><i class="icon icon-screen-desktop d-inline ml-3"></i><b class="text-white">Resources</b></a>
+
+            </li>
+            <li class="list-group-item custom pr-3">
+                <a class="custom d-block" href="/Account/Logout"><i class="icon icon-login d-inline ml-3"></i><b class="text-white">Logout</b></a>
+
+            </li>
+        </ul>
+    </div>
+	<div class="container">
+        <div class="row content">
+            <!-- Sidebar -->
+            <div class="d-none d-md-block col-12 col-md-3 pl-md-3 p-0 float-left sidebar">
+                <div class="row">
+                    <div class="col-12 align-self-center text-left">
+
+
+                        <!-- Widget [services] -->
+                        <div class="item widget-services">
+                            <ul class="list-group list-group-flush widget-services">
+                                <li class="list-group-item pt-0" style="border-top:0px !important">
+                                    <a class="ml-0 custom" href="/Profile/Dashboard"><i class="icon icon-home mr-3" style="color:orange;margin-right: 15px;margin-top: 15px;display: flex; font-size:20px;"></i>
+                                        <h5>Home</h5></a>
+
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="custom" href="/Profile/Profile"><i class="icon-user" style="color:orange;margin-right: 15px;margin-top: 15px;display: flex; font-size:20px;"></i> 
+                                        <h5>Edit Profile</h5></a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="custom" href="/Profile/Mentorship"><i class="icon-user" style="color:orange;margin-right: 15px;margin-top: 15px;display: flex; font-size:20px;"></i> 
+                                        <h5>Mentorship</h5></a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="custom" href="/Profile/MyPathways"><i class="icon icon-direction mr-3" style="color:orange;margin-right: 15px;margin-top: 15px;display: flex; font-size:20px;"></i>
+										<h5>My Pathways</h5></a>
+
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="custom" href="/Profile/Services"><i class="icon icon-screen-desktop mr-3" style="color:orange;margin-right: 15px; margin-top: 15px;display: flex; font-size:20px;"></i>
+										<h5>Services</h5></a>
+                                </li>
+								
+                                <li class="list-group-item">
+                                    <a class="custom" href="/Profile/Resources"><i class="icon icon-screen-desktop mr-3" style="color:orange;margin-right: 15px;margin-top: 15px;display: flex; font-size:20px;"></i>
+										<h5>Resources</h5></a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="custom" href="/Account/Logout"><i class="icon icon-login mr-3" style="color:orange;margin-right: 15px; margin-top: 15px;display: flex; font-size:20px;"></i><h5>Logout</h5></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+ <!-- Main -->
+ <main class="col-12 col-md-9 p-0">
+	<!-- Text -->
+	<div class="row">
+		<div class="col-12 align-self-center"></div>
+        <h1> Project Feedback</h1>
+    </div>
+    <div class="container" style="background-color: rgb(247, 236, 148);">
+        <div id="image" style="float: left; padding:50px">
+            
+            <img src="/">
+        </div>
+        <div class="row" style="display: flex;">
+            <div id="mentorname" class="row" style="text-color: purple;">
+            <h2>Jane Doe </h2> 
+            </div>
+            <div id="mentorttitle" class="row" style="color: black; float:right">
+            <h2>UI/UX </h2> 
+            </div>
+        </div>
+        <div class="row" style="display:flex">
+            <div id="introTitle" style="color:black; display:flex;">
+            <h3>Introduction to UI/UX Design</h3>
+            </div>
+            <div id="content" style="float:right">
+            <p>
+                This is a basic Introduction to the world of UX/UI design. Here, I will teach you the ins and outs of design to get your foot out the door.
+            </p>
+            <p>
+                <b>Project timeline: 3 months</b>
+            </p>
+            </div>
+        </div>
+        @* <br><br> *@
+        <div class="row" style="display: flex; float:right">
+            <div class="row" >
+                <div class="form-group col-12">
+                    <button type="submit" class="btn dark-button float-right" style="display:inline">Back</button>
+                </div>
+            </div>
+            <div class="row" style="text-align:center;">
+                <div class="form-group col-12">
+                    <button type="submit" class="btn dark-button float-right" style="display:inline;">Review</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	</section>
+    </body>
+</html>
