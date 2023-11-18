@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\e685557\\git_branches\\mentorship_page\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj": {}
+    "C:\\Users\\mdeey\\OneDrive\\Documents\\DTDdev\\Mentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\e685557\\git_branches\\mentorship_page\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj": {
+    "C:\\Users\\mdeey\\OneDrive\\Documents\\DTDdev\\Mentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\e685557\\git_branches\\mentorship_page\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
+        "projectUniqueName": "C:\\Users\\mdeey\\OneDrive\\Documents\\DTDdev\\Mentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
         "projectName": "DTD_Mentorship_Project",
-        "projectPath": "C:\\Users\\e685557\\git_branches\\mentorship_page\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
-        "packagesPath": "C:\\Users\\e685557\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\e685557\\git_branches\\mentorship_page\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
+        "projectPath": "C:\\Users\\mdeey\\OneDrive\\Documents\\DTDdev\\Mentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
+        "packagesPath": "C:\\Users\\mdeey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mdeey\\OneDrive\\Documents\\DTDdev\\Mentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\e685557\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mdeey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,16 +39,6 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "Microsoft.Data.Sqlite": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[7.0.14, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -73,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
