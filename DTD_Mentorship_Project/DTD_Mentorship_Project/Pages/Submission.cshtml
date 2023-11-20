@@ -3,19 +3,33 @@
 @{
 }
 
-<div class="page_sub">
+<div class="submissionpage">
     <h1 class="submission">Submission Received!</h1>
-    <div class="text">
-        Thank you for taking the time to apply. 
-        We will review your submission and contact you with further steps. 
-        If you have any questions feel free to reach out at 
-        <span>dtdsupport@gmail.com</span>.
-        
+    <div class="text2">
+        Thank you for taking the time to apply.
+        We will review your submission and contact you with further steps.
+        If you have any questions feel free to reach out at
+        <span class="email">dtdsupport@gmail.com</span>. 
+        We hope you have a nice day.
     </div>
 </div>
 <style>
-    .page_sub{
+    body{
+        padding:0;
+        margin:0;
+    }
+    .text2{
         text-align:center;
+        font-weight:bold;
+        padding-left:150px;
+        padding-right:150px;
+        
+    }
+    .email{
+        text-decoration:underline;
+    }
+
+    .submissionpage {
         margin:0;
         border:0;
         padding:0;
@@ -25,22 +39,16 @@
     }
 
     .submission{
+        text-align:center;
         margin-top:100px;
-        background-color:purple;
         height:100px;
         width:100%;
         position:relative;
         margin:0px;
+        background: linear-gradient(to right, purple, yellow);
+        padding-top:75px;
+        height:200px;
     }
-
-    .text{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        margin:0px;
-    }
-
 
 
     .container{
