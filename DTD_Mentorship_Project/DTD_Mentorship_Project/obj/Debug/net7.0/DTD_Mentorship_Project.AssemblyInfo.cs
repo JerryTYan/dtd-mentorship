@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DTD_Mentorship_Project")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3db07402060a36afd164730fde2631973381474a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35366f5e38534f87f25dbd3ffdf2ae7b7254617e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DTD_Mentorship_Project")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DTD_Mentorship_Project")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
