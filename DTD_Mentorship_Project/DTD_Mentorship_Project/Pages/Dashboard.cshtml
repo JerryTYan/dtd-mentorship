@@ -533,13 +533,14 @@
 
 
 
-            <nav class="d-flex d-md-none navbar navbar-expand-lg navbar-dark primary-color w-100 d-flex justify-content-between visible">
+            <nav class="d-flex d-md-none navbar navbar-expand-lg navbar-dark primary-color w-100 d-flex justify-content-between">
 
                 <!-- Navbar brand -->
                 <div>
 
                     <!-- Collapse button -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+                            aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
@@ -554,10 +555,10 @@
                 <!-- Links -->
                 <ul class="list-group position-absolute bg-dark  w-100 list-group-flush pl-3 pr-3" style="z-index:1000;">
                     <li class="list-group-item custom pr-3">
-                        <a class="custom d-block" href="/Profile/Dashboard"><i class="icon icon-home d-inline ml-3"></i><b class="text-white">Home</b></a>
+                        <a class="custom d-block" href="/Profile/Dashboard"><i class="icon icon-home d-inline ml-3"></i><h5>Home</h5></a>
                     </li>
                     <li class="list-group-item custom pr-3">
-                        <a class="custom d-block" href="/Profile/Profile"><i class="gold icon icon-user d-inline ml-3"></i><b class="text-white">Edit Profile</b></a>
+                        <a class="custom d-block" href="/Profile/Profile"><i class="icon icon-user d-inline ml-3"></i><h5>Edit Profile</h5></a>
 
                     </li>
                     <li class="list-group-item custom pr-3">
@@ -590,27 +591,63 @@
                                 <div class="item widget-services">
                                     <ul class="list-group list-group-flush widget-services">
                                         <li class="list-group-item pt-0" style="border-top:0px !important">
-                                            <a class="ml-0 custom" href="/Profile/Dashboard"><i class="gold icon icon-home mr-3"></i><h5> Home</h5></a>
+                                            <a class="ml-0 custom" href="/Profile/Dashboard">
+                                                <i class="icon icon-home mr-3" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i><h5>Home</h5>
+                                            </a>
 
                                         </li>
                                         <li class="list-group-item">
-                                            <a class="custom" href="/Profile/Profile"><i class="gold icon icon-user mr-3"></i><h5> Edit Profile</h5></a>
+                                            <a class="custom" href="/Profile/Profile">
+                                                <i class="icon-user" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i> <h5>Edit Profile</h5>
+                                            </a>
 
                                         </li>
                                         <li class="list-group-item">
-                                            <a class="custom" href="/Profile/MyPathways"><i class="gold icon icon-direction mr-3"></i><h5> My Pathways</h5></a>
+                                            <a class="custom" href="/Profile/Mentorship">
+                                                <i class="icon-user" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i> <h5>Mentorship</h5>
+                                            </a>
 
                                         </li>
                                         <li class="list-group-item">
-                                            <a class="custom" href="/Profile/Services"><i class="gold icon icon-screen-desktop mr-3"></i><h5> Services</h5></a>
+                                            <a class="custom" href="/Profile/MyPathways">
+                                                <i class="icon icon-direction mr-3" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i>
+                                                <h5>My Pathways</h5>
+                                            </a>
 
                                         </li>
                                         <li class="list-group-item">
-                                            <a class="custom d-block" href="/Profile"><i class="gold icon icon-screen-desktop d-inline mr-3"></i><b class="text-white">Resources</b></a>
+                                            <a class="custom" href="/Profile/Services">
+                                                <i class="icon icon-screen-desktop mr-3" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i>
+                                                <h5>Services</h5>
+                                            </a>
+
+                                        </li>
+
+                                        <li class="list-group-item">
+                                            <a class="custom" href="/Profile/Resources">
+                                                <i class="icon icon-screen-desktop mr-3" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i>
+                                                <h5>Resources</h5>
+                                            </a>
 
                                         </li>
                                         <li class="list-group-item">
-                                            <a class="custom" href="/Account/Logout"><i class="gold icon icon-login mr-3"></i><h5> Logout</h5></a>
+                                            <a class="custom" href="/Account/Logout">
+                                                <i class="icon icon-login mr-3" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i><h5>Logout</h5>
+                                            </a>
 
                                         </li>
 
@@ -699,14 +736,5 @@
         </section>
 
     </main>
-    <section id="donate">
-        <div class="container smaller">
-            <div class="row text-center intro">
-                <div class="col-12">
-                    <a class="mt-4 mr-auto ml-auto ml-lg-0  btn dark-button " href="/FISRedirect"><span style="font-size: 4em;"><i class="icon-credit-card"></i> Donate</span></a>
-                </div>
-            </div>
-        </div>
-    </section>
 </body>
 </html>
