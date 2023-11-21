@@ -66,10 +66,11 @@ project.lock.json
 project.fragment.lock.json
 artifacts/
 **/bin/
-obj/
 **/obj/
-out/
-DTD_Mentorship_Project/DTD_Mentorship_Project/bin/Debug/net7.0/DTD_Mentorship_Project.dll
+**/packages/*
+*.nupkg
+DTD_Mentorship_Project/DTD_Mentorship_Project/bin/Debug/net7.0/
+DTD_Mentorship_Project/DTD_Mentorship_Project/obj/Debug/net7.0/
 DTD_Mentorship_Project/DTD_Mentorship_Project/DTD_Mentorship_Project.csproj.user
 DTD_Mentorship_Project/DTD_Mentorship_Project/obj/Debug/net7.0/DTD_Mentorship_Project.assets.cache
 DTD_Mentorship_Project/DTD_Mentorship_Project/obj/Debug/net7.0/DTD_Mentorship_Project.GeneratedMSBuildEditorConfig.editorconfig
