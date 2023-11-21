@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using FluentValidation;
-using DTD_Mentorship_Project.Validators; // Namespace where your models are defined
+using DTD_Mentorship_Project.Validators;
+using System.Diagnostics;
+using System.Text.Json;
+
 
 namespace DTD_Mentorship_Project.Pages
 {
@@ -12,8 +15,12 @@ namespace DTD_Mentorship_Project.Pages
 
         public _Signup(IValidator<personModel> personValidator)
         {
+            Debug.WriteLine("signup");
             _personValidator = personValidator;
             Person = new personModel(); //initialize the Person property
+            var json = JsonSerializer.Serialize(Person);
+            Debug.WriteLine(json);
+
         }
 
         [BindProperty]
@@ -21,6 +28,7 @@ namespace DTD_Mentorship_Project.Pages
 
         public void OnGet()
         {
+            Debug.WriteLine("get");
             // Initialization logic for GET request
             // Load city data when the page loads
             LoadCities();
@@ -29,6 +37,7 @@ namespace DTD_Mentorship_Project.Pages
         // Define the LoadCities method to load city data
         private void LoadCities()
         {
+            Debug.WriteLine("load");
             // Implement logic to load city data here
             // For example, you can fetch city data from a database or an API and populate the dropdown list
         }
@@ -36,6 +45,10 @@ namespace DTD_Mentorship_Project.Pages
         public IActionResult OnPost()
         {
             // Validate the PersonModel using FluentValidation
+            Debug.WriteLine("post");
+            Debug.Write(Person.ToString());
+
+
             var validationResult = _personValidator.Validate(Person);
 
             if (!validationResult.IsValid)

@@ -6,6 +6,8 @@ namespace DTD_Mentorship_Project.Validators
     {
         public personValidator()
         {
+            Console.WriteLine("validator");
+
             RuleFor(x => x.Name).NotEmpty().Matches("^[a-zA-Z]*$").WithMessage("Invalid name format.");
             RuleFor(x => x.BirthYear).NotEmpty().Must(IsValidBirthYear).WithMessage("Invalid birth year.");
             RuleFor(x => x.City).NotEmpty();
@@ -15,6 +17,8 @@ namespace DTD_Mentorship_Project.Validators
 
         private bool IsValidBirthYear(int birthYear)
         {
+            Console.WriteLine("birthday");
+
             // Calculate the minimum allowed birth year based on the current date
             int currentYear = DateTime.Now.Year;
             int minimumBirthYear = currentYear - 18;
