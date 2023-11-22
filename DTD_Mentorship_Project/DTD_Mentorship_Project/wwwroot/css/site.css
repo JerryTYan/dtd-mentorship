@@ -25,3 +25,7 @@ body {
 header {
     background-color: #111111;
 }
+
+.leftnav {
+    background-color: #111111 !important;
+}
