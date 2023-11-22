@@ -32,8 +32,17 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< Updated upstream
 [C:/Users/e686178/Source/Repos/JerryTYan/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/Pages/_Signup.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1NpZ251cC5jc2h0bWw=
+=======
+[C:/Users/e686178/Source/Repos/JerryTYan/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/Pages/_Accountmerge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0FjY291bnRtZXJnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/e686178/Source/Repos/JerryTYan/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/Pages/_Mentorshippage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX01lbnRvcnNoaXBwYWdlLmNzaHRtbA==
+>>>>>>> Stashed changes
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/e686178/Source/Repos/JerryTYan/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/Pages/_ViewImports.cshtml]

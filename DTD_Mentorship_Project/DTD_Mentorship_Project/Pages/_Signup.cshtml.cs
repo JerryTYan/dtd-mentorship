@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using FluentValidation;
-using DTD_Mentorship_Project.Validators; // Namespace where your models are defined
+using DTD_Mentorship_Project; // Namespace where your models are defined
 
 namespace DTD_Mentorship_Project.Pages
 {
@@ -53,7 +53,7 @@ namespace DTD_Mentorship_Project.Pages
             // Perform your logic here, such as saving the data to a database
 
             // Redirect to a success page or perform other actions
-            return RedirectToPage("/SuccessPage"); // Replace "SuccessPage" with the actual success page route
+            return RedirectToPage("Action", "SignupController"); // Replace "SuccessPage" with the actual success page route
         }
     }
 }

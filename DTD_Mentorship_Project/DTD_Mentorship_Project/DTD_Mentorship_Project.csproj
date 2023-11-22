@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< Updated upstream
     <PackageReference Include="FluentValidation" Version="11.8.0" />
+=======
+    <None Include="wwwroot\assets\DTDLogo_GoldPMS_HORIZ.png" />
+>>>>>>> Stashed changes
   </ItemGroup>
 
 </Project>
