@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YpWWMsF+oV8iifQWvbbyAwz+qaKezAMglyiI8OUiyY4=",
+  "Hash": "F59xKXbSBH5rnL8LB8Fb+xK8tCuBbqsOKRYQIISPChI=",
   "Source": "DTD_Mentorship_Project",
   "BasePath": "_content/DTD_Mentorship_Project",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\DTD_Mentorship_Project.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\assets\\DTDLogo_GoldPMS_HORIZ.png",
+      "SourceId": "DTD_Mentorship_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\",
+      "BasePath": "_content/DTD_Mentorship_Project",
+      "RelativePath": "assets/DTDLogo_GoldPMS_HORIZ.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\DTDLogo_GoldPMS_HORIZ.png"
     },
     {
       "Identity": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\css\\default.css",
@@ -102,6 +119,23 @@
       "OriginalItemSpec": "wwwroot\\css\\font-awesome.min.css"
     },
     {
+      "Identity": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\css\\main.css",
+      "SourceId": "DTD_Mentorship_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\",
+      "BasePath": "_content/DTD_Mentorship_Project",
+      "RelativePath": "css/main.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\main.css"
+    },
+    {
       "Identity": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\css\\site.css",
       "SourceId": "DTD_Mentorship_Project",
       "SourceType": "Discovered",
@@ -151,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\fonts\\icons\\Simple-Line-Icons.woff2",
+      "SourceId": "DTD_Mentorship_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\",
+      "BasePath": "_content/DTD_Mentorship_Project",
+      "RelativePath": "fonts/icons/Simple-Line-Icons.woff2",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\icons\\Simple-Line-Icons.woff2"
     },
     {
       "Identity": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\js\\site.js",

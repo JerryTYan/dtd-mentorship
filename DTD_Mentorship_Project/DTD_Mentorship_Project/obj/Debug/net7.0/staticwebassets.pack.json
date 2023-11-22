@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\DTD_Mentorship_Project.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\assets\\DTDLogo_GoldPMS_HORIZ.png",
+      "PackagePath": "staticwebassets\\assets\\DTDLogo_GoldPMS_HORIZ.png"
+    },
+    {
       "Id": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\css\\default.css",
       "PackagePath": "staticwebassets\\css\\default.css"
     },
@@ -17,6 +21,10 @@
       "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
     },
     {
+      "Id": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
       "Id": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -27,6 +35,10 @@
     {
       "Id": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\fonts\\icons\\Simple-Line-Icons.woff2",
+      "PackagePath": "staticwebassets\\fonts\\icons\\Simple-Line-Icons.woff2"
     },
     {
       "Id": "C:\\Users\\e686178\\Source\\Repos\\JerryTYan\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\wwwroot\\js\\site.js",

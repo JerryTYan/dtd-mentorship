@@ -11,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+// builder.Services.AddValidatorsFromAssemblyContaining<personModel>();
+
 
 // Add the PersonModel as a scoped service
 builder.Services.AddScoped<personModel>();
@@ -19,7 +21,7 @@ builder.Services.AddScoped<personModel>();
 builder.Services.AddScoped<IValidator<personModel>, personValidator>();
 
 // Configure HttpClient with required headers
-builder.Services.AddHttpClient<locationController>(client =>
+builder.Services.AddHttpClient<SignupController>(client =>
 {
     client.BaseAddress = new Uri("https://api.zippopotam.us/");
     client.DefaultRequestHeaders.Add("HeaderName", "HeaderValue"); // Add your headers here
