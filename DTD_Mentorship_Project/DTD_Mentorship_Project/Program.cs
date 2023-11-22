@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using DTD_Mentorship_Project.Validators;
 using DTD_Mentorship_Project.Pages;
 using DTD_Mentorship_Project.Controllers;
+using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,9 @@ builder.Services.AddRazorPages();
 
 // Add the PersonModel as a scoped service
 builder.Services.AddScoped<personModel>();
+
+//Needed to add IValidator<personModel> as scoped service along with the person validator function
+builder.Services.AddScoped<IValidator<personModel>, personValidator>();
 
 // Configure HttpClient with required headers
 builder.Services.AddHttpClient<locationController>(client =>
