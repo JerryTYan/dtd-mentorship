@@ -2,7 +2,7 @@
 @model DTD_Mentorship_Project.Pages._MentorshipModel
 
 
-<!DOCTYPE html>
+@* <!DOCTYPE html>
 <html>
 
 <head>
@@ -204,12 +204,11 @@
 
                     </div>
                 </div>
-            </div>
+            </div> *@
  <!-- Main -->
  <main class="col-12 col-md-9 p-0">
 
 	<!-- Text -->
-	<div class="row">
 		<div class="col-12 align-self-center">
 
 			
@@ -220,47 +219,47 @@
 Mentorship
 </h1>
 
+
 <div class="row">
-  <div class="col-md-12 col-sm-12 mb-12 text-white">
+  @* <div class="col-md-12 col-sm-12 mb-12 text-white"> *@
         
         <ul class="list-group">
-        <a href="/accountmerge">
+        <a href="/accountmerge" class="dark-button">
             <li class="list-group-item p-3 text-white" style="font-size: 15px;">
-            <h3 class="mb-2" style="font-size: 30px;">Become a mentor today!</h3>
+            <h3 class="mb-2 text-white" style="font-size: 30px;">Become a mentor today!</h3>
             <div class="col-15 d-flex justify-content-end align-items-center">
             We are always on the lookout for talented individuals who are willing to share their time and experiences to those who fell lost or want support in their journey.
-            <iconify-icon icon="ic:baseline-keyboard-arrow-right" style="font-size: 80px;"></iconify-icon>
+<i class="icon icon-arrow-right mr-3 text-white" ></i>
         
  
                 
                </div>
             </li>
             </a>
-            <a href="/mentorselect">
+            <a href="/mentorselect" class="dark-button">
             <li class="list-group-item p-3 text-white" style="font-size: 15px;">
-            <h3 class="mb-2" style="font-size: 30px;">Find a mentor that works!</h3>
+            <h3 class="mb-2 text-white" style="font-size: 30px;">Find a mentor that works!</h3>
                             <div class="col-15 d-flex justify-content-end align-items-center">
 
                 We are lucky to have a wide variety of mentors that you get to choose from. Find someone you think you can connect with and reach out to see if they're available! 
-                        <iconify-icon icon="ic:baseline-keyboard-arrow-right" style="font-size: 80px;"></iconify-icon>
-</div>
+<i class="icon icon-arrow-right mr-3 text-white" ></i>
             </li>
             </a>
-             <a href="">
+             <a href="" class="dark-button">
             <li class="list-group-item p-3 text-white" style="font-size: 15px;">
-            <h3 class="mb-2" style="font-size: 30px;">Project Feedback</h3>
+            <h3 class="mb-2 text-white" style="font-size: 30px;">Project Feedback</h3>
             <div class="col-15 d-flex justify-content-end align-items-center">
                 After connect with a mentor for 3 months, you have the option to provide internal feedback to Delete the Divide. All information is anonymous.
-            <iconify-icon icon="ic:baseline-keyboard-arrow-right" style="font-size: 80px;"></iconify-icon>
+<i class="icon icon-arrow-right mr-3 text-white" ></i>
 </div>
             </li>
             </a>
-             <a href="">
+             <a href="" class="dark-button">
             <li class="list-group-item p-3 text-white" style="font-size: 15px;">
-            <h3 class="mb-2" style="font-size: 30px;">My Dashboard</h3>
+            <h3 class="mb-2 text-white" style="font-size: 30px;">My Dashboard</h3>
             <div class="col-15 d-flex align-items-center">
                 Drop and add Mentees currently on your project.
-                <iconify-icon icon="ic:baseline-keyboard-arrow-right" style="font-size: 80px;"></iconify-icon>
+<i class="icon icon-arrow-right mr-3 text-white" ></i>
 </div>
             </li>
             </a>
@@ -268,178 +267,7 @@ Mentorship
         </div>
         </div>
 	</section>
-</body>
-<style>
-    /* ul {
-	float: right;
-	display: block;
-	
-} */
-/* li {
-	
-  flex-wrap: wrap;
-  gap: 1rem;
-  
-  align-items: center;
-  
-} */
-.btn {
-    width: max-content;
-    max-width: 100%;
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0.5rem 1.25rem;
-    border-width: 0;
-    border-radius: 2px;
-    background: black;
-    
-  color: orange;
-}
-.btn i {
-    margin-right: 0.5rem;
-}
-.list-group-item p-3.text-white {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.widget-services li {
-  display: flex;
-  align-items: start;
-}
-.list-group-item {
-  margin: 0;
-  background: none;
-  font-size: 1rem;
-  padding-right: 0;
-  padding-left: 0;
-}
+  </main>
 
-.sidebar ul li a:not(.btn) {
-  color: inherit;
-  overflow-wrap: break-word;
-}
-.list-group-item a:not(.btn) {
-  color: inherit;
-}
-h5 {
-  margin: 1.5rem 0;
-  font-size: 1.2rem;
-  font-weight: var(--h2-weight);
-  line-height: 1.2;
-  font-family: var(--h2-font);
-  color: var(--primary-t-color);
-  -ms-word-wrap: break-word;
-  word-wrap: break-word;
-}
-.container {
-  max-width: 1170px;
-  padding: 0;
-}
-
-.widget-services li a {
-  display: flex;
-  align-items: start;
-}
-.sidebar .item:last-child {
-  margin-bottom: 0;
-}
-.sidebar ol, .sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-<%-- a.btn.dark-button{
-text-decoration: none;
-border-width: 2px; 
-align-items: center;
-  display: flex;
-  border-image: linear-gradient(45deg, darkblue, darkorchid,#FDB927,#FDB927) 1;
-background: black;
-  color: orange;
-  padding: 0.5rem 2rem;
- 
-} --%>
-
-/* a.btn.dark-button i.fa.fa-user{
-  width: 2px;
-  height: 2px;
-  float: left;
-} */
- <%-- a.btn.dark-button:hover{
-  
-  background:linear-gradient(45deg, darkblue, darkorchid,#FDB927,#FDB927);
-    color: #FDB927;
-    /* border-style: solid; */
-    /* padding: 0.5rem 2rem; */
-  } --%>
-  
-  .list-group .list-group-item iconify-icon {
-    color:#FDB927;
-    margin-right: 15px;
-  margin-top: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-}
-  .row {
-    margin-left: 0;
-    margin-right: 0;
-}
-section {
-  position: relative;
-  width: 100%;
-
-  padding: 130px 0;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-}
-header {
-  position: relative;
-  z-index: 5;
-}
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-body{
-	font-family: 'Poppins', sans-serif;
-  font-size:16px;
-  width: 100%;
-    height: 100%;
-	background-color: black;
-}
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  scroll-behavior: smooth;
-}
-html {
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  -webkit-text-size-adjust: 100%;
-}
-main {
-  padding: 0;
-}
-section.section-3 {
-  background-color: var(--section-3-bg-color);
-  background-image: var(--section-3-bg-image);
-}
-section {
-  position: relative;
-  width: 100%;
-  padding: 60px 0;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-}
-</style>
-</html>
 
 
