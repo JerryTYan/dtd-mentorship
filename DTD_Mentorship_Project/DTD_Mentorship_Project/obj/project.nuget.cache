@@ -4,12 +4,5 @@
   "success": true,
   "projectFilePath": "C:\\Users\\e684527\\source\\repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\e684527\\source\\repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DTD_Mentorship_Project.styles.css" asp-append-version="true" />
-
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,27 +18,43 @@
     <link rel="stylesheet" href="~/vendors/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="~/css/dtd.css">
     <link rel="stylesheet" href="~/css/default.css">
+    <link rel="stylesheet" href="~/css/dtd.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/main.css">
+    <link rel="stylesheet" href="~/css/site.css">
     <link rel="stylesheet" href="~/css/theme-orange.css">
-        <link rel="stylesheet" href="~/css/site.css">
-                <link rel="stylesheet" href="~/css/main.css">
+
+
 
 
 </head>
 <body>
-    <header>
-       
-        <nav class="navbar navbar-expand-sm aos-init aos-animate visible">
+    <div class="sidebarSocial share-list">
+        <!--<a href="#"><div class="box shares"></div></a>-->
+        <a href="https://www.youtube.com/deletethedivide" target="_blank"><div class="box text-center nav-link"><i class="icon-social-youtube"></i></div></a>
+        <a href="https://www.instagram.com/deletethedivide" target="_blank"><div class="box text-center nav-link"><i class="icon-social-instagram"></i></div></a>
+        <a href="https://www.facebook.com/deletethedivide" target="_blank"><div class="box  text-center nav-link"><i class="icon-social-facebook"></i></div></a>
+        <a href="https://www.twitter.com/deletethedivide" target="_blank"><div class="box  text-center nav-link"><i class="icon-social-twitter"></i></div></a>
+        <a href="/home/contact"><div class="box text-center nav-link"><i class="icon-envelope-open"></i></div></a>
+        <a href="/FISRedirect"><div class="box  text-center nav-link"><i class="icon-credit-card"></i></div></a>
+        <!--<a href="#"><div class="box other text-center dtd_font_light pt-2"></div></a>-->
+    </div>
+
+    <header id="header">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand aos-init aos-animate visible navbar-sticky">
             <div class="container header">
 
                 <a class="navbar-brand" href="/">
 
-                    <img src="assets/DTDLogo_GoldPMS_HORIZ.png" alt="Delete the divide" style="width: 240px; height: auto !important;max-height: inherit;" _mstalt="284154" _msthash="1">
+                    <img src="/assets/DTDLogo_GoldPMS_HORIZ.png" alt="Delete the divide" style="width: 240px; height: auto !important;max-height: inherit;">
 
                 </a>
 
                 <div class="ml-auto"></div>
+
 
 
                 <ul class="navbar-nav action">
@@ -54,138 +69,156 @@
                     </li>
                 </ul>
 
+
             </div>
         </nav>
 
-
     </header>
-    <main>
-    <style>
+    <section id="content" class="section-3 odd leftnav">
 
-    .custom h5 {
-        margin: 0.5rem 0;
-        font-size: 1.0rem;
-        font-weight: var(--h2-weight);
-        line-height: 2;
-        font-family: var(--h2-font);
-        color: var(--primary-t-color);
-        -ms-word-wrap: break-word;
-        word-wrap: break-word;
-        color: white;
-    }
+        <div class="collapse navbar-collapse w-100 " style="z-index:1000;" id="basicExampleNav">
 
-    .custom .icon {
-        font-size: 24px;
-    }
+            <!-- Links -->
+            <ul class="list-group position-absolute bg-dark  w-100 list-group-flush pl-3 pr-3" style="z-index:1000;">
+                <li class="list-group-item custom pr-3">
+                    <a class="custom d-block" href="/Profile/Dashboard"><i class="icon icon-home d-inline ml-3"></i><h5>Home</h5></a>
+                </li>
+                <li class="list-group-item custom pr-3">
+                    <a class="custom d-block" href="/Profile/Profile"><i class="icon icon-user d-inline ml-3"></i><h5>Edit Profile</h5></a>
 
-    .list-group-item {
-        border-color: #191919 !important;
-    }
-</style>
-<nav class="d-flex d-md-none navbar navbar-expand-lg navbar-dark primary-color w-100 d-flex justify-content-between">
-	
-			<!-- Navbar brand -->
-			<div>
-	
-				<!-- Collapse button -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
-						aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-			</div>
-	
-	
-			<!-- Collapsible content -->
-			<!-- Collapsible content -->
-		</nav>
-<div class="collapse navbar-collapse w-100 " style="z-index:1000;" id="basicExampleNav">
+                </li>
+                <li class="list-group-item custom pr-3">
+                    <a class="custom d-block" href="/Profile/MyPathways"><i class="icon icon-direction d-inline ml-3"></i><b class="text-white">My Pathways</b></a>
 
-        <!-- Links -->
-        <ul class="list-group position-absolute bg-dark  w-100 list-group-flush pl-3 pr-3" style="z-index:1000;">
-            <li class="list-group-item custom pr-3">
-                <a class="custom d-block" href="/Profile/Dashboard"><i class="icon icon-home d-inline ml-3"></i><h5>Home</h5></a>
-            </li>
-            <li class="list-group-item custom pr-3">
-                <a class="custom d-block" href="/Profile/Profile"><i class="icon icon-user d-inline ml-3"></i><h5>Edit Profile</h5></a>
+                </li>
+                <li class="list-group-item">
+                    <a class="custom d-block" href="/Profile/Services"><i class="icon icon-screen-desktop d-inline ml-3"></i><b class="text-white">Services</b></a>
 
-            </li>
-            <li class="list-group-item custom pr-3">
-                <a class="custom d-block" href="/Profile/MyPathways"><i class="icon icon-direction d-inline ml-3"></i><b class="text-white">My Pathways</b></a>
+                </li>
+                <li class="list-group-item">
+                    <a class="custom d-block" href="/Profile"><i class="icon icon-screen-desktop d-inline ml-3"></i><b class="text-white">Resources</b></a>
 
-            </li>
-            <li class="list-group-item">
-                <a class="custom d-block" href="/Profile/Services"><i class="icon icon-screen-desktop d-inline ml-3"></i><b class="text-white">Services</b></a>
+                </li>
+                <li class="list-group-item custom pr-3">
+                    <a class="custom d-block" href="/Account/Logout"><i class="icon icon-login d-inline ml-3"></i><b class="text-white">Logout</b></a>
 
-            </li>
-            <li class="list-group-item">
-                <a class="custom d-block" href="/Profile"><i class="icon icon-screen-desktop d-inline ml-3"></i><b class="text-white">Resources</b></a>
+                </li>
+            </ul>
 
-            </li>
-            <li class="list-group-item custom pr-3">
-                <a class="custom d-block" href="/Account/Logout"><i class="icon icon-login d-inline ml-3"></i><b class="text-white">Logout</b></a>
-
-            </li>
-        </ul>
-    </div>
-	<div class="container">
-        <div class="row content">
-            <!-- Sidebar -->
-            <div class="d-none d-md-block col-12 col-md-3 pl-md-3 p-0 float-left sidebar">
-                <div class="row">
-                    <div class="col-12 align-self-center text-left">
+        
+        </div>
 
 
-                        <!-- Widget [services] -->
-                        <div class="item widget-services">
-                            <ul class="list-group list-group-flush widget-services">
-                                <li class="list-group-item pt-0" style="border-top:0px !important">
-                                    <a class="ml-0 custom" href="/Profile/Dashboard"><i class="icon icon-home mr-3"></i><h5>Home</h5></a>
-
-                                </li>
-                                <li class="list-group-item">
-                                    <a class="custom" href="/Profile/Profile"><i class="icon icon-user mr-3"></i> <h5>Edit Profile</h5></a>
-
-                                </li>
-                                <li class="list-group-item">
-                                    <a class="custom" href="/Profile/Mentorship"><i class="icon icon-home mr-3" ></i> <h5>Mentorship</h5></a>
-
-                                </li>
-                                <li class="list-group-item">
-                                    <a class="custom" href="/Profile/MyPathways"><i class="icon icon-direction mr-3" ></i>
-										<h5>My Pathways</h5></a>
-
-                                </li>
-                                <li class="list-group-item">
-                                    <a class="custom" href="/Profile/Services"><i class="icon icon-screen-desktop mr-3"></i>
-										<h5>Services</h5></a>
-
-                                </li>
-								
-                                <li class="list-group-item">
-                                    <a class="custom" href="/Profile/Resources"><i class="icon icon-screen-desktop mr-3" ></i>
-										<h5>Resources</h5></a>
-
-                                </li>
-                                <li class="list-group-item">
-                                    <a class="custom" href="/Account/Logout"><i class="icon icon-login mr-3"></i><h5>Logout</h5></a>
-
-                                </li>
+        
+        <div class="container">
 
 
-                            </ul>
+            <div class="row content">
+                <!-- Sidebar -->
+                <div class="d-none d-md-block col-12 col-md-3 pl-md-3 p-0 float-left sidebar">
+
+                    <div class="row">
+
+                        <div class="col-12 align-self-center text-left">
+
+                            <!-- Widget [services] -->
+                            <div class="item widget-services">
+                                <ul class="list-group list-group-flush widget-services">
+                                    <li class="list-group-item pt-0" style="border-top:0px !important">
+                                        <a class="ml-0 custom" href="/Profile/Dashboard">
+                                            <i class="icon icon-home mr-3" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i><h5>Home</h5>
+                                        </a>
+
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a class="custom" href="/Profile/Profile">
+                                            <i class="icon-user" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i> <h5>Edit Profile</h5>
+                                        </a>
+
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a class="custom" href="/Profile/Mentorship">
+                                            <i class="icon-user" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i> <h5>Mentorship</h5>
+                                        </a>
+
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a class="custom" href="/Profile/MyPathways">
+                                            <i class="icon icon-direction mr-3" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i>
+                                            <h5>My Pathways</h5>
+                                        </a>
+
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a class="custom" href="/Profile/Services">
+                                            <i class="icon icon-screen-desktop mr-3" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i>
+                                            <h5>Services</h5>
+                                        </a>
+
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <a class="custom" href="/Profile/Resources">
+                                            <i class="icon icon-screen-desktop mr-3" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i>
+                                            <h5>Resources</h5>
+                                        </a>
+
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a class="custom" href="/Account/Logout">
+                                            <i class="icon icon-login mr-3" style="color:orange;margin-right: 15px;
+  margin-top: 15px;
+    display: flex; font-size:20px;"></i><h5>Logout</h5>
+                                        </a>
+
+                                    </li>
+
+
+                                </ul>
+                            </div>
                         </div>
 
-
-
                     </div>
+ 
                 </div>
+  
+                <!-- Main -->
+                <main role="main" class="col-12 col-md-9 p-0">
+                    @RenderBody()
+                </main>
             </div>
 
-    @* <div class="container"> *@
-        @* <main role="main" class="pb-3"> *@
-            @RenderBody()
-        @* </main> *@
-    @* </div> *@
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+    <section id="donate" style="background-color: white">
+        <div class="container smaller">
+            <div class="row text-center intro">
+                <div class="col-12">
+                    <a class="mt-4 mr-auto ml-auto ml-lg-0  btn dark-button " href="/FISRedirect"><span style="font-size: 4em;"><i class="icon-credit-card"></i> Donate</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="odd">
         <!-- Footer [links] -->
