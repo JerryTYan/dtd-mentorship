@@ -30,6 +30,17 @@
 
 </head>
 <body>
+    <div class="sidebarSocial share-list">
+        <!--<a href="#"><div class="box shares"></div></a>-->
+        <a href="https://www.youtube.com/deletethedivide" target="_blank"><div class="box text-center nav-link"><i class="icon-social-youtube"></i></div></a>
+        <a href="https://www.instagram.com/deletethedivide" target="_blank"><div class="box text-center nav-link"><i class="icon-social-instagram"></i></div></a>
+        <a href="https://www.facebook.com/deletethedivide" target="_blank"><div class="box  text-center nav-link"><i class="icon-social-facebook"></i></div></a>
+        <a href="https://www.twitter.com/deletethedivide" target="_blank"><div class="box  text-center nav-link"><i class="icon-social-twitter"></i></div></a>
+        <a href="/home/contact"><div class="box text-center nav-link"><i class="icon-envelope-open"></i></div></a>
+        <a href="/FISRedirect"><div class="box  text-center nav-link"><i class="icon-credit-card"></i></div></a>
+        <!--<a href="#"><div class="box other text-center dtd_font_light pt-2"></div></a>-->
+    </div>
+
     <header>
 
         <nav class="navbar navbar-expand-sm aos-init aos-animate visible">
@@ -92,12 +103,21 @@
 
                 </li>
             </ul>
+
+        
         </div>
+
+
+        
         <div class="container">
+
+
             <div class="row content">
                 <!-- Sidebar -->
                 <div class="d-none d-md-block col-12 col-md-3 pl-md-3 p-0 float-left sidebar">
+
                     <div class="row">
+
                         <div class="col-12 align-self-center text-left">
 
                             <!-- Widget [services] -->
@@ -168,22 +188,28 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                </div>
 
+                    </div>
+ 
+                </div>
+  
                 <!-- Main -->
+                <main role="main" class="col-12 col-md-9 p-0">
+                    @RenderBody()
+                </main>
             </div>
+
+
+
+
         </div>
-        <div class="container">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
-        </div>
+
+
 
     </section>
 
 
-    <section id="donate">
+    <section id="donate" style="background-color: white">
         <div class="container smaller">
             <div class="row text-center intro">
                 <div class="col-12">
@@ -192,6 +218,7 @@
             </div>
         </div>
     </section>
+
     <footer class="odd">
         <!-- Footer [links] -->
         <section id="footer" class="footer">
