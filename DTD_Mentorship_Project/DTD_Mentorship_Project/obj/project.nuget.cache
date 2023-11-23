@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "LiVb22MOcPzlii0bjmblntFmQVnTq/+IAUBAiPdX3vl/eBU5mdG9x2fCRbPI3kw6PS00O14Z2UWbiYSUrbrGug==",
+  "dgSpecHash": "rN11oJvAeaDS8NXGyEz4GTIDI077Q+/AcNy3UBDN8X6ViouSP3UNI9fZnEWiqbyaj1BNmbPXSAER4hqvVjmRag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\e685899\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
+  "projectFilePath": "C:\\Users\\e684527\\source\\repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\e684527\\source\\repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
