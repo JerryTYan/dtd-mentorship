@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net7.0": {
-      "FluentValidation/11.8.0": {
+      "FluentValidation/11.8.1": {
         "type": "package",
         "compile": {
           "lib/net7.0/FluentValidation.dll": {
@@ -18,16 +18,16 @@
     }
   },
   "libraries": {
-    "FluentValidation/11.8.0": {
-      "sha512": "TiEaaYqSIAS+wXQv46LRm8Mca092XYNePD0n231Hqlkmm5FuToZoWnjI1ef/vJUxBzqR7/k2vaVQXxijNgVKRQ==",
+    "FluentValidation/11.8.1": {
+      "sha512": "N72rnlE99XYB7EGA1u9y7m7kNTTynqOPBhZqDE8zr1Y0aSR4t5si94LRA7UVdAV09GaXWCErW+EiFhfbg3DSbg==",
       "type": "package",
-      "path": "fluentvalidation/11.8.0",
+      "path": "fluentvalidation/11.8.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.11.8.0.nupkg.sha512",
+        "fluentvalidation.11.8.1.nupkg.sha512",
         "fluentvalidation.nuspec",
         "lib/net5.0/FluentValidation.dll",
         "lib/net5.0/FluentValidation.xml",
@@ -44,23 +44,23 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "FluentValidation >= 11.8.0"
+      "FluentValidation >= 11.8.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\e684527\\.nuget\\packages\\": {}
+    "C:\\Users\\e685579\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\e684527\\source\\repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
+      "projectUniqueName": "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
       "projectName": "DTD_Mentorship_Project",
-      "projectPath": "C:\\Users\\e684527\\source\\repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
-      "packagesPath": "C:\\Users\\e684527\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\e684527\\source\\repos\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
+      "projectPath": "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
+      "packagesPath": "C:\\Users\\e685579\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\e685579\\OneDrive - County of Los Angeles\\Documents\\GitHub\\DTDMentorship\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\e684527\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\e685579\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -88,7 +88,7 @@
         "dependencies": {
           "FluentValidation": {
             "target": "Package",
-            "version": "[11.8.0, )"
+            "version": "[11.8.1, )"
           }
         },
         "imports": [

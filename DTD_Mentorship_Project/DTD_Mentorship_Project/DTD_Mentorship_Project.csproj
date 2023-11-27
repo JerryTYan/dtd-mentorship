@@ -10,4 +10,8 @@
     <None Include="wwwroot\assets\DTDLogo_GoldPMS_HORIZ.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.8.1" />
+  </ItemGroup>
+
 </Project>
