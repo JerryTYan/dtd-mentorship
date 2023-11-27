@@ -29,3 +29,13 @@ header {
 .leftnav {
     background-color: #111111 !important;
 }
+
+input[type=checkbox] {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.id {
+    padding: 0px;
+}
+
