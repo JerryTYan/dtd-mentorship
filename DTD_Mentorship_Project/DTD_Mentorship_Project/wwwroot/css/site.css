@@ -18,5 +18,14 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    background-color: #111111 !important;
+}
+
+
+header {
+    background-color: #111111 !important;
+}
+
+.leftnav {
+    background-color: #111111 !important;
 }

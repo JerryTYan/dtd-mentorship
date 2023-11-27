@@ -443,7 +443,7 @@ textarea {
     background: no-repeat;
     box-shadow: none;
     padding: 0.7rem 1rem;
-    border-color: var(--primary-l-color);
+    border-color:  rgba(255, 255, 255, 0.25);
     border-width: 1px;
     border-radius: 2px;
 }
@@ -507,7 +507,7 @@ input[type=checkbox] {
 textarea {
     height: 100px;
     resize: none;
-    border-color: var(--primary-l-color);
+    border-color: rgba(255, 255, 255, 0.25);
     color: var(--primary-t-color);
 }
 
@@ -2414,7 +2414,22 @@ header .navbar-expand .navbar-brand img {
 .card-img-top {
     border-radius: 0;
 }
-
+body{
+	font-family: 'Poppins', sans-serif;
+  font-size:16px;
+  width: 100%;
+    height: 100%;
+	background-color: black;
+}
+h1{
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator{
+    background-color: white;
+  }
 .card-body {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -3086,7 +3101,7 @@ header .navbar-expand .navbar-brand img {
     background: no-repeat;
     box-shadow: none;
     padding: 10px 15px;
-    border-color: var(--primary-l-color);
+    border-color:  rgba(255, 255, 255, 0.25);
     border-width: 1px;
     border-radius: 2px;
     line-height: 1.2;
