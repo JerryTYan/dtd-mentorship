@@ -2,6 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using FluentValidation;
 using DTD_Mentorship_Project; // Namespace where your models are defined
+using System.Diagnostics;
+using System.Text.Json;
+
 
 namespace DTD_Mentorship_Project.Pages
 {
@@ -14,6 +17,8 @@ namespace DTD_Mentorship_Project.Pages
         {
             _personValidator = personValidator;
             Person = new personModel(); //initialize the Person property
+            var json = JsonSerializer.Serialize(Person);
+            Debug.WriteLine(json);
         }
 
         [BindProperty]

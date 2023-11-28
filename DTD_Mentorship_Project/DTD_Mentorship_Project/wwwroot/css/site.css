@@ -33,7 +33,6 @@ header {
 input[type=checkbox] {
     vertical-align: middle;
     display: inline-block;
-    accent-color: red;
 }
 
 .id {
