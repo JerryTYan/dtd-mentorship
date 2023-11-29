@@ -1,7 +1,21 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSession(options => {
+    options.IdleTimeout = TimeSpan.FromMinutes(540);
+});
+// builder.Services.AddMediatR();
+builder.Services.AddDbContext<DTD_Mentorship_Project.Models.DBContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SQLAZURECONNSTR_DTDDB"));
+});
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+
 
 var app = builder.Build();
 
@@ -15,7 +29,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseSession();
 app.UseRouting();
 
 app.UseAuthorization();

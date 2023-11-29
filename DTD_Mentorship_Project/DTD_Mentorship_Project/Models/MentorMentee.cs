@@ -5,7 +5,15 @@ using System.Collections.Generic;
 
 namespace DTD_Mentorship_Project.Models;
 
-public partial class Mentee
+public partial class MentorMentee
 {
+    public int MentorMenteeId { get; set; }
+
+    public int MentorId { get; set; }
+
     public int MenteeId { get; set; }
+
+    public virtual User Mentee { get; set; }
+
+    public virtual User Mentor { get; set; }
 }

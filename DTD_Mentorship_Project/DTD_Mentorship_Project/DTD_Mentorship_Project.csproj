@@ -10,4 +10,9 @@
     <None Include="wwwroot\assets\DTDLogo_GoldPMS_HORIZ.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.9" />
+  </ItemGroup>
+
 </Project>

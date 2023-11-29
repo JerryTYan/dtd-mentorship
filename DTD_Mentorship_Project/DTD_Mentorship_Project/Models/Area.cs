@@ -5,7 +5,11 @@ using System.Collections.Generic;
 
 namespace DTD_Mentorship_Project.Models;
 
-public partial class Mentee
+public partial class Area
 {
-    public int MenteeId { get; set; }
+    public int AreaId { get; set; }
+
+    public string AreaName { get; set; }
+
+    public virtual ICollection<UserArea> UserArea { get; set; } = new List<UserArea>();
 }
