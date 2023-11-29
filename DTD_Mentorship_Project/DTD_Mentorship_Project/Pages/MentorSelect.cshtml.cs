@@ -12,7 +12,7 @@ namespace DTD_Mentorship_Project.Pages
         public string? Area { get; set; }
         public string? Image { get; set; }
     }
-    public class _MentorSelectModel : PageModel
+    public class MentorSelectModel : PageModel
     {
 
         //do some sorting or query beforehand to put the mentors into UX, Cyber, IT, need to make this process dynamic for
