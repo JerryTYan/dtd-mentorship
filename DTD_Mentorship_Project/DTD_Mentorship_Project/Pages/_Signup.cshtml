@@ -15,11 +15,45 @@ input[type=checkbox] {
 .id{
     padding: 0px;
 } *@
+<style>
+    .checkbox-container{
+        display: flex;
+        align-items: center;
+    }
 
+    .checkbox-container label {
+        display: flex;
+        cursor: pointer;
+    }
+    
+    .checkbox-container input[type='checkbox'] {
+        opacity: 0;
+        cursor: pointer;
+        margin-right: -1.3em
+    }
+
+    .checkbox-container label::before {
+        content: '';
+        width: 1.3em;
+        height: 1.3em;
+        border: .05em solid #8e8e8e;
+        margin-right: 1em;
+    }
+
+    .checkbox-container input[type='checkbox']:checked + label::before{
+        content: '\002714';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white
+    }
+
+    
+</style>
 
 <main> 
       
-    <section class="section-3 odd highlights">
+    <section class="section-3 odd highlights" style="padding:0px">
         <div class="container">
             <div class="row">
                 <form method="post" action="/PlaceholderPage">
@@ -81,7 +115,7 @@ input[type=checkbox] {
             </div>
             <div class="form-group col-12 col-md-6">
                 <label for="State">* State</label>
-                <select class="form-select text-white" id="State" name="State" placeholder="California">
+                <select class="form-select text-white" id="State" name="State">
                     <option>California</option>
                 </select>
                 <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="State" data-valmsg-replace="true"></span>
@@ -117,10 +151,13 @@ input[type=checkbox] {
                 <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Zip" data-valmsg-replace="true"></span>
             </div>
         </div>
-        <div class="row" style="text-align: center;">
-            <label for="TermsofService">
-                    <input type="checkbox" id="TermsofServiceCheckbox" /> When applying as a mentor, I agree to the <a href="/TOS">Terms and Conditions</a> of Delete the Divide*
-            </label>
+        <div ">
+            <div class="checkbox-container">
+                <input type="checkbox" id="TermsofServiceCheckbox">
+                <label for="TermsofServiceCheckbox">
+                     When applying as a mentor, I agree to the <a href="/TOS"> Terms and Conditions </a> of Delete the Divide*
+                </label>
+            </div>
         </div>
         <br>
         <div class="row" style="text-align:center;">
