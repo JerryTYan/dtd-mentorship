@@ -46,3 +46,18 @@ header {
     border-radius: 10px;
     border: 4px solid black; /* This acts as padding */
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.form-check-input:checked + .form-check-label {
+    color: #FFD180; /* Change this to the color you want */
+}
+
+.form-check-input {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
