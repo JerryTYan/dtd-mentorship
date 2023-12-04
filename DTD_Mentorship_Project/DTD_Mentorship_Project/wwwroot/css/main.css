@@ -2392,7 +2392,44 @@ header .navbar-expand .navbar-brand img {
     transition-duration: 0.4s;
     transition-property: opacity, transform;
 }
-
+/* card after clicking view */
+.card-img.img-fluid{
+    max-width: 100%;
+    height: 50%;
+    width: 40%;
+}
+.card-select{
+    background-color: #FEF1DC; 
+    
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 35px;
+    border: none;
+    border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+   
+    
+}
+/* .card-select .d-flex a.dark-button{
+    white-space: nowrap;
+    display: flex;
+    
+        } */
+        .bottom-right-buttons {
+            position: absolute;
+            bottom: 0;
+            right:0;
+            
+            white-space: nowrap;
+          }
 .card.no-hover {
     background-color: transparent;
     box-shadow: none;
@@ -3844,7 +3881,13 @@ footer .copyright a:not(.btn) {
     body .full-slider .inner button {
         margin: auto;
     }
-
+    
+    
+    .card-select .d-flex a.dark-button{
+width: 60%;
+font-size: 10px;
+justify-content: center;
+    }
     body .full-slider .swiper-button-next {
         right: 0;
         padding: 1.5rem 1rem;
