@@ -61,3 +61,13 @@ header {
     width: 0;
 }
 
+.commentbox {
+    border-style: solid;
+    border-width: 4px;
+    border-image: linear-gradient(to right, #5406a5, #FDB927) 1;
+}
+
+.feedback-button {
+    border-width: 3px !important;
+    border-image: linear-gradient(to right, #5406a5, #FDB927) 1 !important;
+}
