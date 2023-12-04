@@ -18,18 +18,18 @@
             <div class="d-flex">
 
                 <div id="mentorname" style="color: #3c0484; font-family:Poppins,sans-serif;margin-right:25px;">
-                    <p style="margin-top:50px;font-size:60px;">Jane Doe </p>
+                    <p style="margin-top:50px;font-size:45px;">@Model.CurrentMentor.Name</p>
 
                 </div>
 
                 <div id="mentorttitle"  style="color: black; font-family:Poppins,sans-serif;">
-                    <p style="margin-top:50px;font-size:60px;">UI/UX</p> 
+                    <p style="margin-top:50px;font-size:45px;">@Model.CurrentMentor.Area</p>
                 </div>
             </div>
         </div>
         <div class="row" style="display:flex; padding:5px; margin-right:50px;">
             <div id="introTitle" style="display:flex;">
-            <p style="color: black; font-size:30px; padding-bottom:30px;"><b>Introduction to UI/UX Design</b></p>
+                <p style="color: black; font-size:30px; padding-bottom:30px;"><b>@Model.CurrentMentor.Title</b></p>
             </div>
             
             <div id="content" style="float:right;">
@@ -42,7 +42,7 @@
         </div>
         <div class="row" style="padding-top:10cm">
                 <div class="form-group" >
-                    <button type="submit" class="btn float-right mr-3" style="display:inline; background-color:#df92d5;">Review</button>
+                    <button type="submit" class="btn float-right mr-3" style="display:inline; background-color:#df92d5;"><a class ="text-black" href="/feedbackform?image=@Model.CurrentMentor.Image&name=@Model.CurrentMentor.Name&description=@Model.CurrentMentor.Description&title=@Model.CurrentMentor.Title&area=@Model.CurrentMentor.Area">Review</a></button>
 
                     <button type="submit" class="btn float-right mr-3" style="display:inline; background-color:#df92d5;">Back</button>
                 </div>

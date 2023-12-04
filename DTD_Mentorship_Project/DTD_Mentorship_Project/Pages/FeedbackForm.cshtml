@@ -19,24 +19,24 @@
 			
 
 			<div class ="mr-4" id="image" style="float: left; padding:50px;border: 5px solid #000;">
-				<img src="/">
+				<img src=@Model.MentorImage>
 			</div>
 
 			<div class="d-flex flex-column">
 				<div class="d-flex flex-row mb-0">
 
 					<div class="mr-3">
-						<h1 class="font-weight-bold" style="color: var(--primary-color);">Jane Doe</h1>
+						<h1 class="font-weight-bold" style="color: var(--primary-color);">@Model.MentorName</h1>
 					</div>
 
 					<div>
-						<h1 style="color: white;">UX/UI Design</h1>
+						<h1 style="color: white;">@Model.MentorArea</h1>
 					</div>
 
 				</div>
 
 				<div class="mt-0">
-					<h3 class="font-weight-bold" style="color: white;">Introduction to UX/UI Design</h3>
+					<h3 class="font-weight-bold" style="color: white;">@Model.MentorTitle</h3>
 				</div>
 
 
