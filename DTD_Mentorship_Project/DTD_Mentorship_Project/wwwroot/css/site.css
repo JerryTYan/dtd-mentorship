@@ -46,3 +46,47 @@ header {
     border-radius: 10px;
     border: 4px solid black; /* This acts as padding */
 }
+
+.text2 {
+    text-align: center;
+    padding-left: 150px;
+    padding-right: 150px;
+    font-size: 20px;
+    height: 200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.email {
+    text-decoration: underline;
+}
+
+.submissionpage {
+    padding-top: 0px;
+    padding-left: 100px;
+    width: 100%;
+    background-color: #191919;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.submission {
+    text-align: center;
+    margin-top: 100px;
+    height: 90px;
+    width: 100%;
+    position: center;
+    margin: 0px;
+    background: linear-gradient(to right, purple, yellow);
+    padding-top: 15px;
+}
+
+.pb-3 {
+    padding-bottom: 0 !important;
+}
+
+.navbar {
+    padding-bottom: 100px;
+}
