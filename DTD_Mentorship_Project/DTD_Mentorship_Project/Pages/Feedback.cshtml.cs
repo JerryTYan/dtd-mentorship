@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace DTD_Mentorship_Project.Pages
 {
-    public class _MentorshipModel : PageModel
+    public class FeedbackModel : PageModel
     {
         public void OnGet()
         {
