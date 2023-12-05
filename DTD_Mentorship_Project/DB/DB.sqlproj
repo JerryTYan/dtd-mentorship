@@ -67,7 +67,9 @@
     <Build Include="Tables\MentorMentee.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DB.publish.xml" />
-    <None Include="DB_1.publish.xml" />
+    <None Include="Seeds\users.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment1.sql" />
   </ItemGroup>
 </Project>

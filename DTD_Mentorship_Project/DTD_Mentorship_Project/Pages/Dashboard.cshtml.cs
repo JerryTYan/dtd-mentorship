@@ -22,9 +22,6 @@ namespace DTD_Mentorship_Project.Pages
         public IActionResult OnGet(string UserEmail = "")
         {
 
-
-
-
             var email = UserEmail;
 
             if (UserEmail != "")
