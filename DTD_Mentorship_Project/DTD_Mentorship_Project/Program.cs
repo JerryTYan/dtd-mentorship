@@ -1,31 +1,23 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Extensions.DependencyInjection;
-using DTD_Mentorship_Project.Validators;
 using DTD_Mentorship_Project.Pages;
-using DTD_Mentorship_Project.Controllers;
-using FluentValidation;
+using DTD_Mentorship_Project.Models;
+using DTD_Mentorship_Project;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//configure kestrel for HTTPS
+builder.WebHost.UseKestrel(options =>
+{
+    options.ListenAnyIP(5101);  // HTTP port
+    options.ListenAnyIP(7277, listenOptions => listenOptions.UseHttps());  // HTTPS port
+});
+
 // Add services to the container.
 builder.Services.AddRazorPages();
-// builder.Services.AddValidatorsFromAssemblyContaining<personModel>();
-
-
-// Add the PersonModel as a scoped service
-builder.Services.AddScoped<personModel>();
-
-//Needed to add IValidator<personModel> as scoped service along with the person validator function
-builder.Services.AddScoped<IValidator<personModel>, personValidator>();
-
-// Configure HttpClient with required headers
-builder.Services.AddHttpClient<SignupController>(client =>
-{
-    client.BaseAddress = new Uri("https://api.zippopotam.us/");
-    client.DefaultRequestHeaders.Add("HeaderName", "HeaderValue"); // Add your headers here
-});
 
 var app = builder.Build();
 

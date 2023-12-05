@@ -1,65 +1,112 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using FluentValidation;
 using DTD_Mentorship_Project; // Namespace where your models are defined
 using System.Diagnostics;
+using System.Net.Http;
 using System.Text.Json;
-
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace DTD_Mentorship_Project.Pages
 {
     public class _Signup : PageModel
     {
-
-        private readonly IValidator<personModel> _personValidator;
-
-        public _Signup(IValidator<personModel> personValidator)
-        {
-            _personValidator = personValidator;
-            Person = new personModel(); //initialize the Person property
-            var json = JsonSerializer.Serialize(Person);
-            Debug.WriteLine(json);
-        }
+        [BindProperty]
+        [Required(ErrorMessage = "Identify yourself. The SelectedUserTypeId field is required.")]
+        [Range(1, int.MaxValue, ErrorMessage = "Please select a valid user type.")]
+        public int SelectedUserTypeId { get; set; }
 
         [BindProperty]
-        public personModel Person { get; set; } // BindProperty for form data
+        [Required(ErrorMessage = "Street Address where you reside is required.")]
+        public string Address { get; set; } = "";
+
+        [BindProperty]
+        [Required(ErrorMessage = "City is required.")]
+        public string City { get; set; } = "";
+
+        [BindProperty]
+        [Required(ErrorMessage = "State is required.")]
+        public string State { get; set; } = "";
+
+        [BindProperty]
+        [Required(ErrorMessage = "Zip is required.")]
+        public string Zip { get; set; } = "";
+
+        [BindProperty]
+        [Required(ErrorMessage = "Date of Birth is required.")]
+        [DataType(DataType.Date)]
+        [DOBNotLessThan18(ErrorMessage = "Date of Birth must be at least 18 years ago.")]
+        public DateTime DOB { get; set; }
+
+        [BindProperty]
+        [Required(ErrorMessage = "Field of Work is required.")]
+        public string FieldofWork { get; set; } = "";
+
+        [BindProperty]
+        [Required(ErrorMessage = "Degree is required.")]
+        public string Degree { get; set; } = "";
+
+        [BindProperty]
+        [Required(ErrorMessage = "Company is required.")]
+        public string Company { get; set; } = "";
+
+        [BindProperty]
+        [Required(ErrorMessage = "Availability is required.")]
+        public string Availability { get; set; } = "";
+
+        [BindProperty]
+        [Required(ErrorMessage = "You must agree to the Terms and Conditions.")]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "You must agree to the Terms and Conditions.")]
+        public bool TermsofServiceCheckbox { get; set; }
+
+        public string Success = "";
+        public string Error = "";
 
         public void OnGet()
         {
             // Initialization logic for GET request
-            // Load city data when the page loads
-            LoadCities();
         }
 
-        // Define the LoadCities method to load city data
-        private void LoadCities()
+        public void OnPost()
         {
-            // Implement logic to load city data here
-            // For example, you can fetch city data from a database or an API and populate the dropdown list
-        }
-
-        public IActionResult OnPost()
-        {
-            // Validate the PersonModel using FluentValidation
-            var validationResult = _personValidator.Validate(Person);
-
-            if (!validationResult.IsValid)
+            if (!ModelState.IsValid)
             {
-                foreach (var error in validationResult.Errors)
-                {
-                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
-                }
-                LoadCities(); // Load cities again to repopulate the dropdowns
-                return Page(); // Return the page with validation errors
+                Error = "Data Validtation Failed ! Correct Field/s as Required !";
+                return; // Return the page with validation errors
             }
+            Success = "Huuray! Your Form was Submitted Correctly :-)";
 
-            // Form data is valid, process the form submission
-            // Access form fields using Person.Name, Person.Age, Person.City, Person.State, Person.ZipCode
-            // Perform your logic here, such as saving the data to a database
+            Address = "";
+            City = "";
+            State = "";
+            Zip = "";
+            FieldofWork = "";
+            Degree = "";
+            Company = "";
+            Availability = "";
 
-            // Redirect to a success page or perform other actions
-            return RedirectToPage("Action", "SignupController"); // Replace "SuccessPage" with the actual success page route
+            ModelState.Clear();
+        }
+
+        // Custom validation attribute for DOB
+        public class DOBNotLessThan18Attribute : ValidationAttribute
+        {
+            protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+            {
+                if (value is DateTime dateOfBirth)
+                {
+                    // Adjust the current date based on the user's timezone if needed
+                    var currentDate = DateTime.UtcNow;
+                    var minDate = currentDate.AddYears(-18);
+
+                    if (dateOfBirth >= minDate)
+                    {
+                        return new ValidationResult(ErrorMessage);
+                    }
+                }
+
+                return ValidationResult.Success;
+            }
         }
     }
 }
-
