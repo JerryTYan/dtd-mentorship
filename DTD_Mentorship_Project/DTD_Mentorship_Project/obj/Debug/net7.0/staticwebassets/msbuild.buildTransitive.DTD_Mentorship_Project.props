@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\DTD_Mentorship_Project.props" />
-</Project>
