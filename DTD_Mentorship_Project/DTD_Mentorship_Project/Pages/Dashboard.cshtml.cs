@@ -22,7 +22,6 @@ namespace DTD_Mentorship_Project.Pages
         public IActionResult OnGet(string UserEmail = "")
         {
 
-            //seed the DB
 
 
 

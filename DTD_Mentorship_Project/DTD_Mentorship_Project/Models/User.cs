@@ -17,7 +17,12 @@ public partial class User
 
     public string Password { get; set; }
 
-    public bool? MentorshipType { get; set; }
+    public bool? Mentorship { get; set; }
+
+    public bool? Intern { get; set; }
+
+    public bool? Mentor { get; set; }
+
 
     public virtual ICollection<MentorMentee> MentorMenteeMentee { get; set; } = new List<MentorMentee>();
 

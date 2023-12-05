@@ -5,5 +5,7 @@
 	[LastName] NVARCHAR(200),
 	[Email] NVARCHAR(200),
 	[Password] NVARCHAR(200),
-	[MentorshipType] BIT,
+	[Mentor] Bit,
+	[Intern] Bit,
+	[Mentorship] BIT,
 )

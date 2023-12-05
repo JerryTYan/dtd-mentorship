@@ -72,43 +72,6 @@ public partial class DBContext : DbContext
                 .HasConstraintName("FK_UserArea_User");
         });
 
-        //seed the database
-        modelBuilder.Entity<User>().HasData(
-            new User
-            {
-                UserId = 1,
-                FirstName = "Jerry",
-                LastName = "Yan",
-                Email = "JerryYan@gmail.com",
-                Password = "asdfg",
-                MentorshipType = true
-            }) ;
-
-        modelBuilder.Entity<User>().HasData(
-            new User
-            {
-                UserId = 2,
-                FirstName = "Eduardo",
-                LastName = "Galvez",
-                Email = "EduardoGalvez@gmail.com",
-                Password = "eddyG",
-                MentorshipType = true
-            });
-
-        modelBuilder.Entity<User>().HasData(
-            new User
-            {
-                UserId = 2,
-                FirstName = "Jorge",
-                LastName = "Lopez",
-                Email = "JorgeLopez@gmail.com",
-                Password = "jorgeL",
-                MentorshipType = false
-            });
-
-
-
-
         OnModelCreatingPartial(modelBuilder);
     }
 

@@ -66,4 +66,8 @@
     <Build Include="Tables\UserArea.sql" />
     <Build Include="Tables\MentorMentee.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="DB.publish.xml" />
+    <None Include="DB_1.publish.xml" />
+  </ItemGroup>
 </Project>
