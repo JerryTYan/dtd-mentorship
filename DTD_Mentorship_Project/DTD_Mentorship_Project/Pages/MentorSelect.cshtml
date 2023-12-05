@@ -1,0 +1,143 @@
+﻿@page "/mentorselect"
+@model DTD_Mentorship_Project.Pages.MentorSelectModel
+
+@{
+}
+
+
+
+
+
+<main >
+
+    <!-- Text -->
+    <div class="row">
+        <div class="col-12 align-self-center">
+            <h1 style="font-size: 50px; color:white;">
+                Available Mentors
+            </h1>
+
+            <div class="container overflow-auto">
+                <h1 style="font-size: x-large; color: white;">UX/UI</h1>
+                <div class="row text-white d-flex flex-nowrap">
+
+                    @if (Model.Mentors_UX != null){
+
+                        @foreach (var mentor in Model.Mentors_UX)
+                        {
+                            <div class="col-lg-5">
+                                <div class="card" style="background-color: #FEF1DC">
+                                    <div class="card-body" >
+
+                                        <div class="d-flex justify-content-center">
+                                            <h5 class="card-title" style="color:black;">@mentor.Name</h5>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img src=@mentor.Image class="img-fluid" alt="Mentor Image">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="card-text" style="color:black;">@mentor.Description</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary" style="background-color: #e28ce3; color: black;"><a href="/currentmentorselect?image=@mentor.Image&name=@mentor.Name&description=@mentor.Description&title=@mentor.Title&area=@mentor.Area">View</a></button>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+                            
+            </div>
+
+            <div class="mt-5 col-md-12"></div>
+
+            <div class="container overflow-auto">
+                <h1 style="font-size: x-large; color: white;">Cybersecurity</h1>
+                <div class="row text-white d-flex flex-nowrap">
+
+                    @if (Model.Mentors_CB != null)
+                    {
+
+                        @foreach (var mentor in Model.Mentors_CB)
+                        {
+                            <div class="col-lg-5">
+                                <div class="card" style="background-color: #FEF1DC">
+                                    <div class="card-body">
+
+                                        <div class="d-flex justify-content-center">
+                                            <h5 class="card-title" style="color:black;">@mentor.Name</h5>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img src=@mentor.Image class="img-fluid" alt="Mentor Image">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="card-text" style="color:black;">@mentor.Description</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary" style="background-color: #e28ce3; color: black;"><a href="/currentmentorselect?image=@mentor.Image&name=@mentor.Name&description=@mentor.Description&title=@mentor.Title&area=@mentor.Area">View</a></button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+
+            </div>
+
+            <div class="mt-5 col-md-12"></div>
+
+            <div class="container overflow-auto">
+                <h1 style="font-size: x-large; color: white;">IT Support</h1>
+                <div class="row text-white d-flex flex-nowrap">
+
+                    @if (Model.Mentors_IT != null)
+                    {
+
+                        @foreach (var mentor in Model.Mentors_IT)
+                        {
+                            <div class="col-lg-5">
+                                <div class="card" style="background-color: #FEF1DC">
+                                    <div class="card-body">
+
+                                        <div class="d-flex justify-content-center">
+                                            <h5 class="card-title" style="color:black;">@mentor.Name</h5>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img src=@mentor.Image class="img-fluid" alt="Mentor Image">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="card-text" style="color:black;">@mentor.Description</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary" style="background-color: #e28ce3; color: black;"><a href="/currentmentorselect?image=@mentor.Image&name=@mentor.Name&description=@mentor.Description&title=@mentor.Title&area=@mentor.Area">View</a></button>
+                                        </div>
+
+                                    </div>
+                                </div> 
+                            </div>
+                        }
+                    }
+                </div>
+
+            </div>
+
+@*             <div class="mt-5 col-md-12"></div>
+ *@
+        </div>
+    </div>
+</main>
+
+
+
+
