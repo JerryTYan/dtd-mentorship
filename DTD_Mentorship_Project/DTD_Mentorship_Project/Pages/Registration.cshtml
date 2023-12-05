@@ -1,0 +1,41 @@
+﻿@page "/register"
+@model DTD_Mentorship_Project.Pages.RegistrationModel
+@{
+}
+
+
+<main class="col-12 col-md-9 p-0">
+	<h1>
+		Create New Account
+	</h1>
+	<div class="row">
+
+		<div class="form-group col-12">
+			<label for="Email">Email</label>
+			<input class="form-control" type="text" id="Email" name="Email" placeholder="Email address" value="" required>
+			<span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+		</div>
+		<div class="form-group col-12">
+			<label for="Password">Password</label>
+			<input class="form-control" type="text" id="Password" name="Password" value="" placeholder="Password" required>
+			<span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+		</div>
+
+
+		<div class="form-group col-12">
+			<label for="Confirm">Confirm Password</label>
+			<input class="form-control" type="text" id="Confirm" name="Confirm" value="" placeholder="Confirm" required>
+			<span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Confirm" data-valmsg-replace="true"></span>
+		</div>
+
+
+
+
+
+
+
+		<div class="center-btn text-right">
+			<a class="btn dark-button" href="/submission">Register</a>
+		</div>
+	</div>
+</main>
