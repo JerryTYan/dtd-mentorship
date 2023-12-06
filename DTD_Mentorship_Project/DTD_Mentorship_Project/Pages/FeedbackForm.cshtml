@@ -48,7 +48,7 @@
 		</div>
 
 
-		<form>
+		<form method="post">
 
 			<fieldset id="status1">
 				<div class="mt-4">
@@ -58,13 +58,13 @@
 
 
 					<div class="form-check form-check-inline text-white">
-						<input class="form-check-input" type="radio" id="s_agree1" name="status1">
-						<label class="form-check-label cursor-pointer" for="s_agree1">Strongly Agree</label>
+						<input class="form-check-input" type="radio" id="s_agree1" name="status1" asp-for="Fair" value =4>
+						<label class="form-check-label cursor-pointer" for="s_agree1" >Strongly Agree</label>
 						<span class="ml-4">|</span>
 					</div>
 
 					<div class="form-check form-check-inline text-white">
-						<input class="form-check-input" type="radio" id="agree1" name="status1">
+						<input class="form-check-input" type="radio" id="agree1" name="status1" asp-for="Fair" value=3>
 						<label class="form-check-label cursor-pointer" for="agree1">Agree</label>
 						<span class="ml-4">|</span>
 
@@ -72,19 +72,19 @@
 
 
 					<div class="form-check form-check-inline text-white">
-						<input class="form-check-input" type="radio" id="neutral1" name="status1">
+						<input class="form-check-input" type="radio" id="neutral1" name="status1" asp-for="Fair" value=2>
 						<label class="form-check-label cursor-pointer" for="neutral1">Neutral</label>
 						<span class="ml-4">|</span>
 					</div>
 
 					<div class="form-check form-check-inline text-white">
-						<input class="form-check-input" type="radio" id="disagree1" name="status1">
+						<input class="form-check-input" type="radio" id="disagree1" name="status1" asp-for="Fair" value=1>
 						<label class="form-check-label cursor-pointer" for="disagree1">Disagree</label>
 						<span class="ml-4">|</span>
 					</div>
 
 					<div class="form-check form-check-inline text-white">
-						<input class="form-check-input" type="radio" id="s_disagree1" name="status1">
+						<input class="form-check-input" type="radio" id="s_disagree1" name="status1" asp-for="Fair" value=0>
 						<label class="form-check-label cursor-pointer" for="s_disagree1">Strongly Disagree</label>
 					</div>
 
@@ -99,13 +99,13 @@
 				<div class="mt-4">
 				<h4 class="text-white font-weight-bold text-size mb-0">2.) Did they act professionally?</h4>
 				<div class="form-check form-check-inline text-white">
-					<input class="form-check-input" type="radio" id="s_agree2" name="status2">
+					<input class="form-check-input" type="radio" id="s_agree2" name="status2" asp-for="Professional" value=4>
 					<label class="form-check-label cursor-pointer" for="s_agree2">Strongly Agree</label>
 					<span class="ml-4">|</span>
 				</div>
 
 				<div class="form-check form-check-inline text-white">
-					<input class="form-check-input" type="radio" id="agree2" name="status2">
+					<input class="form-check-input" type="radio" id="agree2" name="status2" asp-for="Professional" value=3>
 					<label class="form-check-label cursor-pointer" for="agree2">Agree</label>
 					<span class="ml-4">|</span>
 
@@ -113,19 +113,19 @@
 
 
 				<div class="form-check form-check-inline text-white">
-					<input class="form-check-input" type="radio" id="neutral2" name="status2">
+					<input class="form-check-input" type="radio" id="neutral2" name="status2" asp-for="Professional" value=2>
 					<label class="form-check-label cursor-pointer" for="neutral2">Neutral</label>
 					<span class="ml-4">|</span>
 				</div>
 
 				<div class="form-check form-check-inline text-white">
-					<input class="form-check-input" type="radio" id="disagree2" name="status2">
+					<input class="form-check-input" type="radio" id="disagree2" name="status2" asp-for="Professional" value=1>
 					<label class="form-check-label cursor-pointer" for="disagree2">Disagree</label>
 					<span class="ml-4">|</span>
 				</div>
 
 				<div class="form-check form-check-inline text-white">
-					<input class="form-check-input" type="radio" id="s_disagree2" name="status2">
+					<input class="form-check-input" type="radio" id="s_disagree2" name="status2" asp-for="Professional" value=0>
 					<label class="form-check-label cursor-pointer" for="s_disagree2">Strongly Disagree</label>
 				</div>
 
@@ -140,13 +140,13 @@
 				<div class="mt-4">
 				<h4 class="text-white font-weight-bold text-size mb-0">3.) Was the workload what was expected?</h4>
 				<div class="form-check form-check-inline text-white">
-					<input class="form-check-input" type="radio" id="s_agree3" name="status3">
+					<input class="form-check-input" type="radio" id="s_agree3" name="status3" asp-for="Workload" value=4>
 					<label class="form-check-label cursor-pointer" for="s_agree3">Strongly Agree</label>
 					<span class="ml-4">|</span>
 				</div>
 
 				<div class="form-check form-check-inline text-white">
-					<input class="form-check-input" type="radio" id="agree3" name="status3">
+					<input class="form-check-input" type="radio" id="agree3" name="status3" asp-for="Workload" value=3>
 					<label class="form-check-label cursor-pointer" for="agree3">Agree</label>
 					<span class="ml-4">|</span>
 
@@ -154,19 +154,19 @@
 
 
 				<div class="form-check form-check-inline text-white">
-					<input class="form-check-input" type="radio" id="neutral3" name="status3">
+					<input class="form-check-input" type="radio" id="neutral3" name="status3" asp-for="Workload" value=2>
 					<label class="form-check-label cursor-pointer" for="neutral3">Neutral</label>
 					<span class="ml-4">|</span>
 				</div>
 
 				<div class="form-check form-check-inline text-white">
-					<input class="form-check-input" type="radio" id="disagree3" name="status3">
+					<input class="form-check-input" type="radio" id="disagree3" name="status3" asp-for="Workload" value=1>
 					<label class="form-check-label cursor-pointer" for="disagree3">Disagree</label>
 					<span class="ml-4">|</span>
 				</div>
 
 				<div class="form-check form-check-inline text-white">
-					<input class="form-check-input" type="radio" id="s_disagree3" name="status3">
+					<input class="form-check-input" type="radio" id="s_disagree3" name="status3" asp-for="Workload" value=0>
 					<label class="form-check-label cursor-pointer" for="s_disagree3">Strongly Disagree</label>
 				</div>
 
@@ -181,13 +181,13 @@
 				<div class="mt-4">
 				<h4 class="text-white font-weight-bold text-size mb-0">4.) Would you recommend this mentor?</h4>
 				<div class="form-check form-check-inline text-white">
-					<input class="form-check-input" type="radio" id="s_agree4" name="status4">
+					<input class="form-check-input" type="radio" id="s_agree4" name="status4" asp-for="Recommend" value=4>
 					<label class="form-check-label cursor-pointer" for="s_agree4">Strongly Agree</label>
 					<span class="ml-4">|</span>
 				</div>
 
 				<div class="form-check form-check-inline text-white">
-					<input class="form-check-input" type="radio" id="agree4" name="status4">
+					<input class="form-check-input" type="radio" id="agree4" name="status4" asp-for="Recommend" value=3>
 					<label class="form-check-label cursor-pointer" for="agree4">Agree</label>
 					<span class="ml-4">|</span>
 
@@ -195,19 +195,19 @@
 
 
 				<div class="form-check form-check-inline text-white">
-					<input class="form-check-input" type="radio" id="neutral4" name="status4">
+					<input class="form-check-input" type="radio" id="neutral4" name="status4" asp-for="Recommend" value=2>
 					<label class="form-check-label cursor-pointer" for="neutral4">Neutral</label>
 					<span class="ml-4">|</span>
 				</div>
 
 				<div class="form-check form-check-inline text-white">
-					<input class="form-check-input" type="radio" id="disagree4" name="status4">
+					<input class="form-check-input" type="radio" id="disagree4" name="status4" asp-for="Recommend" value=1>
 					<label class="form-check-label cursor-pointer" for="disagree4">Disagree</label>
 					<span class="ml-4">|</span>
 				</div>
 
 				<div class="form-check form-check-inline text-white">
-					<input class="form-check-input" type="radio" id="s_disagree4" name="status4">
+					<input class="form-check-input" type="radio" id="s_disagree4" name="status4" asp-for="Recommend" value=0>
 					<label class="form-check-label cursor-pointer" for="s_disagree4">Strongly Disagree</label>
 				</div>
 
