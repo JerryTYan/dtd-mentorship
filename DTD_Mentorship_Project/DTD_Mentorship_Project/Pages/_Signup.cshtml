@@ -31,7 +31,7 @@ input[type=checkbox] {
 
 <main> 
       
-    <section class="section-3 odd highlights">
+    <section class="section-3 odd highlights" style="padding:0px;">
         <div class="container">
             <div class="row">
                 <!-- Add this section to display messages -->
@@ -149,7 +149,7 @@ input[type=checkbox] {
                                         <span class="text-danger font-weight-bold" asp-validation-for="Availability"></span>
                                     </div>
 
-        <div class="row" style="text-align: center;">
+                                    <div class="row" style="text-align: center; padding:20px;">
             <label for="TermsofService">
                     <input type="checkbox" asp-for="TermsofServiceCheckbox" /> When applying as a mentor, I agree to the <a href="/TOS">Terms and Conditions</a> of Delete the Divide*
             </label>
@@ -157,7 +157,7 @@ input[type=checkbox] {
 
         </div>
         <br>
-        <div class="row" style="text-align:center;">
+        <div class="row" style="text-align:center; padding:5px;">
             <div class="form-group col-12">
                 <button type="submit" class="btn dark-button float-center">Check Eligibility</button>
             </div>
