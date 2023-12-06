@@ -1,17 +1,22 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace DTD_Mentorship_Project.Pages
 {
 	public class NewUser
 	{
-		[Required]
+        [BindProperty]
+        [Required]
 		public string? Email { get; set; }
-		
+
+		[BindProperty]
 		[Required]
 		public string? Password { get; set; }
 
+		[BindProperty]
 		[Compare("Password", ErrorMessage = "Password doesn't match.")]
 		public string? Confirm { get; set; }
 	}
@@ -45,7 +50,17 @@ namespace DTD_Mentorship_Project.Pages
 			}
 
 
-			return RedirectToPage();
+			if (!ModelState.IsValid)
+			{
+				TempData["Email"] = FormData.Email;
+				TempData["Password"] = FormData.Password;
+				TempData["Confirm"] = FormData.Confirm;
+
+			}
+
+			return Page();
+
+
 		}
 	}
 }
