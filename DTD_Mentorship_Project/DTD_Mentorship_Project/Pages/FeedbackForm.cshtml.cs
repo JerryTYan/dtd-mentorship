@@ -22,17 +22,6 @@ namespace DTD_Mentorship_Project.Pages
         public string? MentorTitle { get; set; }
         public string? MentorArea { get; set; }
 
-		[BindProperty]
-		public int? Fair { get; set; }
-
-		[BindProperty]
-		public int? Professional { get; set; }
-
-		[BindProperty]
-		public int? Workload { get; set; }
-
-		[BindProperty]
-		public int? Recommend { get; set; }
 
 		public void OnGet()
         {
@@ -60,6 +49,7 @@ namespace DTD_Mentorship_Project.Pages
 			//additional comment
 			var comment = HttpContext.Request.Form["comment"];
 
+			_logger.LogInformation("Status1: {Status1}, Status2: {Status2}, Status3: {Status3}, Status4: {Status4}, Comment: {Comment}", status1, status2, status3, status4, comment);
 
 			return RedirectToPage("submission");
         }
