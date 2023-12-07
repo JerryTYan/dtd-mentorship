@@ -40,8 +40,9 @@
 
                 <div class="col-md-12 col-sm-12 mb-12">
 
-
-                    @foreach (var mentee in Model.LoggedInUser.MentorMenteeMentee.ToList())
+                    <!--get the mentees for this mentor-->
+                    <
+                    @foreach (var mentee in Model.LoggedInUser.MentorMenteeMentees)
                     {
                         <span class="rounded-pill pill-large text-white bg-secondary"> @mentee.Mentee.FirstName @mentee.Mentee.LastName</span>
                         <button class="btn btn-danger" onclick="showConfirmationPopup('@mentee.Mentee.FirstName')">x</button>

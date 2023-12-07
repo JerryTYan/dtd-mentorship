@@ -16,11 +16,15 @@
    "T4TemplatePath": null,
    "Tables": [
       {
+         "Name": "[dbo].[Address]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[Area]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[Mentee]",
+         "Name": "[dbo].[Identity]",
          "ObjectType": 0
       },
       {
@@ -42,13 +46,15 @@
    "UseDatabaseNames": false,
    "UseDateOnlyTimeOnly": false,
    "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
    "UseFluentApiOnly": true,
    "UseHandleBars": false,
    "UseHierarchyId": false,
-   "UseInflector": false,
+   "UseInflector": true,
    "UseLegacyPluralizer": false,
    "UseManyToManyEntity": false,
    "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
    "UseNoObjectFilter": false,
    "UseNodaTime": false,
    "UseNullableReferences": false,

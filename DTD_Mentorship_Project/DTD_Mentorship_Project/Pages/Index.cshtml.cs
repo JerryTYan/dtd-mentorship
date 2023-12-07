@@ -24,9 +24,8 @@ namespace DTD_Mentorship_Project.Pages
 
 
 
-            }
+        }
             
 
-        }
     }
 }
