@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/vendors/css/icons.min.css">
     <link rel="stylesheet" href="~/vendors/css/bootstrap.min.css">
+        <link rel="stylesheet" href="~/vendors/css/slider.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/default.css">
@@ -24,6 +25,20 @@
     <link rel="stylesheet" href="~/css/main.css">
     <link rel="stylesheet" href="~/css/site.css">
     <link rel="stylesheet" href="~/css/theme-orange.css">
+@* <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.min.js"></script>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script> *@
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 
 
 
@@ -71,39 +86,57 @@
         </nav>
 
     </header>
-    <section id="content" class="section-3 odd leftnav">
+    <section id="content" class="section-3 odd">
+        <nav class="d-flex d-md-none navbar navbar-expand-lg navbar-dark primary-color w-100 d-flex justify-content-between">
+
+        <!-- Navbar brand -->
+        <div>
+
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+
+        <!-- Collapsible content -->
+        <!-- Collapsible content -->
+    </nav>
 
         <div class="collapse navbar-collapse w-100 " style="z-index:1000;" id="basicExampleNav">
 
-            <!-- Links -->
-            <ul class="list-group position-absolute bg-dark  w-100 list-group-flush pl-3 pr-3" style="z-index:1000;">
-                <li class="list-group-item custom pr-3">
-                    <a class="custom d-block" href="/"><i class="icon icon-home d-inline ml-3"></i><h5>Home</h5></a>
-                </li>
-                <li class="list-group-item custom pr-3">
-                    <a class="custom d-block" href="/Profile/Profile"><i class="icon icon-user d-inline ml-3"></i><h5>Edit Profile</h5></a>
+        <!-- Links -->
+        <ul class="list-group position-absolute bg-dark  w-100 list-group-flush pl-3 pr-3" style="z-index:1000;">
+            <li class="list-group-item custom pr-3">
+                <a class="custom d-block" href="/"><i class="icon icon-home d-inline ml-3"></i><b class="text-white">Home</b></a>
+            </li>
+            <li class="list-group-item custom pr-3">
+                <a class="custom d-block" href="/Profile/Profile"><i class="icon icon-user d-inline ml-3"></i><b class="text-white">Edit Profile</b></a>
 
-                </li>
-                <li class="list-group-item custom pr-3">
-                    <a class="custom d-block" href="/Profile/MyPathways"><i class="icon icon-direction d-inline ml-3"></i><b class="text-white">My Pathways</b></a>
+            </li>
+            <li class="list-group-item custom pr-3">
+                <a class="custom d-block" href="/Mentorship"><i class="icon icon-user d-inline ml-3"></i><b class="text-white">Mentorship</b></a>
 
-                </li>
-                <li class="list-group-item">
-                    <a class="custom d-block" href="/Profile/Services"><i class="icon icon-screen-desktop d-inline ml-3"></i><b class="text-white">Services</b></a>
+            </li>
+            <li class="list-group-item custom pr-3">
+                <a class="custom d-block" href="/Profile/MyPathways"><i class="icon icon-direction d-inline ml-3"></i><b class="text-white">My Pathways</b></a>
 
-                </li>
-                <li class="list-group-item">
-                    <a class="custom d-block" href="/Profile"><i class="icon icon-screen-desktop d-inline ml-3"></i><b class="text-white">Resources</b></a>
+            </li>
+            <li class="list-group-item">
+                <a class="custom d-block" href=""><i class="icon icon-screen-desktop d-inline ml-3"></i><b class="text-white">Services</b></a>
 
-                </li>
-                <li class="list-group-item custom pr-3">
-                    <a class="custom d-block" href="/Account/Logout"><i class="icon icon-login d-inline ml-3"></i><b class="text-white">Logout</b></a>
+            </li>
+            <li class="list-group-item">
+                <a class="custom d-block" href=""><i class="icon icon-screen-desktop d-inline ml-3"></i><b class="text-white">Resources</b></a>
 
-                </li>
-            </ul>
+            </li>
+            <li class="list-group-item custom pr-3">
+                <a class="custom d-block" href="/Account/Logout"><i class="icon icon-login d-inline ml-3"></i><b class="text-white">Logout</b></a>
 
-        
-        </div>
+            </li>
+        </ul>
+    </div>
 
 
         
