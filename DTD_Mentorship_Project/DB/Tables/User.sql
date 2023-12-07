@@ -5,7 +5,9 @@
 	[LastName] NVARCHAR(200),
 	[Email] NVARCHAR(200),
 	[Password] NVARCHAR(200),
-	[Mentor] Bit,
-	[Intern] Bit,
-	[Mentorship] BIT,
+	[OngoingMentorship] BIT NOT NULL,
+	[Image] NVARCHAR(200), 
+    [Identity] NVARCHAR(200) NOT NULL, 
+    [Degree] NVARCHAR(200) NULL, 
+    [Availability] DATETIME NULL
 )

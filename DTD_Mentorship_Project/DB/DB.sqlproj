@@ -9,8 +9,7 @@
     <ProjectGuid>{c6b70202-12dc-419e-a02f-b3767602e787}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
-    <RootPath>
-    </RootPath>
+    <RootPath />
     <RootNamespace>DB</RootNamespace>
     <AssemblyName>DB</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
@@ -48,7 +47,6 @@
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
-    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
     <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
     <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
   </PropertyGroup>
@@ -58,18 +56,23 @@
     <Folder Include="Properties" />
     <Folder Include="Seeds" />
     <Folder Include="Tables" />
+    <Folder Include="Snapshots" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\Mentee.sql" />
     <Build Include="Tables\User.sql" />
     <Build Include="Tables\Area.sql" />
     <Build Include="Tables\UserArea.sql" />
     <Build Include="Tables\MentorMentee.sql" />
+    <Build Include="Tables\Address.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Seeds\users.sql" />
+    <None Include="Snapshots\DB_20231207_11-34-19.dacpac" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="DB.refactorlog" />
   </ItemGroup>
 </Project>
