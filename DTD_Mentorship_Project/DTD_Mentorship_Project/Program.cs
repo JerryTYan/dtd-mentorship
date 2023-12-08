@@ -1,5 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Controllers;
+using Microsoft.Extensions.DependencyInjection;
+using DTD_Mentorship_Project.Pages;
+using DTD_Mentorship_Project.Models;
+using DTD_Mentorship_Project;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +19,15 @@ builder.Services.AddSession(options => {
 //{
 //    options.UseSqlServer(builder.Configuration.GetConnectionString("SQLAZURECONNSTR_DTDDB"));
 //});
+
+
+
+//configure kestrel for HTTPS
+builder.WebHost.UseKestrel(options =>
+{
+    options.ListenAnyIP(5101);  // HTTP port
+    options.ListenAnyIP(7277, listenOptions => listenOptions.UseHttps());  // HTTPS port
+});
 
 // Add services to the container.
 builder.Services.AddRazorPages();

@@ -3,68 +3,78 @@
 
 
 
- <main>
+<main>
 
-	<!-- Text -->
-		<div class="col-12 align-self-center">
-
-			
+    <!-- Text -->
+    <div class="col-12 align-self-center">
 
 
 
-<h1 style="font-size: 50px; color:white;">
-Mentorship
-</h1>
 
 
-<div class="row">
-  @* <div class="col-md-12 col-sm-12 mb-12 text-white"> *@
-        
-        <ul class="list-group">
-        <a href="/accountmerge" class="dark-button">
-            <li class="list-group-item p-3 text-white" style="font-size: 15px;">
-            <h3 class="mb-2 text-white" style="font-size: 30px;">Become a mentor today!</h3>
-            <div class="col-15 d-flex justify-content-end align-items-center">
-            We are always on the lookout for talented individuals who are willing to share their time and experiences to those who fell lost or want support in their journey.
-<i class="icon icon-arrow-right mr-3 text-white" ></i>
-        
- 
-                
-               </div>
-            </li>
-            </a>
-            <a href="/mentorselect" class="dark-button">
-            <li class="list-group-item p-3 text-white" style="font-size: 15px;">
-            <h3 class="mb-2 text-white" style="font-size: 30px;">Find a mentor that works!</h3>
-                            <div class="col-15 d-flex justify-content-end align-items-center">
+        <h1 style="font-size: 50px; color:white;">
+            Mentorship
+        </h1>
 
-                We are lucky to have a wide variety of mentors that you get to choose from. Find someone you think you can connect with and reach out to see if they're available! 
-<i class="icon icon-arrow-right mr-3 text-white" ></i>
-            </li>
-            </a>
-             <a href="" class="dark-button">
-            <li class="list-group-item p-3 text-white" style="font-size: 15px;">
-            <h3 class="mb-2 text-white" style="font-size: 30px;">Project Feedback</h3>
-            <div class="col-15 d-flex justify-content-end align-items-center">
-                After connect with a mentor for 3 months, you have the option to provide internal feedback to Delete the Divide. All information is anonymous.
-<i class="icon icon-arrow-right mr-3 text-white" ></i>
-</div>
-            </li>
-            </a>
-             <a href="" class="dark-button">
-            <li class="list-group-item p-3 text-white" style="font-size: 15px;">
-            <h3 class="mb-2 text-white" style="font-size: 30px;">My Dashboard</h3>
-            <div class="col-15 d-flex align-items-center">
-                Drop and add Mentees currently on your project.
-<i class="icon icon-arrow-right mr-3 text-white" ></i>
-</div>
-            </li>
-            </a>
-        </ul>
+
+        <div class="row">
+
+            <ul class="list-group">
+
+                @if (Model.CurrentUser != null && Model.CurrentUser.UserType == "mentee")
+                {
+
+                    <a href="/accountmerge" class="dark-button">
+                    <li class="list-group-item p-3 text-white" style="font-size: 15px;">
+                        <h3 class="mb-2 text-white" style="font-size: 30px;">Become a mentor today!</h3>
+                        <div class="col-15 d-flex justify-content-end align-items-center">
+                            We are always on the lookout for talented individuals who are willing to share their time and experiences to those who fell lost or want support in their journey.
+                            <i class="icon icon-arrow-right mr-3 text-white"></i>
+                        </div>
+                    </li>
+                    </a>
+                    <a href="/mentorselect" class="dark-button">
+                    <li class="list-group-item p-3 text-white" style="font-size: 15px;">
+                        <h3 class="mb-2 text-white" style="font-size: 30px;">Find a mentor that works!</h3>
+                        <div class="col-15 d-flex justify-content-end align-items-center">
+
+                            We are lucky to have a wide variety of mentors that you get to choose from. Find someone you think you can connect with and reach out to see if they're available!
+                            <i class="icon icon-arrow-right mr-3 text-white"></i>
+                    </li>
+                    </a>
+
+
+                    <a href="/feedback" class="dark-button">
+                    <li class="list-group-item p-3 text-white" style="font-size: 15px;">
+                        <h3 class="mb-2 text-white" style="font-size: 30px;">Project Feedback</h3>
+                        <div class="col-15 d-flex justify-content-end align-items-center">
+                            After connect with a mentor for 3 months, you have the option to provide internal feedback to Delete the Divide. All information is anonymous.
+                            <i class="icon icon-arrow-right mr-3 text-white"></i>
+                        </div>
+                    </li>
+                    </a>
+                }
+
+
+
+                @if (Model.CurrentUser != null && Model.CurrentUser.UserType == "mentor")
+                {
+
+
+
+                    <a href="" class="dark-button">
+                    <li class="list-group-item p-3 text-white" style="font-size: 15px;">
+                        <h3 class="mb-2 text-white" style="font-size: 30px;">My Dashboard</h3>
+                        <div class="col-15 d-flex align-items-center">
+                            Drop and add Mentees currently on your project.
+                            <i class="icon icon-arrow-right mr-3 text-white"></i>
+                        </div>
+                    </li>
+                    </a>
+                }
+
+
+            </ul>
         </div>
-        </div>
-	</section>
-  </main>
-
-
-
+    </div>
+</main>

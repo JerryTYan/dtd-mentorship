@@ -1,11 +1,11 @@
-@page "/Dashboard"
+@page "/"
 @model DashboardModel
 
 
 
 
 
-                    <!-- Main -->
+<!-- Main -->
 <main>
 
     <!-- Text -->
@@ -40,12 +40,11 @@
 
                 <div class="col-md-12 col-sm-12 mb-12">
 
-                    <!--get the mentees for this mentor-->
-                    <
-                    @foreach (var mentee in Model.LoggedInUser.MentorMenteeMentees)
+
+                    @foreach (var mentee in Model.CurrentMentees)
                     {
-                        <span class="rounded-pill pill-large text-white bg-secondary"> @mentee.Mentee.FirstName @mentee.Mentee.LastName</span>
-                        <button class="btn btn-danger" onclick="showConfirmationPopup('@mentee.Mentee.FirstName')">x</button>
+                        <span class="rounded-pill pill-large text-white bg-secondary"> @mentee.Name</span>
+                        <button class="btn btn-danger" onclick="showConfirmationPopup('@mentee.Name')">x</button>
                     }
                     <script>
                         function showConfirmationPopup(menteeName) {
@@ -61,7 +60,7 @@
             </div>
             <div class="container">
                 <h4 class="about-me">About me</h4>
-                <p class="about-me">test</p>
+                <p class="about-me">@Model.AboutMe</p>
             </div>
 
             <script>

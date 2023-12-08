@@ -1,0 +1,242 @@
+﻿@page "/feedbackform"
+@model DTD_Mentorship_Project.Pages.FeedbackFormModel
+@{
+}
+
+
+<main class="col-12 col-md-11 p-0">
+	<div class="row">
+		<div class="col-12 align-self-center"></div>
+		<h1 style="font-family: Poppins; color:white;"> Project Feedback</h1>
+	</div>
+
+	<div class="container">
+
+
+		<div class="d-flex">
+
+
+			
+
+			<div class ="mr-4" id="image" style="float: left; padding:50px;border: 5px solid #000;">
+				<img src=@Model.MentorImage>
+			</div>
+
+			<div class="d-flex flex-column">
+				<div class="d-flex flex-row mb-0">
+
+					<div class="mr-3">
+						<h1 class="font-weight-bold" style="color: var(--primary-color);">@Model.MentorName</h1>
+					</div>
+
+					<div>
+						<h1 style="color: white;">@Model.MentorArea</h1>
+					</div>
+
+				</div>
+
+				<div class="mt-0">
+					<h3 class="font-weight-bold" style="color: white;">@Model.MentorTitle</h3>
+				</div>
+
+
+			</div>
+
+
+
+
+		</div>
+
+
+		<form>
+
+			<fieldset id="status1">
+				<div class="mt-4">
+				<h4 class="text-white font-weight-bold text-size mb-0">1.) Was the mentor fair?</h4>
+
+				<div class="mb-0">
+
+
+					<div class="form-check form-check-inline text-white">
+						<input class="form-check-input" type="radio" id="s_agree1" name="status1">
+						<label class="form-check-label cursor-pointer" for="s_agree1">Strongly Agree</label>
+						<span class="ml-4">|</span>
+					</div>
+
+					<div class="form-check form-check-inline text-white">
+						<input class="form-check-input" type="radio" id="agree1" name="status1">
+						<label class="form-check-label cursor-pointer" for="agree1">Agree</label>
+						<span class="ml-4">|</span>
+
+					</div>
+
+
+					<div class="form-check form-check-inline text-white">
+						<input class="form-check-input" type="radio" id="neutral1" name="status1">
+						<label class="form-check-label cursor-pointer" for="neutral1">Neutral</label>
+						<span class="ml-4">|</span>
+					</div>
+
+					<div class="form-check form-check-inline text-white">
+						<input class="form-check-input" type="radio" id="disagree1" name="status1">
+						<label class="form-check-label cursor-pointer" for="disagree1">Disagree</label>
+						<span class="ml-4">|</span>
+					</div>
+
+					<div class="form-check form-check-inline text-white">
+						<input class="form-check-input" type="radio" id="s_disagree1" name="status1">
+						<label class="form-check-label cursor-pointer" for="s_disagree1">Strongly Disagree</label>
+					</div>
+
+				</div>
+
+
+			</div>
+			</fieldset>
+
+			<fieldset id="status2">
+
+				<div class="mt-4">
+				<h4 class="text-white font-weight-bold text-size mb-0">2.) Did they act professionally?</h4>
+				<div class="form-check form-check-inline text-white">
+					<input class="form-check-input" type="radio" id="s_agree2" name="status2">
+					<label class="form-check-label cursor-pointer" for="s_agree2">Strongly Agree</label>
+					<span class="ml-4">|</span>
+				</div>
+
+				<div class="form-check form-check-inline text-white">
+					<input class="form-check-input" type="radio" id="agree2" name="status2">
+					<label class="form-check-label cursor-pointer" for="agree2">Agree</label>
+					<span class="ml-4">|</span>
+
+				</div>
+
+
+				<div class="form-check form-check-inline text-white">
+					<input class="form-check-input" type="radio" id="neutral2" name="status2">
+					<label class="form-check-label cursor-pointer" for="neutral2">Neutral</label>
+					<span class="ml-4">|</span>
+				</div>
+
+				<div class="form-check form-check-inline text-white">
+					<input class="form-check-input" type="radio" id="disagree2" name="status2">
+					<label class="form-check-label cursor-pointer" for="disagree2">Disagree</label>
+					<span class="ml-4">|</span>
+				</div>
+
+				<div class="form-check form-check-inline text-white">
+					<input class="form-check-input" type="radio" id="s_disagree2" name="status2">
+					<label class="form-check-label cursor-pointer" for="s_disagree2">Strongly Disagree</label>
+				</div>
+
+
+
+
+			</div>
+
+			</fieldset>
+
+			<fieldset id="status3">
+				<div class="mt-4">
+				<h4 class="text-white font-weight-bold text-size mb-0">3.) Was the workload what was expected?</h4>
+				<div class="form-check form-check-inline text-white">
+					<input class="form-check-input" type="radio" id="s_agree3" name="status3">
+					<label class="form-check-label cursor-pointer" for="s_agree3">Strongly Agree</label>
+					<span class="ml-4">|</span>
+				</div>
+
+				<div class="form-check form-check-inline text-white">
+					<input class="form-check-input" type="radio" id="agree3" name="status3">
+					<label class="form-check-label cursor-pointer" for="agree3">Agree</label>
+					<span class="ml-4">|</span>
+
+				</div>
+
+
+				<div class="form-check form-check-inline text-white">
+					<input class="form-check-input" type="radio" id="neutral3" name="status3">
+					<label class="form-check-label cursor-pointer" for="neutral3">Neutral</label>
+					<span class="ml-4">|</span>
+				</div>
+
+				<div class="form-check form-check-inline text-white">
+					<input class="form-check-input" type="radio" id="disagree3" name="status3">
+					<label class="form-check-label cursor-pointer" for="disagree3">Disagree</label>
+					<span class="ml-4">|</span>
+				</div>
+
+				<div class="form-check form-check-inline text-white">
+					<input class="form-check-input" type="radio" id="s_disagree3" name="status3">
+					<label class="form-check-label cursor-pointer" for="s_disagree3">Strongly Disagree</label>
+				</div>
+
+
+
+
+			</div>
+			</fieldset>
+
+			<fieldset id="status4">
+
+				<div class="mt-4">
+				<h4 class="text-white font-weight-bold text-size mb-0">4.) Would you recommend this mentor?</h4>
+				<div class="form-check form-check-inline text-white">
+					<input class="form-check-input" type="radio" id="s_agree4" name="status4">
+					<label class="form-check-label cursor-pointer" for="s_agree4">Strongly Agree</label>
+					<span class="ml-4">|</span>
+				</div>
+
+				<div class="form-check form-check-inline text-white">
+					<input class="form-check-input" type="radio" id="agree4" name="status4">
+					<label class="form-check-label cursor-pointer" for="agree4">Agree</label>
+					<span class="ml-4">|</span>
+
+				</div>
+
+
+				<div class="form-check form-check-inline text-white">
+					<input class="form-check-input" type="radio" id="neutral4" name="status4">
+					<label class="form-check-label cursor-pointer" for="neutral4">Neutral</label>
+					<span class="ml-4">|</span>
+				</div>
+
+				<div class="form-check form-check-inline text-white">
+					<input class="form-check-input" type="radio" id="disagree4" name="status4">
+					<label class="form-check-label cursor-pointer" for="disagree4">Disagree</label>
+					<span class="ml-4">|</span>
+				</div>
+
+				<div class="form-check form-check-inline text-white">
+					<input class="form-check-input" type="radio" id="s_disagree4" name="status4">
+					<label class="form-check-label cursor-pointer" for="s_disagree4">Strongly Disagree</label>
+				</div>
+
+
+
+
+			</div>
+
+			</fieldset>
+
+			<fieldset id="commentarea">
+				<div class="mt-4 text-center">
+					<label for="comment">Additional Comments</label>
+					<textarea id="comment" name="comment" rows="4" cols="50" maxlength="300" placeholder="(Enter 300 characters or less)" class="commentbox"></textarea>
+					
+				</div>
+
+			</fieldset>
+
+
+			<div class="d-flex justify-content-center">
+				<input type="submit" value="Submit" class="feedback-button text-white">
+
+			</div>
+
+		</form>
+
+
+	</div>
+
+
+</main>

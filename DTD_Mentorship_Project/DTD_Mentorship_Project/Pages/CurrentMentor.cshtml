@@ -1,0 +1,31 @@
+
+@page "/currentmentorselect"
+@model DTD_Mentorship_Project.Pages.CurrentMentorSelectModel
+
+<main>
+    <!-- Text -->
+    <div class="container mt-4">
+        <h1 class="text-center text-white">Mentorship</h1>
+        <h2 class="text-white">@Model.Area</h2>
+
+        <div class="card-select">
+            <div class="row no-gutters">
+                <div class="col-md-6">
+                    <img src="@Model.MentorImage" class="img-fluid" alt="Mentor Image" >
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <h4 class="card-title h5 text-black">@Model.MentorName</h4>
+                        <p class="card-text text-black">@Model.MentorTitle</p>
+                        <p class="card-text text-black">@Model.MentorDescription</p>
+
+                        <div class="d-flex justify-content-between mt-3 bottom-right-buttons">
+                            <a href='/mentorselect' class="btn btn-primary dark-button">Back to mentors</a>
+                            <a href='#' class="btn btn-secondary dark-button">Book a meeting</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
