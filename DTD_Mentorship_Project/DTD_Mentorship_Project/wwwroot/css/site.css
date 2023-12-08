@@ -124,3 +124,7 @@ input[type=checkbox] {
 .navbar {
     padding-bottom: 100px;
 }
+
+.feedback-name {
+    color: #FDB927;
+}
