@@ -102,7 +102,7 @@ input[type=checkbox] {
     background-color: #191919;
     color: white;
     margin: 0px;
-    padding: 0px;
+    padding: 100px !important;
     border: 0px;
 }
 

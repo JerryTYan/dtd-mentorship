@@ -67,13 +67,13 @@ namespace DTD_Mentorship_Project.Pages
             // Initialization logic for GET request
         }
 
-        public void OnPost()
+        public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
                 Error = "Data Validtation Failed ! Correct Field/s as Required !";
-                return; // Return the page with validation errors
-            }
+				return Page(); // Return the page with validation errors
+			}
             Success = "Huuray! Your Form was Submitted Correctly :-)";
 
             Address = "";
@@ -86,10 +86,13 @@ namespace DTD_Mentorship_Project.Pages
             Availability = "";
 
             ModelState.Clear();
-        }
 
-        // Custom validation attribute for DOB
-        public class DOBNotLessThan18Attribute : ValidationAttribute
+			return RedirectToPage("/registration");
+
+		}
+
+		// Custom validation attribute for DOB
+		public class DOBNotLessThan18Attribute : ValidationAttribute
         {
             protected override ValidationResult IsValid(object value, ValidationContext validationContext)
             {

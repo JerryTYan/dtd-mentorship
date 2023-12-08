@@ -1,0 +1,51 @@
+﻿@page "/register"
+@model DTD_Mentorship_Project.Pages.RegistrationModel
+@{
+	Layout = "~/Pages/Shared/_LayoutNoLeft.cshtml";
+}
+
+
+<main>
+	<h1>
+		Create New Account
+	</h1>
+	<div class="row">
+
+
+		<form method="post">
+
+			<div asp-validation-summary="All" class="text-danger"></div>
+			<div class="form-group col-12">
+				<label for="Email" asp-for="FormData.Email">Email</label>
+				<input class="form-control" type="text" id="Email" name="Email" placeholder="Email address" value=@TempData["Email"] asp-for="FormData.Email" required>
+				<span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true" asp-validation-for="FormData.Email"></span>
+			</div>
+			<div class="form-group col-12">
+				<label for="Password" asp-for="FormData.Password">Password</label>
+				<input class="form-control" type="text" id="Password" name="Password" value=@TempData["Password"] placeholder="Password" asp-for="FormData.Password" required>
+				<span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true" asp-validation-for="FormData.Password"></span>
+			</div>
+
+
+			<div class="form-group col-12">
+				<label for="Confirm" asp-for="FormData.Confirm">Confirm Password</label>
+				<input class="form-control" type="text" id="Confirm" name="Confirm" value=@TempData["Confirm"] placeholder="Confirm" asp-for="FormData.Confirm" required>
+				<span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Confirm" data-valmsg-replace="true" asp-validation-for="FormData.Confirm"></span>
+			</div>
+
+			<div class="center-btn text-right">
+				<button type="submit" class="btn dark-button"> Register </button>
+			</div>
+
+		</form>
+
+
+
+
+
+
+
+	</div>
+
+	<br>
+</main>
