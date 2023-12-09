@@ -24,17 +24,17 @@
 
             <!-- About Me Section -->
             <div class="container">
-                <h4 class="about-me">About Me</h4>
-                <p class="about-me">@Model.AboutMe</p>
+                <h3 class="about-me">About Me</h3>
+                <p class="about-me-description">@Model.AboutMe</p>
             </div>
 
             <!-- Mentees Section -->
             <div class="container">
-                <h4 class="mentee">Current Mentees</h4>
+                <h3 class="mentee">Current Mentees</h3>
             </div>
 
             <div class="container">
-                <h5>Maximum Number of Mentees</h5>
+                <h5>Your Maximum Number of Mentees</h5>
                 <div class="d-flex align-items-center">
                     <select id="maxMentees" class="form-control mr-2">
                         @for (int i = 1; i <= 10; i++)

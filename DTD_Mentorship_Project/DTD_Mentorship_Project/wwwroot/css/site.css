@@ -18,16 +18,16 @@ html {
 }
 
 body {
-    background-color: #111111 !important;
+    background-color: #040402 !important;
 }
 
 
 header {
-    background-color: #111111 !important;
+    background-color: #040402 !important;
 }
 
 .leftnav {
-    background-color: #111111 !important;
+    background-color: #040402 !important;
 }
 
 input[type=checkbox] {
@@ -65,6 +65,15 @@ input[type=checkbox] {
     background: #333 !important;
     color: white !important;
 }
+/* Custom styles for mentee cards in dashboard*/
+
+/* About me frame*/
+.about-me-description {
+    border: 1px solid rgba(111, 111, 111, 0.5);
+    border-radius: 3px;
+    padding: 15px;
+}
+/* About me frame*/
 
 .cursor-pointer {
     cursor: pointer;
