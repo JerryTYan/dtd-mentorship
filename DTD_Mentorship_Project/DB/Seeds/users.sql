@@ -3,8 +3,33 @@ INSERT INTO [$(User)] values (2,"Ivan","Flores","IvanF@gmail.com","develop",fals
 INSERT INTO [$(User)] values (3,"Eduardo","Galvez","EduardoG@gmail.com","Engineer",false,true,false);
 INSERT INTO [$(User)] values (4,"Kathy","A","KathyA@gmail.com","deign",false,true,false);
 INSERT INTO [$(User)] values (5,"Jorge","Gaytan","JorgeG@gmail.com","coder",false,true,false);
-INSERT INTO [$(User)] values (6,"Justin",Fernandez,"JustinF@gmail.com","intern",false,true,false);
+INSERT INTO [$(User)] values (6,"Justin","Fernandez","JustinF@gmail.com","intern",false,true,false);
 INSERT INTO [$(User)] values (7,"Jordan","Myers","JordanM@gmail.com","learning",false,true,false);
+INSERT INTO [$(User)] values (8,"Mike","Jordan","MJordan@gmail.com","learning",false,true,false);
+INSERT INTO [$(User)] values (9,"John","Smith","JohnD@gmail.com","learning",false,true,false);
+INSERT INTO [$(User)] values (10,"Jack","Johnson","JackJ@gmail.com","intern",false,true,false);
+INSERT INTO [$(User)] values (11,"Jill","Johnson","JillJ@gmail.com","intern",false,true,false);
+INSERT INTO [$(User)] values (12,"Jane","Doe","JaneD@gmail.com","learning",false,true,false);
+INSERT INTO [$(User)] values (13,"Adam","West","AdamW@gmail.com","learning",false,true,false);
+INSERT INTO [$(User)] values (14,"Bruce","Wayne","BruceW@gmail.com","developer",false,true,false);
+INSERT INTO [$(User)] values (15,"Amy","East","AmyE@gmail.com","intern",false,true,false);
+INSERT INTO [$(User)] values (16,"James","Smith","JamesS@gmail.com","learning",false,true,false);
+INSERT INTO [$(User)] values (17,"Oscar","Myers","OscarM@gmail.com","intern",false,true,false);
+INSERT INTO [$(User)] values (18,"Alexander","Hamilton","AlexanderH@gmail.com","developer",false,true,false);
+INSERT INTO [$(User)] values (19,"Eva","Ramirez","EvaR@gmail.com","developer",false,true,false);
+INSERT INTO [$(User)] values (20,"Amanda","Guiterrez","AmandaG@gmail.com","intern",false,true,false);
+INSERT INTO [$(User)] values (21,"Jason","Hernandez","JasonH@gmail.com","Engineer",false,true,false);
+INSERT INTO [$(User)] values (22,"Freddy","Gonzalez","FreddyG@gmail.com","learning",false,true,false);
+INSERT INTO [$(User)] values (23,"Pamela","Johnson","PamelaJ@gmail.com","learning",false,true,false);
+INSERT INTO [$(User)] values (24,"Becky","Cooper","BeckyC@gmail.com","intern",false,true,false);
+INSERT INTO [$(User)] values (25,"Peter","Parker","PeterP@gmail.com","Engineer",false,true,false);
+INSERT INTO [$(User)] values (26,"Robert","Robinson","RobertR@gmail.com","developer",false,true,false);
+INSERT INTO [$(User)] values (27,"Skylar","Blue","SklyarB@gmail.com","learning",false,true,false);
+INSERT INTO [$(User)] values (28,"Rick","Jameson","RickJ@gmail.com","learning",false,true,false);
+INSERT INTO [$(User)] values (29,"Jen","Henderson","JenH@gmail.com","intern",false,true,false);
+INSERT INTO [$(User)] values (30,"Riley","Jackson","RileyJ@gmail.com","developer",false,true,false);
+
+
 
 
 INSERT INTO [$(User)] VALUES (8,"Alice","Smith","AliceS@gmail.com","manager2",true,false,false);
@@ -25,4 +50,8 @@ INSERT INTO [$(User)] VALUES (22,"Logan","White","LoganW@gmail.com","manager16",
 INSERT INTO [$(User)] VALUES (23,"Abigail","Lee","AbigailL@gmail.com","manager17",true,false,false);
 INSERT INTO [$(User)] VALUES (24,"Henry","Young","HenryY@gmail.com","manager18",true,false,false);
 INSERT INTO [$(User)] VALUES (25,"Chloe","Cooper","ChloeC@gmail.com","manager19",true,false,false);
-INSERT INTO [$(User)] VALUES (26,"Owen","Evans","OwenE@gmail.com","manager20",true,false,false);
+INSERT INTO [$(User)] VALUES (26,"Jake","Jones","JakeJ@gmail.com","manager20",true,false,false);
+INSERT INTO [$(User)] VALUES (27,"Bruce","Banner","BruceB@gmail.com","manager21",true,false,false);
+INSERT INTO [$(User)] VALUES (28,"Oliver","Cooper","OliverC@gmail.com","manager22",true,false,false);
+INSERT INTO [$(User)] VALUES (29,"Valerie","Rodriguez","ValerieR@gmail.com","manager23",true,false,false);
+INSERT INTO [$(User)] VALUES (30,"Tom","Salazar","TomS@gmail.com","manager24",true,false,false);

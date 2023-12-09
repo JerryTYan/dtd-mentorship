@@ -3563,32 +3563,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\e685557\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/jorgelopez/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\e685557\\git_branches\\mentorship_page\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
+      "projectUniqueName": "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/DTD_Mentorship_Project.csproj",
       "projectName": "DTD_Mentorship_Project",
-      "projectPath": "C:\\Users\\e685557\\git_branches\\mentorship_page\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
-      "packagesPath": "C:\\Users\\e685557\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\e685557\\git_branches\\mentorship_page\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
+      "projectPath": "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/DTD_Mentorship_Project.csproj",
+      "packagesPath": "/Users/jorgelopez/.nuget/packages/",
+      "outputPath": "/Users/jorgelopez/Documents/DTDMentorship/DTD_Mentorship_Project/DTD_Mentorship_Project/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\e685557\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/jorgelopez/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3649,7 +3641,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.403/RuntimeIdentifierGraph.json"
       }
     }
   }
