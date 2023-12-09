@@ -1,4 +1,4 @@
-@page "/mentorship"
+@page "/Profile/Mentorship"
 @model DTD_Mentorship_Project.Pages.MentorshipModel
 
 
@@ -24,7 +24,7 @@
                 @if (Model.CurrentUser != null && Model.CurrentUser.UserType == "mentee")
                 {
 
-                    <a href="/accountmerge" class="dark-button">
+                    <a href="/Profile/Mentorship/AccountMerge" class="dark-button">
                     <li class="list-group-item p-3 text-white" style="font-size: 15px;">
                         <h3 class="mb-2 text-white" style="font-size: 30px;">Become a mentor today!</h3>
                         <div class="col-15 d-flex justify-content-end align-items-center">
@@ -33,7 +33,7 @@
                         </div>
                     </li>
                     </a>
-                    <a href="/mentorselect" class="dark-button">
+                    <a href="/Profile/Mentorship/MentorSelect" class="dark-button">
                     <li class="list-group-item p-3 text-white" style="font-size: 15px;">
                         <h3 class="mb-2 text-white" style="font-size: 30px;">Find a mentor that works!</h3>
                         <div class="col-15 d-flex justify-content-end align-items-center">
@@ -44,9 +44,9 @@
                     </a>
 
 
-                    <a href="/feedback" class="dark-button">
+                    <a href="/Profile/Mentorship/Feedback" class="dark-button">
                     <li class="list-group-item p-3 text-white" style="font-size: 15px;">
-                        <h3 class="mb-2 text-white" style="font-size: 30px;">Project Feedback</h3>
+                        <h3 class="mb-2 text-white" style="font-size: 30px;">Mentor Feedback</h3>
                         <div class="col-15 d-flex justify-content-end align-items-center">
                             After connect with a mentor for 3 months, you have the option to provide internal feedback to Delete the Divide. All information is anonymous.
                             <i class="icon icon-arrow-right mr-3 text-white"></i>
