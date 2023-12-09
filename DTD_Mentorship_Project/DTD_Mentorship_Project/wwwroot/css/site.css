@@ -61,9 +61,9 @@ input[type=checkbox] {
     border-radius: 10px;
 }
 
-.card.mb-3 .card-body:hover {
-    background-color: #333 !important; 
-    color: white; 
+.card.mb-3:hover .card-body {
+    background: #333 !important;
+    color: white !important;
 }
 
 .cursor-pointer {
