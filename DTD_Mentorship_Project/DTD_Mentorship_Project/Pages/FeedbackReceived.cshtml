@@ -1,0 +1,25 @@
+﻿@page "/feedbackreceived"
+@model DTD_Mentorship_Project.Pages.FeedbackReceivedModel
+@{
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <img src=@Model.MentorImage width="200" height="200" class="img-fluid border" alt="Mentor Image">
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <h1 class="col-md-6 feedback-name">@Model.MentorName</h1>
+                <h3 class="col-md-6 align-self-center">@Model.MentorArea</h3>
+            </div>
+            <div class="row">
+                <h3 class="col-md-12 text-center font-weight-normal">Feedback Received!</h3>
+            </div>
+            <div class="row d-flex justify-content-center pt-3">
+                <a asp-page="/FeedbackForm" class="btn dark-button">Edit Feedback</a>
+            </div>
+        </div>
+    </div>
+</div> 

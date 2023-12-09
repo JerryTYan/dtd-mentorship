@@ -20,7 +20,7 @@ namespace DTD_Mentorship_Project.Pages
             //switch between mentee and mentor to see different stuff on page
             //ideally we use userid to get userdat from db, and then determine if page
             //is meant for mentor or mentee
-            CurrentUser = new User {UserId = "45", UserType = "mentee"};
+            CurrentUser = new User { UserId = "45", UserType = "mentee" };
         }
     }
 }

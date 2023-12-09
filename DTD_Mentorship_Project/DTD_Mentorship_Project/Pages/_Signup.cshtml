@@ -1,685 +1,234 @@
-@page "/signup"
-@model DTD_Mentorship_Project.Pages._SignupModel
+﻿@page "/signup"
+@model DTD_Mentorship_Project.Pages._Signup
+
+
 @{
-   Layout = null;
+    Layout = "~/Pages/Shared/_LayoutNoLeft.cshtml";
 }
 
-<!DOCTYPE html>
+@* css rules here from jorge's signup branch
+ *@
 
-<html>
+@*
+input[type=checkbox] { 
+    vertical-align: middle; 
+    display: inline-block;
 
+}
+
+.id{
+    padding: 0px;
+} *@
+<!--Add Jquery headers to initlize datepickers-->
 <head>
-    <title>Sign-Up</title>
-	<meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="~/vendors/css/icons.min.css">
-        <link rel="stylesheet" href="~/vendors/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-         <link rel="stylesheet" href="~/css/main.css">
-        <link rel="stylesheet" href="~/css/default.css">
-        <link rel="stylesheet" href="~/css/theme-orange.css">
-       
-    <style>
-        :root{
-            --header-bg-color: #040402;
-            --nav-item-color: #f5f5f5;
-            --top-nav-item-color: #f5f5f5;
-            --hero-bg-color: #040402;
-            --card-bg-color: #fff;
-            --section-1-bg-color: #111111;
-            --section-2-bg-color: #191919;
-            --section-3-bg-color: #040402;
-            --section-4-bg-color: #111111;
-            --section-5-bg-color: #191919;
-            --section-6-bg-color: #040402;
-            --section-7-bg-color: #111111;
-            --primary-p-color: #a3a3a3;
-            --footer-bg-color: #191919;
-        }
-        .dark-button-active {
-            padding: 10px 25px;
-            background-color: var(--primary-color) !important;
-            background-image: -webkit-linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%) !important;
-            background-image: linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%) !important;
-            color: var(--white-color) !important;
-        }
-            .form-row {
-            display: flex;
-            flex-direction: column;
-        }
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-        .form-row label {
-            flex: 1;
-            margin-right: 10px; 
-        }
+    <!-- Include jQuery UI with Datepicker and Timepicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css">
 
-        .form-row input {
-            flex: 1;
-        }
-
-        .form-cols {
-            display: flex;
-            flex-direction: row;
-        }
-        body{
-            background-color: var(--section-3-bg-color);
-            @* background-image: var(--section-3bg-im); *@
-        }
-        input[type=checkbox] { 
-            vertical-align: middle; 
-            display: inline-block;
-            @* align: center; *@
-            @* cursor: pointer;  *@
-        }
-        @* #TOSCheck{
-            display: block;
-        }  *@
-        .id{
-            padding: 0px;
-        }
-    </style>
 </head>
 
-<body>
-    @* <div class ="sidebarSocial share-list">
-        <a href="https://www.youtube.com/deletethedivide" target="_blank">
-            <div class ="box text-center nav-link">
-                <i class="icon-social-youtube"></i>
-            </div>
-        </a>
-        <a href="https://www.instagram.com/deletethedivide" target="_blank">
-            <div class="box text-center nav-link">
-                <i class="icon-social-instagram"></i>
-            </div>
-        </a>
-        <a href="https://www.facebook.com/deletethedivide" target="_blank">
-            <div class="box  text-center nav-link">
-                <i class="icon-social-facebook"></i>
-            </div>
-        </a>
-        <a href="/FISRedirect">
-        <div class="box  text-center nav-link">
-            <i class="icon-credit-card"></i>
-        </div>
-        </a>
-        <a href="https://www.twitter.com/deletethedivide" target="_blank">
-            <div class="box  text-center nav-link">
-                <i class="icon-social-twitter"></i>
-            </div>
-        </a>
-        <a href="/home/contact">
-            <div class="box text-center nav-link">
-                <i class="icon-envelope-open"></i>
-            </div>
-        </a>
-    </div> *@
 
-    <header id="header">
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand aos-init aos-animate visible navbar-sticky">
-        <div class="container header">
-
-            <!-- Navbar Brand-->
-            <a class="navbar-brand" href="/">
-
-                    <img src="https://members.deletethedivide.org/assets/images/DTDLogo_GoldPMS_HORIZ.png" alt="Delete the divide" style="width: 240px; height: auto !important;max-height: inherit;">
-
-            </a>
-
-            <!-- Nav holder -->
-            <div class="ml-auto"></div>
-
-            <!-- Navbar Items -->
-            <!--TODO: Re-add this when given the new links for wordpress-->
-            <!-- Navbar Toggle -->
-
-            <ul class="navbar-nav action">
-                <li class="nav-item ml-3">
-                        <a class="btn ml-lg-auto dark-button" href="/Account/Login"><i class="icon-user"></i>Login / Sign Up</a>
-
-                </li>
-            </ul>
-
-            <!-- Navbar Action
-            <ul class="navbar-nav action">
-                <li class="nav-item ml-3">
-                    <a href="/buy-at-themeforest" target="_blank" class="btn ml-lg-auto dark-button"><i class="icon-rocket"></i>BUY NOW</a>
-                        Suggestion: Replace the purchase button above with a contact button.
-
-                        <a href="#contact" class="smooth-anchor btn ml-lg-auto dark-button"><i class="icon-rocket"></i>CONTACT US</a>
-
-                </li>
-            </ul>
-            -->
-        </div>
-    </nav>
-
-    </header>
-       <section id="donate" style="background-color: #f5f5f5">
-            <div class="container smaller">
-                <div class="row text-center intro">
-                    <div class="col-12">
-                        <a class="mt-4 mr-auto ml-auto ml-lg-0  btn dark-button " href="/FISRedirect"><span style="font-size: 4em;"><i class="icon-credit-card"></i> Donate</span></a>
-                    </div>
-                </div>
-            </div>
-    </section> 
-    <main> 
-        @* <section id="donate">
-            <div class="container smaller">
-                <div class="row text-center intro">
-                    <div class="col-12">
-                        <a class="mt-4 mr-auto ml-auto ml-lg-0  btn dark-button " href="/FISRedirect"><span style="font-size: 4em;"><i class="icon-credit-card"></i> Donate</span></a>
-                    </div>
-                </div>
-            </div>
-    </section>            *@
-        <section class="section-3 odd highlights">
-            <div class="container">
-                <div class="row">
-                    <form method="post" action="/Account/EligibilityPost">
-
-                        <div class="form-group mt-2">
-
-                                <div class="row">
-                                    <div class="col-12 mt-3">
-                                        <label class="dtd_font_bold p-0" for="dtd_usertype">Identify yourself.  I am a:</label>
-                                        <select class="form-control" id="dtd_usertype" data-url="/Account" data-val="true" data-val-required="The SelectedUserTypeId field is required." placeholder="Mentor" name="SelectedUserTypeId">
-                                            <option selected="selected" value="0">Select One</option>
-                                            <option value="1">Youth (Ages 12 – 17)</option>
-                                            <option value="2">Young Adult (Ages 18 – 24)</option>
-                                            <option value="8">Adult (Ages 25 - 59)</option>
-                                            <option value="9">Older Adult (Ages 60+)</option>
-                                            <option value="3">Organization Participant or Member</option>
-                                            <option value="4">Small Business Owner</option>
-                                            <option value="5">Educator</option>
-                                            <option value="6">Partner</option>
-                                            <option value="7">Mentor</option>
-                                            <option value="8">Other</option>
-                                        </select>
-                                        <input type="hidden" id="SelectedUserTypeId" name="SelectedUserTypeId" value="2">
-                                    </div>
-                                </div>
-
-
-                                <div class="eligibility-form mt-3">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Mentor Eligibility</h2>
-                    </div>
-                </div>
-        @* <div class="row">
-
-            <div class="col-12">
-                <h4>Do you have a sign up code from your school or other organization?</h4>
-            </div>
-
-            <div class="dtd_btype row mb-5">
-                <div class="col-6 text-right">
-                    <div id="btnYesCode" class="btn btn-lg ml-lg-auto dark-button dtd_sb_type" data-type="yes">Yes</div>
-                </div>
-                <div class="col-6 text-left">
-                    <div id="btnNoCode" class="btn btn-lg ml-lg-auto dark-button dtd_sb_type" data-type="no">No</div>
-                </div>
-            </div>
-        </div> *@
-
-        @* <div id="codeForm" class="border border-dark p-5 mx-3" style="display:none;">
+<main> 
+      
+    <section class="section-3 odd highlights">
+        <div class="container">
             <div class="row">
-                <div class="form-inline col-12">
-                    <div class="form-group">
-                        <h5 class="form-label mr-3">Sign Up Code:</h5>
-
-                        <input class="form-control mr-3" type="text" id="SignUpCode" name="SignUpCode" value="">
-                        <button type="submit" class="btn dark-button ">Check Code</button>
+                <!-- Add this section to display messages -->
+                @if (Model.Error.Length >0)
+                {
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>@Model.Error</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label=" = "Close"></button>
                     </div>
+                }
+                else if (Model.Success.Length >0)
+                {
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>@Model.Success</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label=" = "Close"></button>
                 </div>
-                <div class="col-12 validation-summary-errors" style="display: none;">
-                    <span class="text-danger d-block mt-2 font-weight-bold field-validation-valid" data-valmsg-for="SignUpCode" data-valmsg-replace="true"></span>
-                </div>
-            </div>
-        </div> *@
+                }
+                <!-- End of message section -->
+                <form method="post">
 
-        <div id="regularForm" style="">
-            <div class="row mt-3">
-                <div class="form-group col-12 py-1">
-                    <p>Membership eligibility criteria for Young Adults: Must be age 18 to 24 and reside in a targeted service area in LA County.</p>
-                    <p>Enter the physical street address where you reside. Then click the ‘Check Eligibility’ button.</p>
+                    <div class="form-group mt-2">
+
+                            <div class="row">
+                                <div class="col-12 mt-3">
+                                    <label class="dtd_font_bold p-0" for="dtd_usertype">Identify yourself.  I am a:</label>
+                                <select class="form-select" title="usertype" id="dtd_usertype" data-url="/Account" asp-for="SelectedUserTypeId">
+                                        <option selected="selected" value="0">Select One</option>
+                                        <option value="1">Youth (Ages 12 – 17)</option>
+                                        <option value="2">Young Adult (Ages 18 – 24)</option>
+                                        <option value="8">Adult (Ages 25 - 59)</option>
+                                        <option value="9">Older Adult (Ages 60+)</option>
+                                        <option value="3">Organization Participant or Member</option>
+                                        <option value="4">Small Business Owner</option>
+                                        <option value="5">Educator</option>
+                                        <option value="6">Partner</option>
+                                        <option value="7">Mentor</option>
+                                        <option value="8">Other</option>
+                                    </select>
+                                <span class="text-danger font-weight-bold" asp-validation-for="SelectedUserTypeId"></span>
+                                </div>
+                            </div>
+
+
+     <div class="eligibility-form mt-3">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Mentor Eligibility</h2>
                 </div>
             </div>
-        <div class="text-danger font-weight-bold ml-2 validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+ 
+
+    <div style="">
+        <div class="row mt-3">
+            <div class="form-group col-12 py-1">
+                <p>Membership eligibility criteria for Young Adults: Must be age 18 to 24 and reside in a targeted service area in LA County.</p>
+                <p>Enter the physical street address where you reside. Then click the ‘Check Eligibility’ button.</p>
+            </div>
+        </div>
+   <!--<div class="text-danger font-weight-bold ml-2" ><ul><li style="display:none"></li>
 </ul>
+    </div> -->
+
+        <div class="row">
+
+            <div class="form-group col-12 py-1">
+                <label class="col-form-label">* Street Address where you reside</label>
+                <input class="form-control" asp-for="Address">
+                <span class="text-danger font-weight-bold" asp-validation-for="Address"></span>
+            </div>
+
+            <div class="form-group col-12 col-md-6">
+                <label for="City">* City</label>
+                <input class="form-control" asp-for="City">
+                <span class="text-danger font-weight-bold" asp-validation-for="City"></span>
+            </div>
+            <div class="form-group col-12 col-md-6">
+                <label for="State">* State</label>
+                <select class="form-select" asp-for="State">
+                    <option>California</option>
+                    <option>NewYork</option>
+                    <option>Arizona</option>
+                    <option>Texas</option>
+                    <option>Detroit</option>
+                </select>
+                <span class="text-danger font-weight-bold" asp-validation-for="State"></span>
+            </div>
+            <div class="form-group col-12 col-md-6">
+                <label for="Zip">* Zip</label>
+                <input class="form-control" asp-for="Zip">
+                <span class="text-danger font-weight-bold" asp-validation-for="Zip"></span>
+            </div>
+            <div class="form-group col-12 col-md-6">
+                <label for="DOB">* Date of Birth</label>
+                <input type="text" class="form-control datepicker" asp-for="DOB" value="">
+                <span class="text-danger font-weight-bold " asp-validation-for="DOB"></span>
+            </div>
+            <div class="form-group col-12 col-md-6">
+                <label for="FieldofWork">* Field of Work</label>
+                <input class="form-control" asp-for="FieldofWork">
+                <span class="text-danger font-weight-bold " asp-validation-for="FieldofWork"></span>
+            </div>
+            <div class="form-group col-12 col-md-6">
+                <label for="Degree">* Degree</label>
+                <input class="form-control" asp-for="Degree">
+                <span class="text-danger font-weight-bold" asp-validation-for="Degree"></span>
+            </div>
+            <div class="form-group col-12 col-md-6">
+                <label for="Company">* Company</label>
+                <input class="form-control" asp-for="Company">
+                <span class="text-danger font-weight-bold" asp-validation-for="Company"></span>
+            </div>
+                                    <div class="form-group col-12 col-md-6">
+                                        <label for="Availability">* Availability</label>
+                                        <input class="form-control availability" asp-for="Availability">
+                                        <span class="text-danger font-weight-bold" asp-validation-for="Availability"></span>
+                                    </div>
+
+        <div class="row" style="text-align: center;">
+            <label for="TermsofService">
+                    <input type="checkbox" asp-for="TermsofServiceCheckbox" /> When applying as a mentor, I agree to the <a href="/TOS">Terms and Conditions</a> of Delete the Divide*
+            </label>
+            <span class="text-danger font-weight-bold" asp-validation-for="TermsofServiceCheckbox"></span>
+
         </div>
+        <br>
+        <div class="row" style="text-align:center;">
+            <div class="form-group col-12">
+                <button type="submit" class="btn dark-button float-center">Check Eligibility</button>
+            </div>
+        </div>
+    </div>
+    </div>
+       </div>
+        </form>
 
-            <div class="row">
-                @* <div class="form-group col-12 mt-3">
-                    <label class="dtd_font_bold p-0" for="YearOfBirthSelected">* Birth Year:</label>
-                    <select class="form-control" id="YearOfBirthSelected" name="YearOfBirthSelected">
-                        <option value="0">Select One</option>
-                        <option value="1924">1924</option>
-                        <option value="1925">1925</option>
-                        <option value="1926">1926</option>
-                        <option value="1927">1927</option>
-                        <option value="1928">1928</option>
-                        <option value="1929">1929</option>
-                        <option value="1930">1930</option>
-                        <option value="1931">1931</option>
-                        <option value="1932">1932</option>
-                        <option value="1933">1933</option>
-                        <option value="1934">1934</option>
-                        <option value="1935">1935</option>
-                        <option value="1936">1936</option>
-                        <option value="1937">1937</option>
-                        <option value="1938">1938</option>
-                        <option value="1939">1939</option>
-                        <option value="1940">1940</option>
-                        <option value="1941">1941</option>
-                        <option value="1942">1942</option>
-                        <option value="1943">1943</option>
-                        <option value="1944">1944</option>
-                        <option value="1945">1945</option>
-                        <option value="1946">1946</option>
-                        <option value="1947">1947</option>
-                        <option value="1948">1948</option>
-                        <option value="1949">1949</option>
-                        <option value="1950">1950</option>
-                        <option value="1951">1951</option>
-                        <option value="1952">1952</option>
-                        <option value="1953">1953</option>
-                        <option value="1954">1954</option>
-                        <option value="1955">1955</option>
-                        <option value="1956">1956</option>
-                        <option value="1957">1957</option>
-                        <option value="1958">1958</option>
-                        <option value="1959">1959</option>
-                        <option value="1960">1960</option>
-                        <option value="1961">1961</option>
-                        <option value="1962">1962</option>
-                        <option value="1963">1963</option>
-                        <option value="1964">1964</option>
-                        <option value="1965">1965</option>
-                        <option value="1966">1966</option>
-                        <option value="1967">1967</option>
-                        <option value="1968">1968</option>
-                        <option value="1969">1969</option>
-                        <option value="1970">1970</option>
-                        <option value="1971">1971</option>
-                        <option value="1972">1972</option>
-                        <option value="1973">1973</option>
-                        <option value="1974">1974</option>
-                        <option value="1975">1975</option>
-                        <option value="1976">1976</option>
-                        <option value="1977">1977</option>
-                        <option value="1978">1978</option>
-                        <option value="1979">1979</option>
-                        <option value="1980">1980</option>
-                        <option value="1981">1981</option>
-                        <option value="1982">1982</option>
-                        <option value="1983">1983</option>
-                        <option value="1984">1984</option>
-                        <option value="1985">1985</option>
-                        <option value="1986">1986</option>
-                        <option value="1987">1987</option>
-                        <option value="1988">1988</option>
-                        <option value="1989">1989</option>
-                        <option value="1990">1990</option>
-                        <option value="1991">1991</option>
-                        <option value="1992">1992</option>
-                        <option value="1993">1993</option>
-                        <option value="1994">1994</option>
-                        <option value="1995">1995</option>
-                        <option value="1996">1996</option>
-                        <option value="1997">1997</option>
-                        <option value="1998">1998</option>
-                        <option value="1999">1999</option>
-                        <option value="2000">2000</option>
-                        <option value="2001">2001</option>
-                        <option value="2002">2002</option>
-                        <option value="2003">2003</option>
-                        <option value="2004">2004</option>
-                        <option value="2005">2005</option>
-                        <option value="2006">2006</option>
-                        <option value="2007">2007</option>
-                        <option value="2008">2008</option>
-                        <option value="2009">2009</option>
-                        <option value="2010">2010</option>
-                        <option value="2011">2011</option>
-                        <option value="2012">2012</option>
-                        <option value="2013">2013</option>
-                        <option value="2014">2014</option>
-                        <option value="2015">2015</option>
-                        <option value="2016">2016</option>
-                        <option value="2017">2017</option>
-                        <option value="2018">2018</option>
-                        <option value="2019">2019</option>
-                        <option value="2020">2020</option>
-                        <option value="2021">2021</option>
-                        <option value="2022">2022</option>
-                        <option value="2023">2023</option>
-                    </select>
-                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="YearOfBirthSelected" data-valmsg-replace="true"></span>
-                </div> *@
-                <div class="form-group col-12 py-1">
-                    <label for="Address" class="col-form-label">* Street Address where you reside</label>
-                    <input class="form-control" required="required" type="text" id="Address" name="Address" value="">
-                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Address" data-valmsg-replace="true"></span>
-                </div>
-                @* <div class="form-group col-12 py-1">
-                    <label for="Address2" class="col-form-label">Address Cont.</label>
-                    <input class="form-control" type="text" id="Address2" name="Address2" value="">
-                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Address2" data-valmsg-replace="true"></span>
-                </div> *@
-                <div class="form-group col-12 col-md-6">
-                    <label for="City">* City</label>
-                    <input class="form-control" type="text" id="City" name="City" value="">
-                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="City" data-valmsg-replace="true"></span>
-                </div>
-                <div class="form-group col-12 col-md-6">
-                    <label for="State">* State</label>
-                    <select class="form-select text-white" id="State" name="State" placeholder="California">
-                        <option>California</option>
-                    </select>
-                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="State" data-valmsg-replace="true"></span>
-                </div>
-                <div class="form-group col-12 col-md-6">
-                    <label for="Zip">* Zip</label>
-                    <input class="form-control" type="text" id="Zip" name="Zip" value="">
-                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Zip" data-valmsg-replace="true"></span>
-                </div>
-                <div class="form-group col-12 col-md-6">
-                    <label for="DOB">* Date of Birth</label>
-                    <input class="form-control" type="text" id="DOB" name="DOB" value="">
-                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="DOB" data-valmsg-replace="true"></span>
-                </div>
-                <div class="form-group col-12 col-md-6">
-                    <label for="FieldofWork">* Field of Work</label>
-                    <input class="form-control" type="text" id="FieldofWork" name="FieldofWork" value="">
-                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="FieldofWork" data-valmsg-replace="true"></span>
-                </div>
-                <div class="form-group col-12 col-md-6">
-                    <label for="Degree">* Degree</label>
-                    <input class="form-control" type="text" id="Degree" name="Degree" value="">
-                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Degree" data-valmsg-replace="true"></span>
-                </div>
-                <div class="form-group col-12 col-md-6">
-                    <label for="Company">* Company</label>
-                    <input class="form-control" type="text" id="Company" name="Company" value="">
-                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Company" data-valmsg-replace="true"></span>
-                </div>
-                <div class="form-group col-12 col-md-6">
-                    <label for="Availability">* Availability</label>
-                    <input class="form-control" type="text" id="Availability" name="Availablity" value="">
-                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Zip" data-valmsg-replace="true"></span>
-                </div>
-            </div>
-            <div class="row" style="text-align: center;">
-                <label for="TermsofService"> 
-                    <input class="form-control" type="checkbox"> When applying as a mentor, I agree to the <a href="/TOS">Terms and Conditions</a> of Delete the Divide*
-                </label>
-            </div>
-            <br>
-            <div class="row" style="text-align:center;">
-                <div class="form-group col-12">
-                    <button type="submit" class="btn dark-button float-center">Check Eligibility</button>
-                </div>
-            </div>
-        </div></div>
-                        </div>
-                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8HcgS-b69XFLsb8E43zvm4yfCdba9GOXRQ3YQj8t2GJnl_T8lNCD0puTHPp_ORyvkOe9SG_ewfl3zZiE9S7vRPCh3J13ofSbDvQ1-jgEZt_y9u6E38bYAiPqA5zUBWyX0bD0gC6MV_p6E7ZvxcgLb9w"></form>
-                </div>
-            </div>
-        </section>
 
-        <div class="modal fade" id="getinvolved-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                <div class="modal-content full section-3 odd highlights dtd_info_box border-gradient-purple" style="background-color:#040402">
-                    <div class="modal-header">
-                        <h3 class="m-0 text-center">Get Involved</h3>
-                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body pt-0">
-                        <div class="col-12">
-                            <p>Eligibility is not required. Thank you for your interest to get involved with Delete The Divide™.  Click the CONTINUE button to complete the Get Involved form.</p>
-                            <p class="text-center"><a class="btn ml-lg-auto dark-button" href="/GetInvolved">CONTINUE</a></p>
+            </div>
+        </div>
+    </section>
 
-                        </div>
+    <div class="modal fade" id="getinvolved-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content full section-3 odd highlights dtd_info_box border-gradient-purple" style="background-color:#040402">
+                <div class="modal-header">
+                    <h3 class="m-0 text-center">Get Involved</h3>
+                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="col-12">
+                        <p>Eligibility is not required. Thank you for your interest to get involved with Delete The Divide™.  Click the CONTINUE button to complete the Get Involved form.</p>
+                        <p class="text-center"><a class="btn ml-lg-auto dark-button" href="/GetInvolved">CONTINUE</a></p>
+
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-
-   @*@ <footer class="odd">
-            <!-- Footer [links] -->
-            <section id="footer" class="footer">
-                <div class="container">
-                    <div class="row items footer-widget">
-                        <div class="col-12 col-lg-3 p-0">
-                            <div class="row">
-                                <div class="branding col-12 p-0 text-center  item">
-                                    <div class="text-center mb-3">
-                                    <img src="https://members.deletethedivide.org/assets/images/logos/LA_County_Seal.png" alt="dtd" class="img-fluid dtd_img_100">
-                                    </div>
-                                    <div class="text-center">
-                                        <p class="">DELETE THE DIVIDE <br>Developed &amp; Administered by:</p>
-                                    <img src="https://members.deletethedivide.org/assets/images/logos/isd-logo-withoutletters.png" alt="dtd" class="img-fluid dtd_img_75">
-                                    </div>
-
-                                    <!--<ul class="navbar-nav social share-list mt-0 ml-auto">
-                                    <li class="nav-item">
-                                        <a href="https://www.instagram.com/deletethedivide" class="nav-link" target="_blank"><i class="icon-social-instagram ml-0"></i></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://www.facebook.com/deletethedivide" class="nav-link" target="_blank"><i class="icon-social-facebook"></i></a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="https://www.twitter.com/deletethedivide" class="nav-link" target="_blank"><i class="icon-social-twitter"></i></a>
-                                    </li>
-                                </ul>-->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-9 p-0">
-                            <div class="row">
-                                <div class="col-12 col-lg-4 p-3 text-center text-lg-left item">
-                                    <h4 class="title">Information</h4>
-                                    <ul class="navbar-nav">
-                                        <li class="nav-item">
-                                            <a href="http://findwifi.lacounty.gov/" class="nav-link" target="_blank">
-                                                <i class="icon-feed mr-2"></i>
-                                                Free WiFi Locator
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="https://experience.arcgis.com/experience/cb6759c16c9c4093b5254f065828fb39" class="nav-link" target="_blank">
-                                                <i class="icon-map mr-2"></i>
-                                                Interactive Maps
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="https://www.everyoneon.org" class="nav-link" target="_blank">
-                                                <i class="icon-info mr-2"></i>
-                                                EveryoneOn
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="https://lacountylibrary.org/laptop" class="nav-link" target="_blank">
-                                                <i class="fas fa-desktop mr-2"></i>
-                                                L.A. County Library Laptop and Hotspot Loans
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="https://www.internetforallnow.org/Applytoday?" class="nav-link" target="_blank">
-                                                <i class="icon-info mr-2"></i>
-                                                EBB Enrollment
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-12 col-lg-4 p-3 text-center text-lg-left item ">
-
-                                    <h4 class="title mt-0">Translation</h4>
-                                    <select class="form-control notranslate" onchange="doGTranslate(this);" style="width:80%; display:inline;"><option value="">Select Language</option><option value="en|af">Afrikaans</option><option value="en|sq">Albanian</option><option value="en|ar">Arabic</option><option value="en|hy">Armenian</option><option value="en|az">Azerbaijani</option><option value="en|eu">Basque</option><option value="en|be">Belarusian</option><option value="en|bg">Bulgarian</option><option value="en|ca">Catalan</option><option value="en|zh-CN">Chinese (Simplified)</option><option value="en|zh-TW">Chinese (Traditional)</option><option value="en|hr">Croatian</option><option value="en|cs">Czech</option><option value="en|da">Danish</option><option value="en|nl">Dutch</option><option value="en|en">English</option><option value="en|et">Estonian</option><option value="en|tl">Filipino</option><option value="en|fi">Finnish</option><option value="en|fr">French</option><option value="en|gl">Galician</option><option value="en|ka">Georgian</option><option value="en|de">German</option><option value="en|el">Greek</option><option value="en|ht">Haitian Creole</option><option value="en|iw">Hebrew</option><option value="en|hi">Hindi</option><option value="en|hu">Hungarian</option><option value="en|is">Icelandic</option><option value="en|id">Indonesian</option><option value="en|ga">Irish</option><option value="en|it">Italian</option><option value="en|ja">Japanese</option><option value="en|ko">Korean</option><option value="en|lv">Latvian</option><option value="en|lt">Lithuanian</option><option value="en|mk">Macedonian</option><option value="en|ms">Malay</option><option value="en|mt">Maltese</option><option value="en|no">Norwegian</option><option value="en|fa">Persian</option><option value="en|pl">Polish</option><option value="en|pt">Portuguese</option><option value="en|ro">Romanian</option><option value="en|ru">Russian</option><option value="en|sr">Serbian</option><option value="en|sk">Slovak</option><option value="en|sl">Slovenian</option><option value="en|es">Spanish</option><option value="en|sw">Swahili</option><option value="en|sv">Swedish</option><option value="en|th">Thai</option><option value="en|tr">Turkish</option><option value="en|uk">Ukrainian</option><option value="en|ur">Urdu</option><option value="en|vi">Vietnamese</option><option value="en|cy">Welsh</option><option value="en|yi">Yiddish</option></select><div id="google_translate_element2"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo" aria-label="Language Translate Widget"><option value="">Select Language</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="as">Assamese</option><option value="ay">Aymara</option><option value="az">Azerbaijani</option><option value="bm">Bambara</option><option value="eu">Basque</option><option value="be">Belarusian</option><option value="bn">Bengali</option><option value="bho">Bhojpuri</option><option value="bs">Bosnian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="co">Corsican</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="dv">Dhivehi</option><option value="doi">Dogri</option><option value="nl">Dutch</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="ee">Ewe</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="fy">Frisian</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gn">Guarani</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="ilo">Ilocano</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="rw">Kinyarwanda</option><option value="gom">Konkani</option><option value="ko">Korean</option><option value="kri">Krio</option><option value="ku">Kurdish (Kurmanji)</option><option value="ckb">Kurdish (Sorani)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="ln">Lingala</option><option value="lt">Lithuanian</option><option value="lg">Luganda</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mai">Maithili</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mni-Mtei">Meiteilon (Manipuri)</option><option value="lus">Mizo</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option><option value="no">Norwegian</option><option value="or">Odia (Oriya)</option><option value="om">Oromo</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="pa">Punjabi</option><option value="qu">Quechua</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sm">Samoan</option><option value="sa">Sanskrit</option><option value="gd">Scots Gaelic</option><option value="nso">Sepedi</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="sn">Shona</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option><option value="ta">Tamil</option><option value="tt">Tatar</option><option value="te">Telugu</option><option value="th">Thai</option><option value="ti">Tigrinya</option><option value="ts">Tsonga</option><option value="tr">Turkish</option><option value="tk">Turkmen</option><option value="ak">Twi</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="ug">Uyghur</option><option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="xh">Xhosa</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></div>Powered by <span style="white-space:nowrap"><a class="VIpgJd-ZVi9od-l4eHX-hSRGPd" href="https://translate.google.com" target="_blank"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate">Translate</a></span></div></div>
-                                    <!--<h4 class="title mt-4">Digital Divide</h4>
-                                <p>The economic, educational and social inequalities between those who have computers and internet access and those who do not.</p>-->
-                                </div>
-                                <div class="col-12 col-lg-4 p-3 text-center text-lg-left item">
-                                    <a class="badge tag p-2" href="/Account/Login">Sign Up</a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-
-    </footer>*@
-    
-    
-    
-    @* <---Replace whats under---> *@
-    @* Identify yourself. I am a:
-    <div>
-        <select id="identity">
-            <option value="">Select One</option>
-            <option value="youth">Youth (Ages 12-17)</option>
-            <option value="young_adult">Young Adult (Ages 18-24)</option>
-            <option value="adult">Adult (Ages 25-59)</option>
-            <option value="older_adult">Older Adult (Ages 60+)</option>
-            <option value="org">Organization Participant or Member</option>
-            <option value="small_business">Small Business Owner</option>
-            <option value="educator">Educator</option>
-            <option value="partner">Partner</option>
-            <option value="mentor">Mentor</option>
-            <option value="other">Other</option>
-
-
-        </select>
     </div>
 
-    <div>donate imagery</div>
-
-    <form method="post" id="form-data">
-
-        <div class="entire-form">
-            <div class="form-row">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" />
-            </div>
-
-            <div class="form-row">
-                <label for="address">Street Address where you reside</label>
-                <input type="text" id="address" name="address" />
-            </div>
-
-            <div class="form-cols">
-
-                <div class="form-row">
-                    <label for="city">*City</label>
-                    <input type="text" id="city" name="city" />
-
-                    <label for="state">*State</label>
-                    <input type="text" id="state" name="state" />
-                </div>
-
-                <div class="form-row">
-                    <label for="zip">*Zip</label>
-                    <input type="text" id="zip" name="zip" />
-
-                    <label for="dob">*Date of Birth</label>
-                    <input type="text" id="dob" name="dob" />
-                </div>
-
-
-            </div>
-
-            <div class="form-cols">
-                <div class="form-row">
-                    <label for="work_type">*Field of work</label>
-                    <input type="text" id="work_type" name="work_type" />
-
-                    <label for="degree">*Degree</label>
-                    <input type="text" id="degree" name="degree" />
-                </div>
-
-                <div class="form-row">
-                    <label for="company">*Company</label>
-                    <input type="text" id="company" name="company" />
-
-                    <label for="avail">*Availability</label>
-                    <input type="text" id="avail" name="avail" />
-                </div>
-            </div>
-
-        </div>
-
-        <div class="form-row">
-
-            <div>
-                <input type="checkbox" id="tac" name="tac">
-                <label for="tac">When applying as a Mentor, I agree to the <a href="/tac">Terms and Conditions</a> of Delete the Divide*</label>
-            </div>
-            <input type="submit" value="Apply" />
-        </div>
-    </form>
-
-
-
-
-
-    <script>
-
-        document.getElementById("form-data").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent the form from submitting
-
-            // Access the form elements
-            const name = document.getElementById("name").value;
-            const address = document.getElementById("address").value;
-            const city = document.getElementById("city").value;
-            const state = document.getElementById("state").value;
-            const zip = document.getElementById("zip").value;
-            const dob = document.getElementById("dob").value;
-            const workType = document.getElementById("work_type").value;
-            const degree = document.getElementById("degree").value;
-            const company = document.getElementById("company").value;
-            const availability = document.getElementById("avail").value;
-            const tacCheckbox = document.getElementById("tac");
-
-            const tacAgreed = tacCheckbox.checked;
-
-            console.log("Name: " + name);
-            console.log("Address: " + address);
-            console.log("City: " + city);
-            console.log("State: " + state);
-            console.log("Zip: " + zip);
-            console.log("Date of Birth: " + dob);
-            console.log("Work Type: " + workType);
-            console.log("Degree: " + degree);
-            console.log("Company: " + company);
-            console.log("Availability: " + availability);
-            console.log("Terms and Conditions Agreed: " + tacAgreed);
-
+</main>
+<!--Create Date picker-->
+<!--Create Date picker-->
+<script>
+    $.noConflict();
+    jQuery(function ($) {
+        // Assuming the date format is MM/DD/YYYY
+        // for DOB picker
+        $(".datepicker").datepicker({
+            dateFormat: 'mm-dd-yy',
+            changeMonth: true,
+            changeYear: true,
+            yearRange: '-100:+0',
         });
 
-
-        document.getElementById("identity").addEventListener("change", function () {
-            var id_type = this.value;
-            console.log(id_type)
-
+        // for Availability Picker
+        // Add timepicker to the input field with the class "availability"
+        $(".availability").datetimepicker({
+            dateFormat: 'mm-dd-yy', // corrected
+            timeFormat: 'hh:mm tt',
+            stepMinute: 15, // Set your desired time slot interval
+            minDate: 0, // Set the minimum date to the current date
+            changeMonth: true,
+            changeYear: true,
+            yearRange: '-100:+0',
+            // Set specific time slots (modify as needed)
+            addSliderAccess: true,
+            sliderAccessArgs: { touchonly: false },
+            beforeShow: function (input, inst) {
+                inst.dpDiv.find('.ui-slider').slider('option', 'step', 15);
+            }
         });
-    </script> *@
-</body>
-</html>
+    });
+</script>
+
+
