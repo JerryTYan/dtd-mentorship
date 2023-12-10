@@ -14,6 +14,7 @@ namespace DTD_Mentorship_Project.Pages
         public string Name { get; set; }
         public string School { get; set; }
         public string District { get; set; }
+        public int Progress { get; set; }
         public List<Mentee> CurrentMentees { get; set; }
         public string AboutMe { get; set; }
 

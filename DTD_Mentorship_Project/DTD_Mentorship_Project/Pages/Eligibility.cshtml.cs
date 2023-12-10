@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DTD_Mentorship_Project.Pages
 {
-    public class _Signup : PageModel
+    public class Eligibility : PageModel
     {
         [BindProperty]
         [Required(ErrorMessage = "Identify yourself. The SelectedUserTypeId field is required.")]
@@ -71,10 +71,10 @@ namespace DTD_Mentorship_Project.Pages
         {
             if (!ModelState.IsValid)
             {
-                Error = "Data Validtation Failed ! Correct Field/s as Required !";
+                Error = "Please correct field(s) as required!";
 				return Page(); // Return the page with validation errors
 			}
-            Success = "Huuray! Your Form was Submitted Correctly :-)";
+            Success = "Your Form was Submitted Correctly!";
 
             Address = "";
             City = "";
