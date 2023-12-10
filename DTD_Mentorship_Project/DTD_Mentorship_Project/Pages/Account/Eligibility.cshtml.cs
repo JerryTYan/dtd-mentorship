@@ -87,7 +87,7 @@ namespace DTD_Mentorship_Project.Pages
 
             ModelState.Clear();
 
-			return RedirectToPage("/registration");
+			return RedirectToPage("/Account/Registration");
 
 		}
 

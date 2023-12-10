@@ -51,7 +51,7 @@ namespace DTD_Mentorship_Project.Pages
 
 			_logger.LogInformation("Status1: {Status1}, Status2: {Status2}, Status3: {Status3}, Status4: {Status4}, Comment: {Comment}", status1, status2, status3, status4, comment);
 
-			return RedirectToPage("feedbackreceived", new
+			return RedirectToPage("/Profile/Mentorship/FeedbackReceived", new
 			{
 				image = Request.Query["image"],
 				name = Request.Query["name"],
