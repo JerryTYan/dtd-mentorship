@@ -542,7 +542,7 @@ select {
 
 select:focus {
     border-color: var(--primary-t-color);
-    color: var(--primary-t-color);
+    /* color: var(--primary-t-color); */
 }
 
 select option {
