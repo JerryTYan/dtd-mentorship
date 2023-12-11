@@ -81,25 +81,26 @@ input[type=checkbox] {
     border-image: linear-gradient(to right, #5406a5, #FDB927) 1 !important;
 }
 
-.text2 {
+.submissiontext {
     text-align: center;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 25px;
+    padding-right: 25px;
     font-size: 20px;
-    height: 200px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .email {
     text-decoration: underline;
+    white-space: normal;
 }
 
 .submissionpage {
     padding-top: 0px;
     padding-left: 100px;
     width: 100%;
-    background-color: #191919;
+    background-color: #040402;
     color: white;
     margin: 0px;
     padding: 100px !important;
@@ -109,12 +110,17 @@ input[type=checkbox] {
 .submission {
     text-align: center;
     margin-top: 100px;
-    height: 90px;
-    width: 100%;
-    position: center;
+    width: 100vw;
+    position: relative;
     margin: 0px;
-    background: linear-gradient(to right, purple, yellow);
+    background: linear-gradient(to right, #5406a5, #ffbc00);
     padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+h1.submission {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .pb-3 {
