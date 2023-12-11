@@ -306,7 +306,7 @@ h3 {
     font-weight: var(--h2-weight);
     line-height: 1.2;
     font-family: var(--h2-font);
-    color: var(--primary-t-color);
+    color: #f5f5f5;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
 }
@@ -322,7 +322,7 @@ h4 {
     font-weight: var(--h2-weight);
     line-height: 1.2;
     font-family: var(--h2-font);
-    color: var(--primary-t-color);
+    color: #f5f5f5;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
 }
