@@ -29,50 +29,39 @@
     --h1-font: 'Gilroy', sans-serif;
     --h1-size: 6rem;
     --h1-weight: 900;
-    
     --h2-font: 'Poppins', sans-serif;
     --h2-size: 3rem;
     --h2-weight: 600;
-    
     --p-font: 'Poppins', sans-serif;
     --p-size: 1rem;
     --p-weight: 400;
-
-    --header-bg-color: #111111;
+    --header-bg-color: #040402;
     --nav-brand-height: 35px;
     --nav-item-color: #f5f5f5;
     --top-nav-item-color: #f5f5f5;
-    --hero-bg-color: #111111;
+    --hero-bg-color: #040402;
     --footer-brand-height: 80px;
-
     --primary-color: #dd1e4b;
     --secondary-color: #E0040B;
-    
     --white-color: #f9f9f9;
     --black-color: #040402;
     --dark-grey-color: #191919;
-
     --primary-t-color: #2f323a;
-    --secondary-t-color: #f5f5f5; 
+    --secondary-t-color: #f5f5f5;
     --primary-p-color: #6f6f6f;
     --secondary-p-color: #8e8e8e;
     --primary-b-color: #f5f5f5;
     --primary-l-color: rgba(0, 0, 0, .25);
     --secondary-l-color: rgba(255, 255, 255, 0.25);
-
     --valid-color: #007a4d;
     --invalid-color: #e34f4f;
-
     --primary-bg-color: #f5f5f5;
     --primary-bg-color-2: #eeeeee;
     --primary-bg-color-3: #e5e5e5;
-
     --secondary-bg-color: #040402;
-    --secondary-bg-color-2: #111111;
+    --secondary-bg-color-2: #040402;
     --secondary-bg-color-3: #191919;
-
     --card-bg-color: #f5f5f5;
-
     --footer-bg-color: #111111;
 }
 
@@ -135,7 +124,7 @@
     top: 2px;
     left: 2px;
     bottom: 0;
-    right: 0;
+    right: 2;
     width: calc(100% - 4px);
     height: calc(100% - 4px);
     border-radius: 0;

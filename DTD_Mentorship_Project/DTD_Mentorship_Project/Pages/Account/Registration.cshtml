@@ -1,0 +1,59 @@
+﻿@page "/Account/Register/Mentor"
+@model DTD_Mentorship_Project.Pages.RegistrationModel
+@{
+	Layout = "~/Pages/Shared/_LayoutNoLeft.cshtml";
+}
+
+
+<main style="margin-top: 100px;">
+
+	<div class="container">
+
+    <div class="row">
+        <div class="col-12 col-md-8 offset-md-2 ">
+            <h3 class="text-center mt-1">Sign Up with <span class="text-nowrap">Delete The Divide</span></h3>
+
+            <!-- Removed the form with external action and hard-coded verification token -->
+            <div class="d-flex justify-content-center">
+                <div class="mt-3 ml-3 text-center socialLogin" data-id="Google" style="cursor:pointer;">
+                    <img src="/assets/google-login.png" alt="Register with Google account">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 mt-3">
+            <b class="d-block my-3 h4 text-center">OR</b>
+
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group mt-2">
+                    <h4>Create New Account</h4>
+                </div>
+                <div class="form-group mt-3">
+                    <label class="dtd_font_bold" for="Email" asp-for="FormData.Email">Email</label>
+                    <input class="form-control" type="text" id="Email" name="Email" placeholder="Email address" value=@TempData["Email"] asp-for="FormData.Email" required>
+                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true" asp-validation-for="FormData.Email"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <label class="dtd_font_bold" for="Password" asp-for="FormData.Password">Password</label>
+                    <input class="form-control" type="text" id="Password" name="Password" value=@TempData["Password"] placeholder="Password" asp-for="FormData.Password" required>
+                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true" asp-validation-for="FormData.Password"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <label class="dtd_font_bold" for="Confirm" asp-for="FormData.Confirm">Confirm Password</label>
+                    <input class="form-control" type="text" id="Confirm" name="Confirm" value=@TempData["Confirm"] placeholder="Confirm" asp-for="FormData.Confirm" required>
+                    <span class="text-danger font-weight-bold field-validation-valid" data-valmsg-for="Confirm" data-valmsg-replace="true" asp-validation-for="FormData.Confirm"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <a class="float-left" href="/Account/Login">Login</a>
+                    <button type="submit" class="btn dark-button btn-block float-right">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    </div>
+    <br/>
+</main>

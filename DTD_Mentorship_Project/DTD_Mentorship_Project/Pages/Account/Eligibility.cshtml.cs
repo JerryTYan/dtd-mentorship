@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DTD_Mentorship_Project.Pages
 {
-    public class _Signup : PageModel
+    public class Eligibility : PageModel
     {
         [BindProperty]
         [Required(ErrorMessage = "Identify yourself. The SelectedUserTypeId field is required.")]
@@ -67,14 +67,14 @@ namespace DTD_Mentorship_Project.Pages
             // Initialization logic for GET request
         }
 
-        public void OnPost()
+        public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
-                Error = "Data Validtation Failed ! Correct Field/s as Required !";
-                return; // Return the page with validation errors
-            }
-            Success = "Huuray! Your Form was Submitted Correctly :-)";
+                Error = "Please correct field(s) as required!";
+				return Page(); // Return the page with validation errors
+			}
+            Success = "Your Form was Submitted Correctly!";
 
             Address = "";
             City = "";
@@ -86,10 +86,13 @@ namespace DTD_Mentorship_Project.Pages
             Availability = "";
 
             ModelState.Clear();
-        }
 
-        // Custom validation attribute for DOB
-        public class DOBNotLessThan18Attribute : ValidationAttribute
+			return RedirectToPage("/Account/Registration");
+
+		}
+
+		// Custom validation attribute for DOB
+		public class DOBNotLessThan18Attribute : ValidationAttribute
         {
             protected override ValidationResult IsValid(object value, ValidationContext validationContext)
             {

@@ -1,6 +1,10 @@
-﻿@page "/signup"
-@model DTD_Mentorship_Project.Pages._Signup
+﻿@page "/Account/Eligibility"
+@model DTD_Mentorship_Project.Pages.Eligibility
 
+
+@{
+    Layout = "~/Pages/Shared/_LayoutNoLeft.cshtml";
+}
 
 @* css rules here from jorge's signup branch
  *@
@@ -75,7 +79,7 @@ input[type=checkbox] {
                             </div>
 
 
-     <div class="eligibility-form mt-3">
+     <div class="eligibility-form mt-3" id="mentorEligibilityForm" style="display: none;">
             <div class="row">
                 <div class="col-12">
                     <h2>Mentor Eligibility</h2>
@@ -193,10 +197,9 @@ input[type=checkbox] {
     </div>
 
 </main>
-<!--Create Date picker-->
+
 <!--Create Date picker-->
 <script>
-    $.noConflict();
     jQuery(function ($) {
         // Assuming the date format is MM/DD/YYYY
         // for DOB picker
@@ -227,4 +230,22 @@ input[type=checkbox] {
     });
 </script>
 
+<script>
+    $(document).ready(function () {
+        // Function to show/hide the mentor eligibility form
+        function toggleMentorEligibilityForm() {
+            var selectedValue = $('#dtd_usertype').val();
+            if (selectedValue == "7") { // Assuming "7" is the value for "Mentor"
+                $('#mentorEligibilityForm').show();
+            } else {
+                $('#mentorEligibilityForm').hide();
+            }
+        }
 
+        // Check the dropdown value on page load
+        toggleMentorEligibilityForm();
+
+        // Bind the change event of the dropdown
+        $('#dtd_usertype').change(toggleMentorEligibilityForm);
+    });
+</script>

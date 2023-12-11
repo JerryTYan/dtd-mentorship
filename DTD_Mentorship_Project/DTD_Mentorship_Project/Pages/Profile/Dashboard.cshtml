@@ -1,0 +1,99 @@
+@page "/Profile/Dashboard"
+@model DashboardModel
+
+<!-- Main -->
+<main>
+    <!-- Text -->
+    <div class="row">
+        <div class="col-12 align-self-center">
+            <!-- Profile Section -->
+            <div class="row mt-4 mt-md-0">
+                <div class="col-4 col-md-3 mb-4 text-center">
+                    <img class="card-img-top rounded" src="https://members.deletethedivide.org/assets/images/user.png" alt="user image">
+                    <a href="/Profile/AvatarList"><small class="d-block mt-2">Choose Avatar</small></a>
+                </div>
+                <div class="col-8 col-md-9 mb-4">
+                    <h5 class="featured mt-0 mb-2">@Model.Name</h5>
+                    <ul class="dtd-li">
+                        <li>@Model.School</li>
+                        <li>@Model.District</li>
+                        <li>My progress: @Model.Progress%</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- About Me Section -->
+            <div class="container">
+                <h3 class="about-me">About Me</h3>
+                <p class="about-me-description">@Model.AboutMe</p>
+            </div>
+
+            <!-- Mentees Section -->
+            <div class="container">
+                <h3 class="mentee">Current Mentees</h3>
+            </div>
+
+            <div class="container">
+                <h5>Your Maximum Number of Mentees</h5>
+                <div class="d-flex align-items-center">
+                    <select id="maxMentees" class="form-control mr-2">
+                        @for (int i = 1; i <= 10; i++)
+                        {
+                            <option value="@i">@i</option>
+                        }
+                    </select>
+                    <button class="btn btn-primary" onclick="validateMenteeCount()">Save</button>
+                </div>
+                <p id="error-message" style="color: red; display: none;">Please remove some mentees before reducing the maximum number.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12 mb-12" style="padding-top: 25px;">
+                    @foreach (var mentee in Model.CurrentMentees)
+                    {
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="@mentee.Image" class="card-img" alt="Mentee Image">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">@mentee.Name</h5>
+                                    <p class="card-text">@mentee.GetShortDescription()</p>
+                                    <button class="btn btn-danger" onclick="showConfirmationPopup('@mentee.Name')">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function showConfirmationPopup(menteeName) {
+        var reason = prompt("Why do you want to remove " + menteeName + "?");
+        if (reason) {
+            // The user entered a reason, perform the removal logic here
+            // Ex: Make an AJAX request to the server to remove the mentee
+        }
+    }
+
+    function validateMenteeCount() {
+        var selectedMax = parseInt(document.getElementById('maxMentees').value);
+        var currentMenteeCount = @Model.CurrentMentees.Count;
+
+        if (selectedMax < currentMenteeCount) {
+            document.getElementById('error-message').style.display = 'block';
+        } else {
+            document.getElementById('error-message').style.display = 'none';
+        }
+    }
+
+    $(document).ready(() => {
+        checkDes('pathwayDetail', 'pathwayID');
+        validateMenteeCount();
+    });
+</script>

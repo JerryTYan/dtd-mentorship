@@ -1,0 +1,21 @@
+﻿@page "/Account/Submission"
+@model DTD_Mentorship_Project.Pages.SubmissionModel
+@{
+    // Layout = null;
+    Layout = "~/Pages/Shared/_LayoutNoLeft.cshtml";
+}
+
+<div class="submissionpage">
+    <h1 class="d-flex justify-content-center submission">Submission Received!</h1>
+    <div class="d-flex justify-content-center">
+        <p class="submissiontext text-center">
+        Thank you for taking the time to apply!
+        We will review your submission and contact you with further steps.
+        If you have any questions feel free to reach out at <span class="email">dtdsupport@gmail.com</span>. 
+        We hope you have a nice day!
+        </p>
+    </div>
+    <div class="d-flex justify-content-end mt-3">
+        <a href="/Account/Login" class="btn dark-button btn-block float-right">Login</a>
+    </div>
+</div>

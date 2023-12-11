@@ -1,0 +1,62 @@
+﻿@page "/Account/Login"
+@model DTD_Mentorship_Project.Pages.LoginModel
+@{
+	Layout = "~/Pages/Shared/_LayoutNoLeft.cshtml";
+}
+
+
+<main style="margin-top: 100px;">
+
+	<div class="container">
+
+    <div class="row mb-2">
+        <div class="col-12 text-center">
+            <h4 class="featured d-block d-sm-inline-block  mr-0 mr-sm-3">New to Delete The Divide?</h4>
+            <a class="btn dark-button" href="/Account/Eligibility">Sign Up </a>
+        </div>
+    </div>
+    
+    <div class="row">
+         <div class="col-12 col-md-8 offset-md-2">
+            <hr class="my-3">
+         </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-8 offset-md-2 ">
+            <h3 class="text-center mt-1"><span class="text-nowrap">Login to Delete The Divide</span></h3>
+
+            <!-- Removed the form with external action and hard-coded verification token -->
+            <div class="d-flex justify-content-center">
+                <div class="mt-3 ml-3 text-center socialLogin" data-id="Google" style="cursor:pointer;">
+                    <img src="/assets/google-login.png" alt="Sign In with Google account">
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 mt-3">
+                <form method="post">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group mt-3">
+                        <label class="dtd_font_bold" for="Email" asp-for="FormData.Email">Email</label>
+                        <input class="form-control" type="text" id="Email" name="Email" placeholder="Email address" asp-for="FormData.Email" required>
+                        <span class="text-danger font-weight-bold" asp-validation-for="FormData.Email"></span>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="dtd_font_bold" for="Password" asp-for="FormData.Password">Password</label>
+                        <input class="form-control" type="password" id="Password" name="Password" placeholder="Password" asp-for="FormData.Password" required>
+                        <span class="text-danger font-weight-bold" asp-validation-for="FormData.Password"></span>
+                    </div>
+                    <div class="form-group mt-3">
+                        <a class="float-left" href="/Account/ForgotPassword">Forgot Password?</a>
+                        <button type="submit" class="btn dark-button btn-block float-right">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+    </div>
+    <br/>
+</main>

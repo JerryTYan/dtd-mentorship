@@ -5,6 +5,7 @@
 *.rsuser
 *.suo
 *.user
+*.wsuo
 *.userosscache
 *.sln.docstates
 
@@ -53,8 +54,9 @@ artifacts/
 **/packages/*
 
 # Exclude specific build directories
-DTD_Mentorship_Project/DTD_Mentorship_Project/bin/Debug/net7.0/
-DTD_Mentorship_Project/DTD_Mentorship_Project/obj/Debug/net7.0/
+DTD_Mentorship_Project/DTD_Mentorship_Project/bin/
+DTD_Mentorship_Project/DTD_Mentorship_Project/obj/
 DTD_Mentorship_Project/.vs/
-DTD_Mentorship_Project/DB/DB.dbmdl
+DTD_Mentorship_Project/DTD_Mentorship_Project/DTD_Mentorship_Project.csproj.user
 
+* text=auto
