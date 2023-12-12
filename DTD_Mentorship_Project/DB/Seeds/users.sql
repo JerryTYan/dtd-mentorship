@@ -1,57 +1,9 @@
-﻿INSERT INTO [$(User)] values (1,"Jerry","Yan","JerryY@gmail.com","manager",false,true,false);
-INSERT INTO [$(User)] values (2,"Ivan","Flores","IvanF@gmail.com","develop",false,true,false);
-INSERT INTO [$(User)] values (3,"Eduardo","Galvez","EduardoG@gmail.com","Engineer",false,true,false);
-INSERT INTO [$(User)] values (4,"Kathy","A","KathyA@gmail.com","deign",false,true,false);
-INSERT INTO [$(User)] values (5,"Jorge","Gaytan","JorgeG@gmail.com","coder",false,true,false);
-INSERT INTO [$(User)] values (6,"Justin","Fernandez","JustinF@gmail.com","intern",false,true,false);
-INSERT INTO [$(User)] values (7,"Jordan","Myers","JordanM@gmail.com","learning",false,true,false);
-INSERT INTO [$(User)] values (8,"Mike","Jordan","MJordan@gmail.com","learning",false,true,false);
-INSERT INTO [$(User)] values (9,"John","Smith","JohnD@gmail.com","learning",false,true,false);
-INSERT INTO [$(User)] values (10,"Jack","Johnson","JackJ@gmail.com","intern",false,true,false);
-INSERT INTO [$(User)] values (11,"Jill","Johnson","JillJ@gmail.com","intern",false,true,false);
-INSERT INTO [$(User)] values (12,"Jane","Doe","JaneD@gmail.com","learning",false,true,false);
-INSERT INTO [$(User)] values (13,"Adam","West","AdamW@gmail.com","learning",false,true,false);
-INSERT INTO [$(User)] values (14,"Bruce","Wayne","BruceW@gmail.com","developer",false,true,false);
-INSERT INTO [$(User)] values (15,"Amy","East","AmyE@gmail.com","intern",false,true,false);
-INSERT INTO [$(User)] values (16,"James","Smith","JamesS@gmail.com","learning",false,true,false);
-INSERT INTO [$(User)] values (17,"Oscar","Myers","OscarM@gmail.com","intern",false,true,false);
-INSERT INTO [$(User)] values (18,"Alexander","Hamilton","AlexanderH@gmail.com","developer",false,true,false);
-INSERT INTO [$(User)] values (19,"Eva","Ramirez","EvaR@gmail.com","developer",false,true,false);
-INSERT INTO [$(User)] values (20,"Amanda","Guiterrez","AmandaG@gmail.com","intern",false,true,false);
-INSERT INTO [$(User)] values (21,"Jason","Hernandez","JasonH@gmail.com","Engineer",false,true,false);
-INSERT INTO [$(User)] values (22,"Freddy","Gonzalez","FreddyG@gmail.com","learning",false,true,false);
-INSERT INTO [$(User)] values (23,"Pamela","Johnson","PamelaJ@gmail.com","learning",false,true,false);
-INSERT INTO [$(User)] values (24,"Becky","Cooper","BeckyC@gmail.com","intern",false,true,false);
-INSERT INTO [$(User)] values (25,"Peter","Parker","PeterP@gmail.com","Engineer",false,true,false);
-INSERT INTO [$(User)] values (26,"Robert","Robinson","RobertR@gmail.com","developer",false,true,false);
-INSERT INTO [$(User)] values (27,"Skylar","Blue","SklyarB@gmail.com","learning",false,true,false);
-INSERT INTO [$(User)] values (28,"Rick","Jameson","RickJ@gmail.com","learning",false,true,false);
-INSERT INTO [$(User)] values (29,"Jen","Henderson","JenH@gmail.com","intern",false,true,false);
-INSERT INTO [$(User)] values (30,"Riley","Jackson","RileyJ@gmail.com","developer",false,true,false);
+﻿INSERT INTO [$(User)]([FirstName],[LastName],[Email],[Password],[OngoingMentorship],[Image],[Identity],[Degree],[Availability]) values ('Jerry','Yan','JerryY@gmail.com','manager',false, 'https://images.generated.photos/hhD046j0oSUxEUbhH3aRYZtrRDgTiKibm926XCmUCSc/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTU5MjE2LmpwZw.jpg',false, 2, Bachelor,true, '2023/12/24 13:30:00');
+INSERT INTO [$(User)]([FirstName],[LastName],[Email],[Password],[OngoingMentorship],[Image],[Identity],[Degree],[Availability]) values ('Alice','Johnson','AliceJ@gmail.com','password123',false, 'https://images.generated.photos/fWqbA_jZjgJQC-hmk4skHf97vfD9TvtWdP-ad5Hzw7A/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MTk5OTAwLmpwZw.jpg',false, 1, Associate,true, '2023/12/23 13:30:00');
+INSERT INTO [$(User)]([FirstName],[LastName],[Email],[Password],[OngoingMentorship],[Image],[Identity],[Degree],[Availability]) values ('Bob','Smith','BobS@gmail.com','securepass',false, 'https://images.generated.photos/yqnjUXlOXNtpe9faSCqGBfKOPgN2SqucKZo8lRSAmpA/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MjY3NDczLmpwZw.jpg',false, 2, Bachelor,true, '2023/12/27 13:30:00');
+
+INSERT INTO [$(User)]([FirstName],[LastName],[Email],[Password],[OngoingMentorship],[Image],[Identity],[Degree],[Availability]) values ('Michael','Davis','MichaelD@gmail.com','myp@ss123',false, 'https://images.generated.photos/0w1qv8kT4uzhHXIAZritV-YsRxPqJ3iATPSNgfbdsuw/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTE0NDY3LmpwZw.jpg',false, 9, Masters,true, '2023/12/24 13:30:00');
+INSERT INTO [$(User)]([FirstName],[LastName],[Email],[Password],[OngoingMentorship],[Image],[Identity],[Degree],[Availability]) values ('Sophie','Turner','SophieT@gmail.com','secure1234',false, 'https://images.generated.photos/luxNDYgbLWwAov3T--19NfJEsJoWSSJFDB9MThfHqt4/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDIzMTg1LmpwZw.jpg',false, 9, Masters,true, '2023/12/27 13:30:00');
+INSERT INTO [$(User)]([FirstName],[LastName],[Email],[Password],[OngoingMentorship],[Image],[Identity],[Degree],[Availability]) values ('John','Doe','JohnD@gmail.com','johnspass',false, 'https://images.generated.photos/ddcXlc8JE8QZmRMVe7mqSfv09NociVkvmu-XWskQaKE/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MjU5OTU4LmpwZw.jpg',false, 9, Bachelor,true, '2023/12/23 13:30:00');
 
 
-
-
-INSERT INTO [$(User)] VALUES (8,"Alice","Smith","AliceS@gmail.com","manager2",true,false,false);
-INSERT INTO [$(User)] VALUES (9,"John","Doe","JohnD@gmail.com","manager3",true,false,false);
-INSERT INTO [$(User)] VALUES (10,"Emma","Johnson","EmmaJ@gmail.com","manager4",true,false,false);
-INSERT INTO [$(User)] VALUES (11,"Daniel","Williams","DanielW@gmail.com","manager5",true,false,false);
-INSERT INTO [$(User)] VALUES (12,"Olivia","Jones","OliviaJ@gmail.com","manager6",true,false,false);
-INSERT INTO [$(User)] VALUES (13,"Liam","Taylor","LiamT@gmail.com","manager7",true,false,false);
-INSERT INTO [$(User)] VALUES (14,"Sophia","Brown","SophiaB@gmail.com","manager8",true,false,false);
-INSERT INTO [$(User)] VALUES (15,"Ethan","Miller","EthanM@gmail.com","manager9",true,false,false);
-INSERT INTO [$(User)] VALUES (16,"Ava","Davis","AvaD@gmail.com","manager10",true,false,false);
-INSERT INTO [$(User)] VALUES (17,"Mia","Anderson","MiaA@gmail.com","manager11",true,false,false);
-INSERT INTO [$(User)] VALUES (18,"William","Clark","WilliamC@gmail.com","manager12",true,false,false);
-INSERT INTO [$(User)] VALUES (19,"Sofia","Turner","SofiaT@gmail.com","manager13",true,false,false);
-INSERT INTO [$(User)] VALUES (20,"Elijah","Hill","ElijahH@gmail.com","manager14",true,false,false);
-INSERT INTO [$(User)] VALUES (21,"Grace","Baker","GraceB@gmail.com","manager15",true,false,false);
-INSERT INTO [$(User)] VALUES (22,"Logan","White","LoganW@gmail.com","manager16",true,false,false);
-INSERT INTO [$(User)] VALUES (23,"Abigail","Lee","AbigailL@gmail.com","manager17",true,false,false);
-INSERT INTO [$(User)] VALUES (24,"Henry","Young","HenryY@gmail.com","manager18",true,false,false);
-INSERT INTO [$(User)] VALUES (25,"Chloe","Cooper","ChloeC@gmail.com","manager19",true,false,false);
-INSERT INTO [$(User)] VALUES (26,"Jake","Jones","JakeJ@gmail.com","manager20",true,false,false);
-INSERT INTO [$(User)] VALUES (27,"Bruce","Banner","BruceB@gmail.com","manager21",true,false,false);
-INSERT INTO [$(User)] VALUES (28,"Oliver","Cooper","OliverC@gmail.com","manager22",true,false,false);
-INSERT INTO [$(User)] VALUES (29,"Valerie","Rodriguez","ValerieR@gmail.com","manager23",true,false,false);
-INSERT INTO [$(User)] VALUES (30,"Tom","Salazar","TomS@gmail.com","manager24",true,false,false);
