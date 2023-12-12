@@ -19,12 +19,8 @@ INSERT INTO [$(Address)]([UserID],[Street_Address],[City],[State],[Zip_Code]) VA
 INSERT INTO [$(Address)]([UserID],[Street_Address],[City],[State],[Zip_Code]) VALUES (19, '789 Nebula Blvd', 'Long Beach', 'CA', '90000');
 INSERT INTO [$(Address)]([UserID],[Street_Address],[City],[State],[Zip_Code]) VALUES (20, '888 Los Angeles Ave', 'Los Angeles', 'CA', '90090');
 INSERT INTO [$(Address)]([UserID],[Street_Address],[City],[State],[Zip_Code]) VALUES (21, '999 Enchanted Ln', 'Burbank', 'CA', '91515');
-INSERT INTO [$(Address)]([UserID],[Street_Address],[City],[State],[Zip_Code]) VALUES (22, '210 Beverly Hills Blvd', 'Beverly Hills', 'CA' '90210');
+INSERT INTO [$(Address)]([UserID],[Street_Address],[City],[State],[Zip_Code]) VALUES (22, '210 Beverly Hills Blvd', 'Beverly Hills', 'CA' ,'90210');
 INSERT INTO [$(Address)]([UserID],[Street_Address],[City],[State],[Zip_Code]) VALUES (23, '543 Long Beach Blvd', 'Long Beach', 'CA', '90802');
 INSERT INTO [$(Address)]([UserID],[Street_Address],[City],[State],[Zip_Code]) VALUES (24, '765 Pasadena Plaza', 'Pasadena', 'CA', '91101');
 INSERT INTO [$(Address)]([UserID],[Street_Address],[City],[State],[Zip_Code]) VALUES (25, '876 Whittier Way', 'Whittier', 'CA', '90601');
 INSERT INTO [$(Address)]([UserID],[Street_Address],[City],[State],[Zip_Code]) VALUES (26, '915 Echo Park Ave', 'Los Angeles', 'CA', '90012');
-INSERT INTO [$(Address)]([UserID],[Street_Address],[City],[State],[Zip_Code]) VALUES (27, '280 Watts Way', 'Watts', 'CA', '90001');
-INSERT INTO [$(Address)]([UserID],[Street_Address],[City],[State],[Zip_Code]) VALUES (28, '654 Culver City Ln', 'Culver City', 'CA', '90230');
-INSERT INTO [$(Address)]([UserID],[Street_Address],[City],[State],[Zip_Code]) VALUES (29, '987 Malibu Road', 'Malibu', 'CA', '90265');
-INSERT INTO [$(Address)]([UserID],[Street_Address],[City],[State],[Zip_Code]) VALUES (30, '845 Inglewood Blvd', 'Inglewood', 'CA', '90301');
