@@ -6,19 +6,6 @@
     Layout = "~/Pages/Shared/_LayoutNoLeft.cshtml";
 }
 
-@* css rules here from jorge's signup branch
- *@
-
-@*
-input[type=checkbox] { 
-    vertical-align: middle; 
-    display: inline-block;
-
-}
-
-.id{
-    padding: 0px;
-} *@
 <!--Add Jquery headers to initlize datepickers-->
 <head>
     <!-- Include jQuery -->
@@ -171,8 +158,10 @@ input[type=checkbox] {
 
             </div>
         </div>
+    
+    <button type="button" id="modalTrigger" class="btn btn-primary d-none" data-toggle="modal" data-target="#eligibilityModal"></button>
 
-    <div class="modal fade" id="getinvolved-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="eligibilityModal" tabindex="-1" role="dialog" aria-labelledby="eligibilityModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content full section-3 odd highlights dtd_info_box border-gradient-purple" style="background-color:#040402">
                 <div class="modal-header">
@@ -183,8 +172,8 @@ input[type=checkbox] {
                 </div>
                 <div class="modal-body pt-0">
                     <div class="col-12">
-                        <p>Eligibility is not required. Thank you for your interest to get involved with Delete The Divide™.  Click the CONTINUE button to complete the Get Involved form.</p>
-                        <p class="text-center"><a class="btn ml-lg-auto dark-button" href="/GetInvolved">CONTINUE</a></p>
+                        <p>Thank you for your interest in getting involved with Delete The Divide™. After you register for an account, our team will manually review your application for approval. Please click the 'CONTINUE' button below to complete the registration form. We appreciate your patience and look forward to potentially having you as part of our community.</p>
+                        <p class="text-center"><a class="btn ml-lg-auto dark-button" href="/Account/Register/Mentor">CONTINUE</a></p>
 
                     </div>
                 </div>
@@ -243,5 +232,15 @@ input[type=checkbox] {
 
         // Bind the change event of the dropdown
         $('#dtd_usertype').change(toggleMentorEligibilityForm);
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        // Check if eligibility is confirmed after page reload
+        var eligibilityConfirmed = '@TempData["EligibilityConfirmed"]';
+        if (eligibilityConfirmed === 'True') {
+            $('#modalTrigger').click(); // Trigger the modal
+        }
     });
 </script>
