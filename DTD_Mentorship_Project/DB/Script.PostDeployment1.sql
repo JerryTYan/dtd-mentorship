@@ -9,3 +9,10 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
+
+:r .\Seeds\users.sql
+:r .\Seeds\areas.sql
+:r .\Seeds\userareas.sql
+:r .\Seeds\addresses.sql
+
+

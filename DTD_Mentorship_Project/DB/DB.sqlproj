@@ -57,6 +57,10 @@
     <Folder Include="Seeds" />
     <Folder Include="Tables" />
     <Folder Include="Snapshots" />
+    <Folder Include="obj" />
+    <Folder Include="obj\Debug" />
+    <Folder Include="bin" />
+    <Folder Include="bin\Debug" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\User.sql" />
@@ -64,15 +68,23 @@
     <Build Include="Tables\UserArea.sql" />
     <Build Include="Tables\MentorMentee.sql" />
     <Build Include="Tables\Address.sql" />
+    <None Include="Seeds\userareas.sql" />
+    <None Include="Seeds\areas.sql" />
+    <None Include="Seeds\addresses.sql" />
+    <Build Include="Tables\Identity.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Seeds\users.sql" />
     <None Include="Snapshots\DB_20231207_11-34-19.dacpac" />
+    <None Include="obj\Debug\DB.dll" />
+    <None Include="obj\Debug\DB.pdb" />
+    <None Include="obj\Debug\DB.sqlproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\DB.sqlproj.FileListAbsolute.txt" />
+    <None Include="bin\Debug\DB.dacpac" />
+    <None Include="bin\Debug\DB.dll" />
+    <None Include="bin\Debug\DB.pdb" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="DB.refactorlog" />
   </ItemGroup>
 </Project>
