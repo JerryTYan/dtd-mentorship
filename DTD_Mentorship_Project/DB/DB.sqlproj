@@ -83,6 +83,10 @@
     <None Include="bin\Debug\DB.dacpac" />
     <None Include="bin\Debug\DB.dll" />
     <None Include="bin\Debug\DB.pdb" />
+    <None Include="Seeds\identities.sql" />
+    <None Include="DB.sqlproj.user" />
+    <None Include="DB.jfm" />
+    <None Include="DB.dbmdl" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />

@@ -14,5 +14,8 @@ Post-Deployment Script Template
 :r .\Seeds\areas.sql
 :r .\Seeds\userareas.sql
 :r .\Seeds\addresses.sql
+:r .\Seeds\identities.sql
+
+
 
 
