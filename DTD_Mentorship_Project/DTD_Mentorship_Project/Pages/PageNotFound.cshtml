@@ -1,0 +1,21 @@
+@page "/PageNotFound"
+@model DTD_Mentorship_Project.Pages.PageNotFoundModel
+@{
+    Layout = "~/Pages/Shared/_LayoutNoLeft.cshtml";
+}
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>Oops! This Page Doesn't Exist.</h3>
+                <p>We're sorry, but the page you are looking for is not part of the Mentorship demo. Please return to the Dashboard for more information.</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 d-flex justify-content-end">
+                <a href="/Profile/Dashboard" class="btn dark-button">Go to Dashboard</a>
+            </div>
+        </div>
+    </div>
+</main>

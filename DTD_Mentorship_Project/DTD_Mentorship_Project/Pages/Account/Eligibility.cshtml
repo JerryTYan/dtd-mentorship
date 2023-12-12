@@ -35,7 +35,6 @@ input[type=checkbox] {
 
 <main> 
       
-    <section class="section-3 odd highlights">
         <div class="container">
             <div class="row">
                 <!-- Add this section to display messages -->
@@ -147,24 +146,22 @@ input[type=checkbox] {
                 <input class="form-control" asp-for="Company">
                 <span class="text-danger font-weight-bold" asp-validation-for="Company"></span>
             </div>
-                                    <div class="form-group col-12 col-md-6">
-                                        <label for="Availability">* Availability</label>
-                                        <input class="form-control availability" asp-for="Availability">
-                                        <span class="text-danger font-weight-bold" asp-validation-for="Availability"></span>
-                                    </div>
+            <div class="form-group col-12 col-md-6">
+                <label for="Availability">* Availability</label>
+                <input class="form-control availability" asp-for="Availability">
+                <span class="text-danger font-weight-bold" asp-validation-for="Availability"></span>
+            </div>
 
-        <div class="row" style="text-align: center;">
+            <div class="form-group mt-3">
             <label for="TermsofService">
-                    <input type="checkbox" asp-for="TermsofServiceCheckbox" /> When applying as a mentor, I agree to the <a href="/TOS">Terms and Conditions</a> of Delete the Divide*
+                    <input type="checkbox" asp-for="TermsofServiceCheckbox"/> When applying as a mentor, I agree to the <a href="/TOS">Terms and Conditions</a> of Delete the Divide*
             </label>
             <span class="text-danger font-weight-bold" asp-validation-for="TermsofServiceCheckbox"></span>
 
         </div>
         <br>
-        <div class="row" style="text-align:center;">
-            <div class="form-group col-12">
-                <button type="submit" class="btn dark-button float-center">Check Eligibility</button>
-            </div>
+        <div class="form-group mt-3">
+                <button type="submit" class="btn dark-button float-right">Check Eligibility</button>
         </div>
     </div>
     </div>
@@ -174,7 +171,6 @@ input[type=checkbox] {
 
             </div>
         </div>
-    </section>
 
     <div class="modal fade" id="getinvolved-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
