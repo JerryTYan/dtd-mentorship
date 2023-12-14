@@ -1,38 +1,35 @@
-﻿INSERT INTO [UserArea] VALUES (4,1);
-INSERT INTO [UserArea] VALUES (1,2);
-INSERT INTO [UserArea] VALUES (3,3);
-INSERT INTO [UserArea] VALUES (1,4);
-INSERT INTO [UserArea] VALUES (3,5);
-INSERT INTO [UserArea] VALUES (2,6);
-INSERT INTO [UserArea] VALUES (4,7);
-INSERT INTO [UserArea] VALUES (4,8);
-INSERT INTO [UserArea] VALUES (4,9);
-INSERT INTO [UserArea] VALUES (4,10);
-INSERT INTO [UserArea] VALUES (4,11);
-INSERT INTO [UserArea] VALUES (1,12);
-INSERT INTO [UserArea] VALUES (1,13);
-INSERT INTO [UserArea] VALUES (1,14);
-INSERT INTO [UserArea] VALUES (1,15);
-INSERT INTO [UserArea] VALUES (3,16);
-INSERT INTO [UserArea] VALUES (2,17);
-INSERT INTO [UserArea] VALUES (4,18);
-INSERT INTO [UserArea] VALUES (4,19);
-INSERT INTO [UserArea] VALUES (1,20);
-INSERT INTO [UserArea] VALUES (2,21);
-INSERT INTO [UserArea] VALUES (3,22);
-INSERT INTO [UserArea] VALUES (3,23);
-INSERT INTO [UserArea] VALUES (1,24);
-INSERT INTO [UserArea] VALUES (2,25);
-INSERT INTO [UserArea] VALUES (3,26);
-INSERT INTO [UserArea] VALUES (1,27);
-INSERT INTO [UserArea] VALUES (2,28);
-INSERT INTO [UserArea] VALUES (3,29);
-INSERT INTO [UserArea] VALUES (4,30);
-INSERT INTO [UserArea] VALUES (4,31);
+﻿--SET IDENTITY_INSERT [UserArea] ON;
+INSERT INTO UserArea (AreaId, UserId) VALUES (4,1);
+INSERT INTO UserArea (AreaId, UserId) VALUES (1,2);
+INSERT INTO UserArea (AreaId, UserId) VALUES (3,3);
+INSERT INTO UserArea (AreaId, UserId) VALUES (1,4);
+INSERT INTO UserArea (AreaId, UserId) VALUES (3,5);
+INSERT INTO UserArea (AreaId, UserId) VALUES (2,6);
+INSERT INTO UserArea (AreaId, UserId) VALUES (4,7);
+INSERT INTO UserArea (AreaId, UserId) VALUES (4,8);
+INSERT INTO UserArea (AreaId, UserId) VALUES (4,9);
+INSERT INTO UserArea (AreaId, UserId) VALUES (4,10);
+INSERT INTO UserArea (AreaId, UserId) VALUES (4,11);
+INSERT INTO UserArea (AreaId, UserId) VALUES (1,12);
+INSERT INTO UserArea (AreaId, UserId) VALUES (1,13);
+INSERT INTO UserArea (AreaId, UserId) VALUES (1,14);
+INSERT INTO UserArea (AreaId, UserId) VALUES (1,15);
+INSERT INTO UserArea (AreaId, UserId) VALUES (3,16);
+INSERT INTO UserArea (AreaId, UserId) VALUES (2,17);
+INSERT INTO UserArea (AreaId, UserId) VALUES (4,18);
+INSERT INTO UserArea (AreaId, UserId) VALUES (4,19);
+INSERT INTO UserArea (AreaId, UserId) VALUES (1,20);
+INSERT INTO UserArea (AreaId, UserId) VALUES (2,21);
+INSERT INTO UserArea (AreaId, UserId) VALUES (3,22);
+INSERT INTO UserArea (AreaId, UserId) VALUES (3,23);
+INSERT INTO UserArea (AreaId, UserId) VALUES (1,24);
+INSERT INTO UserArea (AreaId, UserId) VALUES (2,25);
+INSERT INTO UserArea (AreaId, UserId) VALUES (3,26);
+INSERT INTO UserArea (AreaId, UserId) VALUES (1,27);
+INSERT INTO UserArea (AreaId, UserId) VALUES (2,28);
+INSERT INTO UserArea (AreaId, UserId) VALUES (3,29);
+INSERT INTO UserArea (AreaId, UserId) VALUES (4,30);
+INSERT INTO UserArea (AreaId, UserId) VALUES (4,31);
+SELECT SCOPE_IDENTITY() AS UserAreaId;
 
-
-
-
-
-
-
+--SET IDENTITY_INSERT [UserArea] OFF;
