@@ -26,7 +26,7 @@ namespace DTD_Mentorship_Project.Pages
         {
             if (ModelState.IsValid && FormData != null)
             {
-                var email = FormData.Email;
+                var email = FormData.Email
                 var password = FormData.Password;
 
                 // TODO: Add authentication logic here

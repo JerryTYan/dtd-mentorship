@@ -61,7 +61,7 @@ input[type=checkbox] {
                             <div class="row">
                                 <div class="col-12 mt-3">
                                     <label class="dtd_font_bold p-0" for="dtd_usertype">Identify yourself.  I am a:</label>
-                                <select class="form-select" title="usertype" id="dtd_usertype" data-url="/Account" asp-for="SelectedUserTypeId">
+                                <select class="form-select" title="usertype" id="dtd_usertype" data-url="/Account" asp-for="FormData.SelectedUserTypeId">
                                         <option selected="selected" value="0">Select One</option>
                                         <option value="1">Youth (Ages 12 – 17)</option>
                                         <option value="2">Young Adult (Ages 18 – 24)</option>
@@ -102,18 +102,18 @@ input[type=checkbox] {
 
             <div class="form-group col-12 py-1">
                 <label class="col-form-label">* Street Address where you reside</label>
-                <input class="form-control" asp-for="Address">
+                <input class="form-control" asp-for="FormData.Address">
                 <span class="text-danger font-weight-bold" asp-validation-for="Address"></span>
             </div>
 
             <div class="form-group col-12 col-md-6">
                 <label for="City">* City</label>
-                <input class="form-control" asp-for="City">
+                <input class="form-control" asp-for="FormData.City">
                 <span class="text-danger font-weight-bold" asp-validation-for="City"></span>
             </div>
             <div class="form-group col-12 col-md-6">
                 <label for="State">* State</label>
-                <select class="form-select" asp-for="State">
+                <select class="form-select" asp-for="FormData.State">
                     <option>California</option>
                     <option>NewYork</option>
                     <option>Arizona</option>
@@ -124,32 +124,32 @@ input[type=checkbox] {
             </div>
             <div class="form-group col-12 col-md-6">
                 <label for="Zip">* Zip</label>
-                <input class="form-control" asp-for="Zip">
+                <input class="form-control" asp-for="FormData.Zip">
                 <span class="text-danger font-weight-bold" asp-validation-for="Zip"></span>
             </div>
             <div class="form-group col-12 col-md-6">
                 <label for="DOB">* Date of Birth</label>
-                <input type="text" class="form-control datepicker" asp-for="DOB" value="">
+                <input type="text" class="form-control datepicker" asp-for="FormData.DOB" value="">
                 <span class="text-danger font-weight-bold " asp-validation-for="DOB"></span>
             </div>
             <div class="form-group col-12 col-md-6">
                 <label for="FieldofWork">* Field of Work</label>
-                <input class="form-control" asp-for="FieldofWork">
+                <input class="form-control" asp-for="FormData.FieldofWork">
                 <span class="text-danger font-weight-bold " asp-validation-for="FieldofWork"></span>
             </div>
             <div class="form-group col-12 col-md-6">
                 <label for="Degree">* Degree</label>
-                <input class="form-control" asp-for="Degree">
+                <input class="form-control" asp-for="FormData.Degree">
                 <span class="text-danger font-weight-bold" asp-validation-for="Degree"></span>
             </div>
             <div class="form-group col-12 col-md-6">
                 <label for="Company">* Company</label>
-                <input class="form-control" asp-for="Company">
+                <input class="form-control" asp-for="FormData.Company">
                 <span class="text-danger font-weight-bold" asp-validation-for="Company"></span>
             </div>
                                     <div class="form-group col-12 col-md-6">
                                         <label for="Availability">* Availability</label>
-                                        <input class="form-control availability" asp-for="Availability">
+                                        <input class="form-control availability" asp-for="FormData.Availability">
                                         <span class="text-danger font-weight-bold" asp-validation-for="Availability"></span>
                                     </div>
 

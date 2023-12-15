@@ -62,6 +62,34 @@ namespace DTD_Mentorship_Project.Pages
         public string Success = "";
         public string Error = "";
 
+        public class EligibilityFormData
+        {
+            [Required]
+            public string SelectedUserTypeId { get; set; }
+            [Required]
+            public string Address { get; set; }
+            [Required]
+            public string City { get; set; }
+            [Required]
+            public string State { get; set; }
+            [Required]
+            public string Zip { get; set; }
+            [Required]
+            public string DOB { get; set; }
+            [Required]
+            public string FieldofWork { get; set; }
+            [Required]
+            public string Degree { get; set; }
+            [Required]
+            public string Company { get; set; }
+            [Required]
+            public string Availability { get; set; }
+
+            [Required]
+            public string Password { get; set; }
+        }
+        public EligibilityFormData FormData { get; set; }
+
         public void OnGet()
         {
             // Initialization logic for GET request
@@ -69,25 +97,33 @@ namespace DTD_Mentorship_Project.Pages
 
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid && FormData != null)
             {
+                
+                
+                Success = "Your Form was Submitted Correctly!";
+
+                Address = FormData.Address;
+                City = FormData.City;
+                State = FormData.State;
+                Zip = FormData.Zip;
+                FieldofWork = FormData.FieldofWork;
+                Degree = FormData.Degree;
+                Company = FormData.Company;
+                Availability = FormData.Availability;
+
+                TempData = Address;
+                TempData = City, State;
+
+                ModelState.Clear();
+
+                return RedirectToPage("/Account/Registration");
+            } 
+            
                 Error = "Please correct field(s) as required!";
 				return Page(); // Return the page with validation errors
-			}
-            Success = "Your Form was Submitted Correctly!";
-
-            Address = "";
-            City = "";
-            State = "";
-            Zip = "";
-            FieldofWork = "";
-            Degree = "";
-            Company = "";
-            Availability = "";
-
-            ModelState.Clear();
-
-			return RedirectToPage("/Account/Registration");
+		
+           
 
 		}
 
