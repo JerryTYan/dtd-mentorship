@@ -1,4 +1,4 @@
-﻿@page "/feedbackreceived"
+﻿@page "/Profile/Mentorship/Feedback/FeedbackReceived"
 @model DTD_Mentorship_Project.Pages.FeedbackReceivedModel
 @{
 }
@@ -10,15 +10,15 @@
             <img src=@Model.MentorImage width="200" height="200" class="img-fluid border" alt="Mentor Image">
         </div>
         <div class="col-md-9">
-            <div class="row">
-                <h1 class="col-md-6 feedback-name">@Model.MentorName</h1>
-                <h3 class="col-md-6 align-self-center">@Model.MentorArea</h3>
+            <div class="row align-items-center">
+                <h2 class="col-md-6 font-weight-bold" style="color: var(--primary-color);">@Model.MentorName</h2>
+                <h3 class="col-md-6 text-white">@Model.MentorArea</h3>
             </div>
             <div class="row">
-                <h3 class="col-md-12 text-center font-weight-normal">Feedback Received!</h3>
+                <h3 class="col-md-12 mt-3 text-center">Feedback Received!</h3>
             </div>
             <div class="row d-flex justify-content-center pt-3">
-                <a asp-page="/FeedbackForm" class="btn dark-button">Edit Feedback</a>
+                <a href="/Profile/Dashboard" class="btn dark-button">Go to Dashboard</a>
             </div>
         </div>
     </div>

@@ -74,6 +74,8 @@ namespace DTD_Mentorship_Project.Pages
                 Error = "Please correct field(s) as required!";
 				return Page(); // Return the page with validation errors
 			}
+            TempData["EligibilityConfirmed"] = true;
+
             Success = "Your Form was Submitted Correctly!";
 
             Address = "";
@@ -87,7 +89,7 @@ namespace DTD_Mentorship_Project.Pages
 
             ModelState.Clear();
 
-			return RedirectToPage("/Account/Registration");
+			return Page();
 
 		}
 

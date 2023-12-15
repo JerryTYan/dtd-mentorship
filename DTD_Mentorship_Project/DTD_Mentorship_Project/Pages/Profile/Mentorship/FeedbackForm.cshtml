@@ -1,23 +1,19 @@
-﻿@page "/feedbackform"
+﻿@page "/Profile/Mentorship/Feedback/FeedbackForm"
 @model DTD_Mentorship_Project.Pages.FeedbackFormModel
 @{
 }
 
 
-<main class="col-12 col-md-11 p-0">
+<main>
 	<div class="row">
-		<div class="col-12 align-self-center"></div>
-		<h1 style="font-family: Poppins; color:white;"> Project Feedback</h1>
+		<h2 class="mt-0 d-flex d-md-block text-center">Mentor Feedback Form</h2>
 	</div>
 
 	<div class="container">
 
 
-		<div class="d-flex">
-
-
+		<div class="d-flex justify-content-start">
 			
-
 			<div class ="mr-4" id="image" style="float: left; padding:50px;border: 5px solid #000;">
 				<img src=@Model.MentorImage>
 			</div>
@@ -26,24 +22,21 @@
 				<div class="d-flex flex-row mb-0">
 
 					<div class="mr-3">
-						<h1 class="font-weight-bold" style="color: var(--primary-color);">@Model.MentorName</h1>
+						<h3 class="mb-0 font-weight-bold" style="color: var(--primary-color);">@Model.MentorName</h3>
 					</div>
 
 					<div>
-						<h1 style="color: white;">@Model.MentorArea</h1>
+						<h3 class="mb-0 text-white">@Model.MentorArea</h3>
 					</div>
 
 				</div>
 
 				<div class="mt-0">
-					<h3 class="font-weight-bold" style="color: white;">@Model.MentorTitle</h3>
+					<h4 class="font-weight-bold text-white text-center">@Model.MentorTitle</h4>
 				</div>
 
 
 			</div>
-
-
-
 
 		</div>
 
@@ -52,7 +45,7 @@
 
 			<fieldset id="status1">
 				<div class="mt-4">
-				<h4 class="text-white font-weight-bold text-size mb-0">1.) Was the mentor fair?</h4>
+				<h4 class="text-white font-weight-bold text-size mb-0">1. Was the mentor fair?</h4>
 
 				<div class="mb-0">
 
@@ -97,7 +90,7 @@
 			<fieldset id="status2">
 
 				<div class="mt-4">
-				<h4 class="text-white font-weight-bold text-size mb-0">2.) Did they act professionally?</h4>
+				<h4 class="text-white font-weight-bold text-size mb-0">2. Did they act professionally?</h4>
 				<div class="form-check form-check-inline text-white">
 					<input class="form-check-input" type="radio" id="s_agree2" name="status2" value=4>
 					<label class="form-check-label cursor-pointer" for="s_agree2">Strongly Agree</label>
@@ -138,7 +131,7 @@
 
 			<fieldset id="status3">
 				<div class="mt-4">
-				<h4 class="text-white font-weight-bold text-size mb-0">3.) Was the workload what was expected?</h4>
+				<h4 class="text-white font-weight-bold text-size mb-0">3. Was the workload what was expected?</h4>
 				<div class="form-check form-check-inline text-white">
 					<input class="form-check-input" type="radio" id="s_agree3" name="status3"  value=4>
 					<label class="form-check-label cursor-pointer" for="s_agree3">Strongly Agree</label>
@@ -179,7 +172,7 @@
 			<fieldset id="status4">
 
 				<div class="mt-4">
-				<h4 class="text-white font-weight-bold text-size mb-0">4.) Would you recommend this mentor?</h4>
+				<h4 class="text-white font-weight-bold text-size mb-0">4. Would you recommend this mentor?</h4>
 				<div class="form-check form-check-inline text-white">
 					<input class="form-check-input" type="radio" id="s_agree4" name="status4"  value=4>
 					<label class="form-check-label cursor-pointer" for="s_agree4">Strongly Agree</label>
@@ -228,7 +221,7 @@
 			</fieldset>
 
 
-			<div class="d-flex justify-content-center">
+			<div class="d-flex justify-content-start">
 				<input type="submit" value="Submit" class="feedback-button text-white">
 			</div>
 

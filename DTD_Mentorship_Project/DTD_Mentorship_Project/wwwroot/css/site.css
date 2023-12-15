@@ -97,13 +97,10 @@ input[type=checkbox] {
 }
 
 .submissionpage {
-    padding-top: 0px;
-    padding-left: 100px;
     width: 100%;
     background-color: #040402;
     color: white;
     margin: 0px;
-    padding: 100px !important;
     border: 0px;
 }
 
@@ -128,7 +125,7 @@ h1.submission {
 }
 
 .navbar {
-    padding-bottom: 100px;
+    padding-bottom: 10px;
 }
 
 .feedback-name {
@@ -146,16 +143,6 @@ h1.submission {
     color: white !important;
 }
 /* Custom styles for mentee cards in dashboard*/
-
-
-/* About Me border*/
-.about-me-description {
-    border: 1px solid rgba(111, 111, 111, 0.5);
-    border-radius: 3px;
-    padding: 15px;
-}
-/* About Me border*/
-
 
 /* Sidebar styling*/
 .widget-services .list-group-item {

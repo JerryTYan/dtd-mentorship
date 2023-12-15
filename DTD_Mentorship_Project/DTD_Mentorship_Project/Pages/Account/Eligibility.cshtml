@@ -6,19 +6,6 @@
     Layout = "~/Pages/Shared/_LayoutNoLeft.cshtml";
 }
 
-@* css rules here from jorge's signup branch
- *@
-
-@*
-input[type=checkbox] { 
-    vertical-align: middle; 
-    display: inline-block;
-
-}
-
-.id{
-    padding: 0px;
-} *@
 <!--Add Jquery headers to initlize datepickers-->
 <head>
     <!-- Include jQuery -->
@@ -35,7 +22,6 @@ input[type=checkbox] {
 
 <main> 
       
-    <section class="section-3 odd highlights">
         <div class="container">
             <div class="row">
                 <!-- Add this section to display messages -->
@@ -114,11 +100,56 @@ input[type=checkbox] {
             <div class="form-group col-12 col-md-6">
                 <label for="State">* State</label>
                 <select class="form-select" asp-for="State">
-                    <option>California</option>
-                    <option>NewYork</option>
+                    <option>Alabama</option>
+                    <option>Alaska</option>
                     <option>Arizona</option>
+                    <option>Arkansas</option>
+                    <option>California</option>
+                    <option>Colorado</option>
+                    <option>Connecticut</option>
+                    <option>Delaware</option>
+                    <option>Florida</option>
+                    <option>Georgia</option>
+                    <option>Hawaii</option>
+                    <option>Idaho</option>
+                    <option>Illinois</option>
+                    <option>Indiana</option>
+                    <option>Iowa</option>
+                    <option>Kansas</option>
+                    <option>Kentucky</option>
+                    <option>Louisiana</option>
+                    <option>Maine</option>
+                    <option>Maryland</option>
+                    <option>Massachusetts</option>
+                    <option>Michigan</option>
+                    <option>Minnesota</option>
+                    <option>Mississippi</option>
+                    <option>Missouri</option>
+                    <option>Montana</option>
+                    <option>Nebraska</option>
+                    <option>Nevada</option>
+                    <option>New Hampshire</option>
+                    <option>New Jersey</option>
+                    <option>New Mexico</option>
+                    <option>New York</option>
+                    <option>North Carolina</option>
+                    <option>North Dakota</option>
+                    <option>Ohio</option>
+                    <option>Oklahoma</option>
+                    <option>Oregon</option>
+                    <option>Pennsylvania</option>
+                    <option>Rhode Island</option>
+                    <option>South Carolina</option>
+                    <option>South Dakota</option>
+                    <option>Tennessee</option>
                     <option>Texas</option>
-                    <option>Detroit</option>
+                    <option>Utah</option>
+                    <option>Vermont</option>
+                    <option>Virginia</option>
+                    <option>Washington</option>
+                    <option>West Virginia</option>
+                    <option>Wisconsin</option>
+                    <option>Wyoming</option>
                 </select>
                 <span class="text-danger font-weight-bold" asp-validation-for="State"></span>
             </div>
@@ -147,24 +178,22 @@ input[type=checkbox] {
                 <input class="form-control" asp-for="Company">
                 <span class="text-danger font-weight-bold" asp-validation-for="Company"></span>
             </div>
-                                    <div class="form-group col-12 col-md-6">
-                                        <label for="Availability">* Availability</label>
-                                        <input class="form-control availability" asp-for="Availability">
-                                        <span class="text-danger font-weight-bold" asp-validation-for="Availability"></span>
-                                    </div>
+            <div class="form-group col-12 col-md-6">
+                <label for="Availability">* Availability</label>
+                <input class="form-control availability" asp-for="Availability">
+                <span class="text-danger font-weight-bold" asp-validation-for="Availability"></span>
+            </div>
 
-        <div class="row" style="text-align: center;">
+            <div class="form-group mt-3">
             <label for="TermsofService">
-                    <input type="checkbox" asp-for="TermsofServiceCheckbox" /> When applying as a mentor, I agree to the <a href="/TOS">Terms and Conditions</a> of Delete the Divide*
+                    <input type="checkbox" asp-for="TermsofServiceCheckbox"/> When applying as a mentor, I agree to the <a href="/TOS">Terms and Conditions</a> of Delete the Divide*
             </label>
             <span class="text-danger font-weight-bold" asp-validation-for="TermsofServiceCheckbox"></span>
 
         </div>
         <br>
-        <div class="row" style="text-align:center;">
-            <div class="form-group col-12">
-                <button type="submit" class="btn dark-button float-center">Check Eligibility</button>
-            </div>
+        <div class="form-group mt-3">
+                <button type="submit" class="btn dark-button float-right">Check Eligibility</button>
         </div>
     </div>
     </div>
@@ -174,9 +203,10 @@ input[type=checkbox] {
 
             </div>
         </div>
-    </section>
+    
+    <button type="button" id="modalTrigger" class="btn btn-primary d-none" data-toggle="modal" data-target="#eligibilityModal"></button>
 
-    <div class="modal fade" id="getinvolved-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="eligibilityModal" tabindex="-1" role="dialog" aria-labelledby="eligibilityModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content full section-3 odd highlights dtd_info_box border-gradient-purple" style="background-color:#040402">
                 <div class="modal-header">
@@ -187,8 +217,8 @@ input[type=checkbox] {
                 </div>
                 <div class="modal-body pt-0">
                     <div class="col-12">
-                        <p>Eligibility is not required. Thank you for your interest to get involved with Delete The Divide™.  Click the CONTINUE button to complete the Get Involved form.</p>
-                        <p class="text-center"><a class="btn ml-lg-auto dark-button" href="/GetInvolved">CONTINUE</a></p>
+                        <p>Thank you for your interest in getting involved with Delete The Divide™. After you register for an account, our team will manually review your application for approval. Please click the 'CONTINUE' button below to complete the registration form. We appreciate your patience and look forward to potentially having you as part of our community.</p>
+                        <p class="text-center"><a class="btn ml-lg-auto dark-button" href="/Account/Register/Mentor">CONTINUE</a></p>
 
                     </div>
                 </div>
@@ -247,5 +277,15 @@ input[type=checkbox] {
 
         // Bind the change event of the dropdown
         $('#dtd_usertype').change(toggleMentorEligibilityForm);
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        // Check if eligibility is confirmed after page reload
+        var eligibilityConfirmed = '@TempData["EligibilityConfirmed"]';
+        if (eligibilityConfirmed === 'True') {
+            $('#modalTrigger').click(); // Trigger the modal
+        }
     });
 </script>

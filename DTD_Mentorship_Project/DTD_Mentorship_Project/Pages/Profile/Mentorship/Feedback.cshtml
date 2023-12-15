@@ -1,52 +1,28 @@
 @page "/Profile/Mentorship/Feedback"
 @model DTD_Mentorship_Project.Pages.FeedbackModel
 
+<main class="container mt-4">
+    <h2 class="mt-0 d-flex d-md-block text-center">Mentor Feedback</h2>
 
-<main class="col-12 col-md-11 p-0">
-	<!-- Text -->
-	<div class="row">
-		<div class="col-12 align-self-center"></div>
-        <h1 style="font-family: Poppins; color:white;"> Mentor Feedback</h1>
-    </div>
-    <br>
-    <div class="container" style="background-color: #ffe7b7; color: black;font-family: Poppins, sans-serif; padding-bottom:10px;">
-        <div id="image" style="float: left; margin:50px; padding:50px;border: 5px solid #000;">
-            
-            <img src="/">
+    <div class="row mt-3 dark-button text-white">
+        <div class="col-md-4 my-3">
+            <img src="@Model.CurrentMentor.Image" class="img-fluid" alt="Mentor Image">
         </div>
-        <div class="row">
-            <div class="d-flex">
 
-                <div id="mentorname" style="color: #3c0484; font-family:Poppins,sans-serif;margin-right:25px;">
-                    <p style="margin-top:50px;font-size:45px;">@Model.CurrentMentor.Name</p>
-
-                </div>
-
-                <div id="mentorttitle"  style="color: black; font-family:Poppins,sans-serif;">
-                    <p style="margin-top:50px;font-size:45px;">@Model.CurrentMentor.Area</p>
-                </div>
-            </div>
-        </div>
-        <div class="row" style="display:flex; padding:5px; margin-right:50px;">
-            <div id="introTitle" style="display:flex;">
-                <p style="color: black; font-size:30px; padding-bottom:30px;"><b>@Model.CurrentMentor.Title</b></p>
-            </div>
-            
-            <div id="content" style="float:right;">
+        <div class="col-md-8 my-3">
+            <h3>@Model.CurrentMentor.Name</h3>
+            <h4>@Model.CurrentMentor.Area</h4>
+            <p class="lead">@Model.CurrentMentor.Title</p>
             <p>
-                Lorem ipsum dolor sit amet. Et corrupti doloribus et dolor sunt et exercitationem minima. Sed excepturi nemo At cupiditate quod aut enim facilis. Qui veniam impedit sit praesentium eligendi aut blanditiis expedita et totam dolores et atque voluptate.
-                Et nihil iusto sit ipsa officia ex illo tempore hic necessitatibus voluptatem cum optio placeat qui dolores voluptates sit ipsum facilis. Et veritatis similique aut nihil voluptate et tempora ipsam vel fugit voluptatem non repellendus expedita. Est inventore repudiandae 33 facilis natus non iure voluptatem ut adipisci commodi. Aut dolores nisi qui perferendis sequi qui alias provident eos pariatur porro ut suscipit vero hic laudantium amet.
+                Lorem ipsum dolor sit amet... 
             </p>
-
-            </div>
         </div>
-        <div class="row" style="padding-top:10cm">
-                <div class="form-group" >
-                    <button type="submit" class="btn float-right mr-3" style="display:inline; background-color:#df92d5;"><a class ="text-black" href="/feedbackform?image=@Model.CurrentMentor.Image&name=@Model.CurrentMentor.Name&description=@Model.CurrentMentor.Description&title=@Model.CurrentMentor.Title&area=@Model.CurrentMentor.Area">Review</a></button>
+    </div>
 
-                    <button type="submit" class="btn float-right mr-3" style="display:inline; background-color:#df92d5;">Back</button>
-                </div>
-
+    <div class="row mt-4">
+        <div class="col text-right">
+            <a href="/Profile/Mentorship" class="btn btn-secondary">Back</a>
+            <a href="/Profile/Mentorship/Feedback/FeedbackForm?image=@Model.CurrentMentor.Image&name=@Model.CurrentMentor.Name&description=@Model.CurrentMentor.Description&title=@Model.CurrentMentor.Title&area=@Model.CurrentMentor.Area" class="btn dark-button">Review</a>
         </div>
     </div>
 </main>
