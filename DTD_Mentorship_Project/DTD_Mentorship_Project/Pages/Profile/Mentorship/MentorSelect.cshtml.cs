@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using DTD_Mentorship_Project.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace DTD_Mentorship_Project.Pages
 {
@@ -28,7 +29,41 @@ namespace DTD_Mentorship_Project.Pages
 
         public void OnGet()
         {
-            //Mentors_IT = _dbContext.;
+           Mentors_CB = (from user in _dbContext.Users
+                         join userarea in _dbContext.UserAreas on user.UserId equals userarea.UserId
+                         join area in _dbContext.Areas on userarea.AreaId equals area.AreaId
+                         where area.AreaId == 3 && user.IdentityId == 9
+                         select user).ToList();
+
+            Mentors_UX = (from user in _dbContext.Users
+                          join userarea in _dbContext.UserAreas on user.UserId equals userarea.UserId
+                          join area in _dbContext.Areas on userarea.AreaId equals area.AreaId
+                          where area.AreaId == 2 && user.IdentityId == 9
+                          select user).ToList();
+
+            Mentors_IT = (from user in _dbContext.Users
+                          join userarea in _dbContext.UserAreas on user.UserId equals userarea.UserId
+                          join area in _dbContext.Areas on userarea.AreaId equals area.AreaId
+                          where area.AreaId == 4 && user.IdentityId == 9
+                          select user).ToList();
+
+           /* if (!Mentors_CB.IsNullOrEmpty())
+            {
+                foreach(var item in Mentors_CB)
+                {
+                    _logger.LogInformation("User found: {User}", item.FirstName);
+                    _logger.LogInformation("Id found: {IdName}", item.UserId);
+
+                }
+              
+
+            }
+            else
+            {
+                _logger.LogInformation("No user found");
+            }
+*/
+
 
         }
     }
