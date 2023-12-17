@@ -32,6 +32,7 @@ builder.WebHost.UseKestrel(options =>
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+builder.Logging.AddConsole();
 
 
 var app = builder.Build();

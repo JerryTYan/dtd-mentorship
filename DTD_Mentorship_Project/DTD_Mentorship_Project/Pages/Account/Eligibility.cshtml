@@ -234,7 +234,7 @@
         // Assuming the date format is MM/DD/YYYY
         // for DOB picker
         $(".datepicker").datepicker({
-            dateFormat: 'mm-dd-yy',
+            dateFormat: 'yy-mm-dd',
             changeMonth: true,
             changeYear: true,
             yearRange: '-100:+0',
@@ -243,8 +243,8 @@
         // for Availability Picker
         // Add timepicker to the input field with the class "availability"
         $(".availability").datetimepicker({
-            dateFormat: 'mm-dd-yy', // corrected
-            timeFormat: 'hh:mm tt',
+            dateFormat: 'yy-mm-dd', // corrected
+            timeFormat: 'HH:mm',
             stepMinute: 15, // Set your desired time slot interval
             minDate: 0, // Set the minimum date to the current date
             changeMonth: true,

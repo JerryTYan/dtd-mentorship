@@ -6,11 +6,27 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using DTD_Mentorship_Project.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
+using Microsoft.Extensions.Logging;
 
 namespace DTD_Mentorship_Project.Pages
 {
     public class Eligibility : PageModel
     {
+        private readonly DBContext _bdContext;
+        private readonly ILogger<Eligibility> _logger;
+
+        [BindProperty]
+        public User Users { get; set; }
+
+        public Eligibility(DBContext bdContext, ILogger<Eligibility> logger)
+        {
+            _bdContext = bdContext;
+            _logger = logger;
+        }
+
         [BindProperty]
         [Required(ErrorMessage = "Identify yourself. The SelectedUserTypeId field is required.")]
         [Range(1, int.MaxValue, ErrorMessage = "Please select a valid user type.")]
@@ -18,7 +34,7 @@ namespace DTD_Mentorship_Project.Pages
 
         [BindProperty]
         [Required(ErrorMessage = "Street Address where you reside is required.")]
-        public string Address { get; set; } = "";
+        public virtual ICollection<Address> Address { get; set; } = new List<Address>();
 
         [BindProperty]
         [Required(ErrorMessage = "City is required.")]
@@ -52,7 +68,7 @@ namespace DTD_Mentorship_Project.Pages
 
         [BindProperty]
         [Required(ErrorMessage = "Availability is required.")]
-        public string Availability { get; set; } = "";
+        public DateTime? Availability { get; set; }
 
         [BindProperty]
         [Required(ErrorMessage = "You must agree to the Terms and Conditions.")]
@@ -67,10 +83,11 @@ namespace DTD_Mentorship_Project.Pages
             // Initialization logic for GET request
         }
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPost()
         {
             if (!ModelState.IsValid)
             {
+                _logger.LogWarning("Form submission failed due to validstion errors.");
                 Error = "Please correct field(s) as required!";
 				return Page(); // Return the page with validation errors
 			}
@@ -78,18 +95,27 @@ namespace DTD_Mentorship_Project.Pages
 
             Success = "Your Form was Submitted Correctly!";
 
-            Address = "";
-            City = "";
-            State = "";
-            Zip = "";
-            FieldofWork = "";
-            Degree = "";
-            Company = "";
-            Availability = "";
+            var eligibilityData = new User
+            {
+                SelectedUserTypeId = SelectedUserTypeId.ToString(),
+                Address = Address,
+                City = City,
+                State = State,
+                Zip = Zip,
+                DOB = DOB.ToString("yyyy-MM-dd"),
+                FieldofWork = FieldofWork,
+                Degree = Degree,
+                Company = Company,
+                Availability = Availability,
+                Password = "YourPassword"  // Replace with a real password
+            };
 
-            ModelState.Clear();
+            _bdContext.Users.Add(eligibilityData);
+            await _bdContext.SaveChangesAsync();
 
-			return Page();
+            _logger.LogInformation("Form Submission Successful.User added to Database");
+
+            return Page();
 
 		}
 

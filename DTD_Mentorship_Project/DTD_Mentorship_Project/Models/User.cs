@@ -27,7 +27,7 @@ public partial class User
 
     public DateTime? Availability { get; set; }
 
-    public virtual ICollection<Address> Addresses { get; set; } = new List<Address>();
+    public virtual ICollection<Address> Address { get; set; } = new List<Address>();
 
     public virtual Identity Identity { get; set; }
 
@@ -36,4 +36,16 @@ public partial class User
     public virtual ICollection<MentorMentee> MentorMenteeMentors { get; set; } = new List<MentorMentee>();
 
     public virtual ICollection<UserArea> UserAreas { get; set; } = new List<UserArea>();
+
+    //Added required fieilds
+
+    public string Company { get; set; }
+    public string  FieldofWork { get; set; }
+    public string DOB { get; set; }
+    public string State { get; set; }
+    public string  City{ get; set; }
+
+    public string Zip { get; set; }
+
+    public string SelectedUserTypeId { get; set; }
 }

@@ -13,7 +13,7 @@ public partial class DBContext : DbContext
     {
     }
 
-    public virtual DbSet<Address> Addresses { get; set; }
+    public virtual DbSet<Address> Address { get; set; }
 
     public virtual DbSet<Area> Areas { get; set; }
 
@@ -46,18 +46,18 @@ public partial class DBContext : DbContext
                 .HasColumnName("Street_Address");
             entity.Property(e => e.ZipCode).HasColumnName("Zip_Code");
 
-            entity.HasOne(d => d.User).WithMany(p => p.Addresses)
+            entity.HasOne(d => d.User).WithMany(p => p.Address)
                 .HasForeignKey(d => d.UserId)
                 .HasConstraintName("FK_Address_UserId");
         });
 
-        modelBuilder.Entity<Area>(entity =>
+       /* modelBuilder.Entity<Area>(entity =>
         {
             entity.ToTable("Area");
 
             entity.Property(e => e.AreaId).ValueGeneratedNever();
             entity.Property(e => e.AreaName).HasMaxLength(200);
-        });
+        }); */
 
         modelBuilder.Entity<Identity>(entity =>
         {
@@ -97,6 +97,16 @@ public partial class DBContext : DbContext
             entity.Property(e => e.Image).HasMaxLength(200);
             entity.Property(e => e.LastName).HasMaxLength(200);
             entity.Property(e => e.Password).HasMaxLength(200);
+
+            //Eligibility properties
+            entity.Property(e => e.City).HasMaxLength(200);
+            entity.Property(e => e.State).HasMaxLength(200);
+            entity.Property(e => e.Zip).HasMaxLength(200);
+            entity.Property(e => e.Company).HasMaxLength(200);
+            entity.Property(e => e.DOB).HasMaxLength(200);
+            entity.Property(e => e.FieldofWork).HasMaxLength(200);
+            entity.Property(e => e.SelectedUserTypeId).HasMaxLength(200);
+
 
             entity.HasOne(d => d.Identity).WithMany(p => p.Users)
                 .HasForeignKey(d => d.IdentityId)
