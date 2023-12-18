@@ -8,12 +8,20 @@ using Microsoft.Extensions.DependencyInjection;
 using DTD_Mentorship_Project.Pages;
 using DTD_Mentorship_Project.Models;
 using DTD_Mentorship_Project;
-
+using System.Text.Json;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Hosting;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSession(options => {
     options.IdleTimeout = TimeSpan.FromMinutes(540);
 });
+
+builder.Services.AddScoped<GeocodingService, GeocodingService>();  // Add this line to register GeocodingService
+
 // builder.Services.AddMediatR();
 builder.Services.AddDbContext<DTD_Mentorship_Project.Models.DBContext>(options =>
 {
@@ -51,11 +59,26 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-// Redirect the root URL to /Profile/Dashboard
+// Redirect the root URL to /Account/Registration
 app.MapGet("/", context =>
 {
-    context.Response.Redirect("/Profile/Dashboard");
+    context.Response.Redirect("/Account/Eligibility");
     return Task.CompletedTask;
+});
+
+
+
+// Map your SuggestCitiesAndZips endpoint
+app.MapGet("/Eligibility/SuggestCitiesAndZips", async context =>
+{
+    // Inject GeocodingService using the service provider
+    var geocodingService = context.RequestServices.GetRequiredService<GeocodingService>();
+
+    // Use the injected service to call the method
+    var suggestions = await geocodingService.SuggestCitiesAndZips("");
+
+    // Return the suggestions as a response
+    await context.Response.WriteAsJsonAsync(suggestions);
 });
 
 app.MapRazorPages();

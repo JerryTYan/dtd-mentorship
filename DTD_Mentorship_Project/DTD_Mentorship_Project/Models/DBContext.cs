@@ -13,7 +13,7 @@ public partial class DBContext : DbContext
     {
     }
 
-    public virtual DbSet<Address> Address { get; set; }
+    public virtual DbSet<Address> Addresses { get; set; }
 
     public virtual DbSet<Area> Areas { get; set; }
 
@@ -43,10 +43,10 @@ public partial class DBContext : DbContext
             entity.Property(e => e.StreetAddress)
                 .HasMaxLength(200)
                 .IsUnicode(false)
-                .HasColumnName("Street_Address");
-            entity.Property(e => e.ZipCode).HasColumnName("Zip_Code");
+                .HasColumnName("StreetAddress");
+            entity.Property(e => e.ZipCode).HasColumnName("ZipCode");
 
-            entity.HasOne(d => d.User).WithMany(p => p.Address)
+            entity.HasOne(d => d.User).WithMany(p => p.Addresses)
                 .HasForeignKey(d => d.UserId)
                 .HasConstraintName("FK_Address_UserId");
         });
@@ -68,7 +68,7 @@ public partial class DBContext : DbContext
                 .IsRequired()
                 .HasMaxLength(200)
                 .IsUnicode(false)
-                .HasColumnName("Identity_Name");
+                .HasColumnName("IdentityName");
         });
 
         modelBuilder.Entity<MentorMentee>(entity =>

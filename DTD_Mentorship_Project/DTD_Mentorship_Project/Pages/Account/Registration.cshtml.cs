@@ -45,7 +45,7 @@ namespace DTD_Mentorship_Project.Pages
 				var confirm = FormData.Confirm;
 
 				_logger.LogInformation("Email: {Email}, Password: {Password}, Confirm: {Confirm}", email, password, confirm);
-				return RedirectToPage("/Account/Submission");
+				return RedirectToPage("/Account/Login");
 
 			}
 

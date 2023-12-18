@@ -26,8 +26,7 @@ public partial class User
     public string Degree { get; set; }
 
     public DateTime? Availability { get; set; }
-
-    public virtual ICollection<Address> Address { get; set; } = new List<Address>();
+    public ICollection<Address> Addresses { get; set; }
 
     public virtual Identity Identity { get; set; }
 

@@ -6,26 +6,36 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 using DTD_Mentorship_Project.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
+using Geocoding;
+using Geocoding.Google;
+using DTD_Mentorship_Project.Pages.Profile;
 
 namespace DTD_Mentorship_Project.Pages
 {
     public class Eligibility : PageModel
     {
+        //Connect Geo Services
+        private readonly GeocodingService _geocodingService;
+        //Initialize DB context
         private readonly DBContext _bdContext;
         private readonly ILogger<Eligibility> _logger;
 
-        [BindProperty]
-        public User Users { get; set; }
 
-        public Eligibility(DBContext bdContext, ILogger<Eligibility> logger)
+        public Eligibility(DBContext bdContext, GeocodingService geocodingService, ILogger<Eligibility> logger)
         {
             _bdContext = bdContext;
+            _geocodingService = geocodingService;
             _logger = logger;
         }
+
+        [BindProperty]
+        public User Users { get; set; }
 
         [BindProperty]
         [Required(ErrorMessage = "Identify yourself. The SelectedUserTypeId field is required.")]
@@ -33,8 +43,18 @@ namespace DTD_Mentorship_Project.Pages
         public int SelectedUserTypeId { get; set; }
 
         [BindProperty]
+        [Required(ErrorMessage = "First Name is required.")]
+        public string FirstName { get; set; } = "";
+
+        [BindProperty]
+        [Required(ErrorMessage = "Last Name is required.")]
+        public string LastName { get; set; } = "";
+
+
+        [BindProperty]
         [Required(ErrorMessage = "Street Address where you reside is required.")]
-        public virtual ICollection<Address> Address { get; set; } = new List<Address>();
+        [StreetAddressValidation(ErrorMessage = "Invalid street address format.")]
+        public virtual ICollection<DTD_Mentorship_Project.Models.Address> Addresses { get; set; } = new List<DTD_Mentorship_Project.Models.Address>();
 
         [BindProperty]
         [Required(ErrorMessage = "City is required.")]
@@ -46,6 +66,7 @@ namespace DTD_Mentorship_Project.Pages
 
         [BindProperty]
         [Required(ErrorMessage = "Zip is required.")]
+        [RegularExpression(@"^\d{5}(?:[-\s]\d{4})?$", ErrorMessage = "Invalid ZIP code format.")]
         public string Zip { get; set; } = "";
 
         [BindProperty]
@@ -78,10 +99,28 @@ namespace DTD_Mentorship_Project.Pages
         public string Success = "";
         public string Error = "";
 
+        /* Fetch City, State, Zip Data from Google Api 
+        [HttpGet]
+        [IgnoreAntiforgeryToken]
+        public async Task<IActionResult> SuggestCitiesAndZips(string input)
+        {
+            try
+            {
+                var suggestions = await _geocodingService.SuggestCitiesAndZips(input);
+            return new JsonResult(suggestions);
+        }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Error calling Google Geocoding API.");
+                    return StatusCode(500, "Error calling Google Geocoding API.");
+    }
+}*/
+
         public void OnGet()
         {
             // Initialization logic for GET request
         }
+
 
         public async Task<IActionResult> OnPost()
         {
@@ -98,7 +137,9 @@ namespace DTD_Mentorship_Project.Pages
             var eligibilityData = new User
             {
                 SelectedUserTypeId = SelectedUserTypeId.ToString(),
-                Address = Address,
+                FirstName = FirstName,
+                LastName = LastName,
+                Addresses = Addresses,
                 City = City,
                 State = State,
                 Zip = Zip,
@@ -107,7 +148,6 @@ namespace DTD_Mentorship_Project.Pages
                 Degree = Degree,
                 Company = Company,
                 Availability = Availability,
-                Password = "YourPassword"  // Replace with a real password
             };
 
             _bdContext.Users.Add(eligibilityData);
@@ -115,12 +155,39 @@ namespace DTD_Mentorship_Project.Pages
 
             _logger.LogInformation("Form Submission Successful.User added to Database");
 
-            return Page();
+            return RedirectToPage("/Account/Registration");
+        }
 
-		}
+        /* Validate Stree Address */
+        public class StreetAddressValidationAttribute : ValidationAttribute
+        {
+            protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+            {
+                if (value is ICollection<Geocoding.Address> addresses)
+                {
+                    if (value is string streetAddress)
+                    {
+                        if (!IsValidStreetAddress(streetAddress))
+                        {
+                            return new ValidationResult(ErrorMessage);
+                        }
+                    }
+                }
 
-		// Custom validation attribute for DOB
-		public class DOBNotLessThan18Attribute : ValidationAttribute
+                return ValidationResult.Success;
+            }
+
+            private bool IsValidStreetAddress(string streetAddress)
+            {
+                // Regex pattern for at least 1-5 digits followed by a space and a string
+                var pattern = @"^\d{1,5}\s\w+";
+                return Regex.IsMatch(streetAddress, pattern);
+            }
+        }
+
+
+        // Custom validation attribute for DOB
+        public class DOBNotLessThan18Attribute : ValidationAttribute
         {
             protected override ValidationResult IsValid(object value, ValidationContext validationContext)
             {

@@ -17,193 +17,209 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css">
 
+    <!--Include Google Goecoding API-->
+
 </head>
 
 
-<main> 
-      
-        <div class="container">
-            <div class="row">
-                <!-- Add this section to display messages -->
-                @if (Model.Error.Length >0)
+<main>
+
+    <div class="container">
+        <div class="row">
+            <!-- Add this section to display messages -->
+            @if (Model.Error.Length >0)
                 {
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        <strong>@Model.Error</strong>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label=" = "Close"></button>
-                    </div>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>@Model.Error</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label=" = " Close"></button>
+            </div>
                 }
                 else if (Model.Success.Length >0)
                 {
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>@Model.Success</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label=" = "Close"></button>
-                </div>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>@Model.Success</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label=" = " Close"></button>
+            </div>
                 }
-                <!-- End of message section -->
-                <form method="post">
+            <!-- End of message section -->
+            <form method="post">
 
-                    <div class="form-group mt-2">
+                <div class="form-group mt-2">
 
-                            <div class="row">
-                                <div class="col-12 mt-3">
-                                    <label class="dtd_font_bold p-0" for="dtd_usertype">Identify yourself.  I am a:</label>
-                                <select class="form-select" title="usertype" id="dtd_usertype" data-url="/Account" asp-for="SelectedUserTypeId">
-                                        <option selected="selected" value="0">Select One</option>
-                                        <option value="1">Youth (Ages 12 – 17)</option>
-                                        <option value="2">Young Adult (Ages 18 – 24)</option>
-                                        <option value="8">Adult (Ages 25 - 59)</option>
-                                        <option value="9">Older Adult (Ages 60+)</option>
-                                        <option value="3">Organization Participant or Member</option>
-                                        <option value="4">Small Business Owner</option>
-                                        <option value="5">Educator</option>
-                                        <option value="6">Partner</option>
-                                        <option value="7">Mentor</option>
-                                        <option value="8">Other</option>
-                                    </select>
-                                <span class="text-danger font-weight-bold" asp-validation-for="SelectedUserTypeId"></span>
+                    <div class="row">
+                        <div class="col-12 mt-3">
+                            <label class="dtd_font_bold p-0" for="dtd_usertype">Identify yourself.  I am a:</label>
+                            <select class="form-select" title="usertype" id="dtd_usertype" data-url="/Account" asp-for="SelectedUserTypeId">
+                                <option selected="selected" value="0">Select One</option>
+                                <option value="1">Youth (Ages 12 – 17)</option>
+                                <option value="2">Young Adult (Ages 18 – 24)</option>
+                                <option value="8">Adult (Ages 25 - 59)</option>
+                                <option value="9">Older Adult (Ages 60+)</option>
+                                <option value="3">Organization Participant or Member</option>
+                                <option value="4">Small Business Owner</option>
+                                <option value="5">Educator</option>
+                                <option value="6">Partner</option>
+                                <option value="7">Mentor</option>
+                                <option value="8">Other</option>
+                            </select>
+                            <span class="text-danger font-weight-bold" asp-validation-for="SelectedUserTypeId"></span>
+                        </div>
+                    </div>
+
+
+                    <div class="eligibility-form mt-3" id="mentorEligibilityForm" style="display: none;">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2>Mentor Eligibility</h2>
+                            </div>
+                        </div>
+
+
+                        <div style="">
+                            <div class="row mt-3">
+                                <div class="form-group col-12 py-1">
+                                    <p>Membership eligibility criteria for Young Adults: Must be age 18 to 24 and reside in a targeted service area in LA County.</p>
+                                    <p>Enter the physical street address where you reside. Then click the ‘Check Eligibility’ button.</p>
                                 </div>
                             </div>
+                            <!--<div class="text-danger font-weight-bold ml-2" ><ul><li style="display:none"></li>
+                            </ul>
+                                </div> -->
 
 
-     <div class="eligibility-form mt-3" id="mentorEligibilityForm" style="display: none;">
-            <div class="row">
-                <div class="col-12">
-                    <h2>Mentor Eligibility</h2>
-                </div>
-            </div>
- 
+                            <div class="row">
 
-    <div style="">
-        <div class="row mt-3">
-            <div class="form-group col-12 py-1">
-                <p>Membership eligibility criteria for Young Adults: Must be age 18 to 24 and reside in a targeted service area in LA County.</p>
-                <p>Enter the physical street address where you reside. Then click the ‘Check Eligibility’ button.</p>
-            </div>
-        </div>
-   <!--<div class="text-danger font-weight-bold ml-2" ><ul><li style="display:none"></li>
-</ul>
-    </div> -->
+                                <div class="form-group col-12 col-md-6">
+                                    <label>First Name</label>
+                                    <input asp-for="FirstName">
+                                    <span class="text-danger font-weight-bold" asp-validation-for="FirstName"></span>
+                                </div>
 
-        <div class="row">
+                                <div class="form-group col-12 col-md-6">
+                                    <label>Last Name</label>
+                                    <input asp-for="LastName">
+                                    <span class="text-danger font-weight-bold" asp-validation-for="LastName"></span>
+                                </div>
 
-            <div class="form-group col-12 py-1">
-                <label class="col-form-label">* Street Address where you reside</label>
-                <input class="form-control" asp-for="Address">
-                <span class="text-danger font-weight-bold" asp-validation-for="Address"></span>
-            </div>
+                                <div class="form-group col-12 py-1">
+                                    <label >Address</label>
+                                    <input  asp-for="Addresses" id="Addresses">
+                                    <ul id="suggestions"></ul>
+                                    <span class="text-danger font-weight-bold" asp-validation-for="Addresses"></span>
+                                </div>
 
-            <div class="form-group col-12 col-md-6">
-                <label for="City">* City</label>
-                <input class="form-control" asp-for="City">
-                <span class="text-danger font-weight-bold" asp-validation-for="City"></span>
-            </div>
-            <div class="form-group col-12 col-md-6">
-                <label for="State">* State</label>
-                <select class="form-select" asp-for="State">
-                    <option>Alabama</option>
-                    <option>Alaska</option>
-                    <option>Arizona</option>
-                    <option>Arkansas</option>
-                    <option>California</option>
-                    <option>Colorado</option>
-                    <option>Connecticut</option>
-                    <option>Delaware</option>
-                    <option>Florida</option>
-                    <option>Georgia</option>
-                    <option>Hawaii</option>
-                    <option>Idaho</option>
-                    <option>Illinois</option>
-                    <option>Indiana</option>
-                    <option>Iowa</option>
-                    <option>Kansas</option>
-                    <option>Kentucky</option>
-                    <option>Louisiana</option>
-                    <option>Maine</option>
-                    <option>Maryland</option>
-                    <option>Massachusetts</option>
-                    <option>Michigan</option>
-                    <option>Minnesota</option>
-                    <option>Mississippi</option>
-                    <option>Missouri</option>
-                    <option>Montana</option>
-                    <option>Nebraska</option>
-                    <option>Nevada</option>
-                    <option>New Hampshire</option>
-                    <option>New Jersey</option>
-                    <option>New Mexico</option>
-                    <option>New York</option>
-                    <option>North Carolina</option>
-                    <option>North Dakota</option>
-                    <option>Ohio</option>
-                    <option>Oklahoma</option>
-                    <option>Oregon</option>
-                    <option>Pennsylvania</option>
-                    <option>Rhode Island</option>
-                    <option>South Carolina</option>
-                    <option>South Dakota</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Utah</option>
-                    <option>Vermont</option>
-                    <option>Virginia</option>
-                    <option>Washington</option>
-                    <option>West Virginia</option>
-                    <option>Wisconsin</option>
-                    <option>Wyoming</option>
-                </select>
-                <span class="text-danger font-weight-bold" asp-validation-for="State"></span>
-            </div>
-            <div class="form-group col-12 col-md-6">
-                <label for="Zip">* Zip</label>
-                <input class="form-control" asp-for="Zip">
-                <span class="text-danger font-weight-bold" asp-validation-for="Zip"></span>
-            </div>
-            <div class="form-group col-12 col-md-6">
-                <label for="DOB">* Date of Birth</label>
-                <input type="text" class="form-control datepicker" asp-for="DOB" value="">
-                <span class="text-danger font-weight-bold " asp-validation-for="DOB"></span>
-            </div>
-            <div class="form-group col-12 col-md-6">
-                <label for="FieldofWork">* Field of Work</label>
-                <input class="form-control" asp-for="FieldofWork">
-                <span class="text-danger font-weight-bold " asp-validation-for="FieldofWork"></span>
-            </div>
-            <div class="form-group col-12 col-md-6">
-                <label for="Degree">* Degree</label>
-                <input class="form-control" asp-for="Degree">
-                <span class="text-danger font-weight-bold" asp-validation-for="Degree"></span>
-            </div>
-            <div class="form-group col-12 col-md-6">
-                <label for="Company">* Company</label>
-                <input class="form-control" asp-for="Company">
-                <span class="text-danger font-weight-bold" asp-validation-for="Company"></span>
-            </div>
-            <div class="form-group col-12 col-md-6">
-                <label for="Availability">* Availability</label>
-                <input class="form-control availability" asp-for="Availability">
-                <span class="text-danger font-weight-bold" asp-validation-for="Availability"></span>
-            </div>
+                                <div class="form-group col-12 col-md-6">
+                                    <label for="City">* City</label>
+                                    <input class="form-control" asp-for="City" id="City">
+                                    <span class="text-danger font-weight-bold" asp-validation-for="City"></span>
+                                </div>
+                                <div class="form-group col-12 col-md-6">
+                                    <label for="State">* State</label>
+                                    <select class="form-select" asp-for="State">
+                                        <option>Alabama</option>
+                                        <option>Alaska</option>
+                                        <option>Arizona</option>
+                                        <option>Arkansas</option>
+                                        <option>California</option>
+                                        <option>Colorado</option>
+                                        <option>Connecticut</option>
+                                        <option>Delaware</option>
+                                        <option>Florida</option>
+                                        <option>Georgia</option>
+                                        <option>Hawaii</option>
+                                        <option>Idaho</option>
+                                        <option>Illinois</option>
+                                        <option>Indiana</option>
+                                        <option>Iowa</option>
+                                        <option>Kansas</option>
+                                        <option>Kentucky</option>
+                                        <option>Louisiana</option>
+                                        <option>Maine</option>
+                                        <option>Maryland</option>
+                                        <option>Massachusetts</option>
+                                        <option>Michigan</option>
+                                        <option>Minnesota</option>
+                                        <option>Mississippi</option>
+                                        <option>Missouri</option>
+                                        <option>Montana</option>
+                                        <option>Nebraska</option>
+                                        <option>Nevada</option>
+                                        <option>New Hampshire</option>
+                                        <option>New Jersey</option>
+                                        <option>New Mexico</option>
+                                        <option>New York</option>
+                                        <option>North Carolina</option>
+                                        <option>North Dakota</option>
+                                        <option>Ohio</option>
+                                        <option>Oklahoma</option>
+                                        <option>Oregon</option>
+                                        <option>Pennsylvania</option>
+                                        <option>Rhode Island</option>
+                                        <option>South Carolina</option>
+                                        <option>South Dakota</option>
+                                        <option>Tennessee</option>
+                                        <option>Texas</option>
+                                        <option>Utah</option>
+                                        <option>Vermont</option>
+                                        <option>Virginia</option>
+                                        <option>Washington</option>
+                                        <option>West Virginia</option>
+                                        <option>Wisconsin</option>
+                                        <option>Wyoming</option>
+                                    </select>
+                                    <span class="text-danger font-weight-bold" asp-validation-for="State"></span>
+                                </div>
+                                <div class="form-group col-12 col-md-6">
+                                    <label for="Zip">* Zip</label>
+                                    <input class="form-control" asp-for="Zip" id="Zip">
+                                    <span class="text-danger font-weight-bold" asp-validation-for="Zip"></span>
+                                </div>
+                                <div class="form-group col-12 col-md-6">
+                                    <label for="DOB">* Date of Birth</label>
+                                    <input type="text" class="form-control datepicker" asp-for="DOB" value="">
+                                    <span class="text-danger font-weight-bold " asp-validation-for="DOB"></span>
+                                </div>
+                                <div class="form-group col-12 col-md-6">
+                                    <label for="FieldofWork">* Field of Work</label>
+                                    <input class="form-control" asp-for="FieldofWork">
+                                    <span class="text-danger font-weight-bold " asp-validation-for="FieldofWork"></span>
+                                </div>
+                                <div class="form-group col-12 col-md-6">
+                                    <label for="Degree">* Degree</label>
+                                    <input class="form-control" asp-for="Degree">
+                                    <span class="text-danger font-weight-bold" asp-validation-for="Degree"></span>
+                                </div>
+                                <div class="form-group col-12 col-md-6">
+                                    <label for="Company">* Company</label>
+                                    <input class="form-control" asp-for="Company">
+                                    <span class="text-danger font-weight-bold" asp-validation-for="Company"></span>
+                                </div>
+                                <div class="form-group col-12 col-md-6">
+                                    <label for="Availability">* Availability</label>
+                                    <input class="form-control availability" asp-for="Availability">
+                                    <span class="text-danger font-weight-bold" asp-validation-for="Availability"></span>
+                                </div>
 
-            <div class="form-group mt-3">
-            <label for="TermsofService">
-                    <input type="checkbox" asp-for="TermsofServiceCheckbox"/> When applying as a mentor, I agree to the <a href="/TOS">Terms and Conditions</a> of Delete the Divide*
-            </label>
-            <span class="text-danger font-weight-bold" asp-validation-for="TermsofServiceCheckbox"></span>
+                                <div class="form-group mt-3">
+                                    <label for="TermsofService">
+                                        <input type="checkbox" asp-for="TermsofServiceCheckbox" /> When applying as a mentor, I agree to the <a href="/TOS">Terms and Conditions</a> of Delete the Divide*
+                                    </label>
+                                    <span class="text-danger font-weight-bold" asp-validation-for="TermsofServiceCheckbox"></span>
 
-        </div>
-        <br>
-        <div class="form-group mt-3">
-                <button type="submit" class="btn dark-button float-right">Check Eligibility</button>
+                                </div>
+                                <br>
+                                <div class="form-group mt-3">
+                                    <button type="submit" class="btn dark-button float-right">Check Eligibility</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+
+
         </div>
     </div>
-    </div>
-       </div>
-        </form>
 
-
-            </div>
-        </div>
-    
     <button type="button" id="modalTrigger" class="btn btn-primary d-none" data-toggle="modal" data-target="#eligibilityModal"></button>
 
     <div class="modal fade" id="eligibilityModal" tabindex="-1" role="dialog" aria-labelledby="eligibilityModalLabel" aria-hidden="true">
@@ -227,6 +243,59 @@
     </div>
 
 </main>
+
+
+<!-- Add this script to get Geolocation Data from google api -->
+<!-- Add this script to your Razor Page or include it in your site-wide JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('Script is running.');
+        const inputField = document.getElementById('Addresses');
+
+        if (inputField) {
+            inputField.addEventListener('input', async () => {
+                console.log('Input Field Regstered');
+                const inputValue = inputField.value.trim();
+                const suggestionsList = document.getElementById('suggestions');
+
+                if (inputValue.length > 0) {
+                    const response = await fetch(`/Models/GeocodingService/SuggestCitiesAndZips?input=${encodeURIComponent(inputValue)}`);
+
+                    if (response.ok) {
+                        console.log('Response Ok.');
+                        const suggestions = await response.json();
+
+                        suggestionsList.innerHTML = '';
+
+                        suggestions.forEach(suggestion => {
+                            const li = document.createElement('li');
+                            li.textContent = suggestion;
+                            li.addEventListener('click', () => {
+                                inputField.value = suggestion;
+                                const parts = suggestion.split(', ');
+                                document.querySelector('input[asp-for="City"]').value = parts[0];
+                                const stateZip = parts[1].split(' ');
+                                document.querySelector('input[asp-for="State"]').value = stateZip[0];
+                                document.querySelector('input[asp-for="Zip"]').value = stateZip[1];
+                                suggestionsList.innerHTML = '';
+                            });
+                            suggestionsList.appendChild(li);
+                        });
+                    } else {
+                        console.error('Failed to fetch suggestions:', response.status, response.statusText);
+                    }
+                } else {
+                    suggestionsList.innerHTML = '';
+                }
+            });
+        } else {
+            console.error('Input field not found.');
+        }
+    });
+</script>
+
+
+
 
 <!--Create Date picker-->
 <script>
