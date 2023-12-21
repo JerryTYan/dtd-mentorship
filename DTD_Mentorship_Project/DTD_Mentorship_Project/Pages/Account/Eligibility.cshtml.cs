@@ -1,36 +1,20 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using DTD_Mentorship_Project; // Namespace where your models are defined
-using System.Diagnostics;
-using System.Net.Http;
-using System.Text.Json;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 using DTD_Mentorship_Project.Models;
-using Microsoft.EntityFrameworkCore;
-using System;
-using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
-using Geocoding;
-using Geocoding.Google;
-using DTD_Mentorship_Project.Pages.Profile;
+using Newtonsoft.Json; // Add this using statement for JSON serialization
 
 namespace DTD_Mentorship_Project.Pages
 {
     public class Eligibility : PageModel
     {
-        //Connect Geo Services
-        private readonly GeocodingService _geocodingService;
-        //Initialize DB context
         private readonly DBContext _bdContext;
         private readonly ILogger<Eligibility> _logger;
 
-
-        public Eligibility(DBContext bdContext, GeocodingService geocodingService, ILogger<Eligibility> logger)
+        public Eligibility(DBContext bdContext, ILogger<Eligibility> logger)
         {
             _bdContext = bdContext;
-            _geocodingService = geocodingService;
             _logger = logger;
         }
 
@@ -53,7 +37,6 @@ namespace DTD_Mentorship_Project.Pages
 
         [BindProperty]
         [Required(ErrorMessage = "Street Address where you reside is required.")]
-        [StreetAddressValidation(ErrorMessage = "Invalid street address format.")]
         public virtual ICollection<DTD_Mentorship_Project.Models.Address> Addresses { get; set; } = new List<DTD_Mentorship_Project.Models.Address>();
 
         [BindProperty]
@@ -99,23 +82,6 @@ namespace DTD_Mentorship_Project.Pages
         public string Success = "";
         public string Error = "";
 
-        /* Fetch City, State, Zip Data from Google Api 
-        [HttpGet]
-        [IgnoreAntiforgeryToken]
-        public async Task<IActionResult> SuggestCitiesAndZips(string input)
-        {
-            try
-            {
-                var suggestions = await _geocodingService.SuggestCitiesAndZips(input);
-            return new JsonResult(suggestions);
-        }
-                catch (Exception ex)
-                {
-                    _logger.LogError(ex, "Error calling Google Geocoding API.");
-                    return StatusCode(500, "Error calling Google Geocoding API.");
-    }
-}*/
-
         public void OnGet()
         {
             // Initialization logic for GET request
@@ -126,15 +92,12 @@ namespace DTD_Mentorship_Project.Pages
         {
             if (!ModelState.IsValid)
             {
-                _logger.LogWarning("Form submission failed due to validstion errors.");
                 Error = "Please correct field(s) as required!";
 				return Page(); // Return the page with validation errors
 			}
             TempData["EligibilityConfirmed"] = true;
 
-            Success = "Your Form was Submitted Correctly!";
-
-            var eligibilityData = new User
+            TempData["EligibilityData"] = JsonConvert.SerializeObject(new User
             {
                 SelectedUserTypeId = SelectedUserTypeId.ToString(),
                 FirstName = FirstName,
@@ -143,39 +106,14 @@ namespace DTD_Mentorship_Project.Pages
                 City = City,
                 State = State,
                 Zip = Zip,
-                DOB = DOB.ToString("yyyy-MM-dd"),
+                DOB = DOB,
                 FieldofWork = FieldofWork,
                 Degree = Degree,
                 Company = Company,
                 Availability = Availability,
-            };
-
-            _bdContext.Users.Add(eligibilityData);
-            await _bdContext.SaveChangesAsync();
-
-            _logger.LogInformation("Form Submission Successful.User added to Database");
-
+            });
             return RedirectToPage("/Account/Registration");
         }
-
-        /* Validate Stree Address */
-        public class StreetAddressValidationAttribute : ValidationAttribute
-        {
-            protected override ValidationResult IsValid(object value, ValidationContext validationContext)
-            {
-                if (value is ICollection<Geocoding.Address> addresses)
-                {
-                    if (value is string streetAddress)
-                    {
-                        if (!IsValidStreetAddress(streetAddress))
-                        {
-                            return new ValidationResult(ErrorMessage);
-                        }
-                    }
-                }
-
-                return ValidationResult.Success;
-            }
 
             private bool IsValidStreetAddress(string streetAddress)
             {
@@ -207,4 +145,3 @@ namespace DTD_Mentorship_Project.Pages
             }
         }
     }
-}

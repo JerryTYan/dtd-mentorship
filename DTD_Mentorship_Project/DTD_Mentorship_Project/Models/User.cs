@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DTD_Mentorship_Project.Models;
 
@@ -40,11 +41,14 @@ public partial class User
 
     public string Company { get; set; }
     public string  FieldofWork { get; set; }
-    public string DOB { get; set; }
+
+    [Column(TypeName = "datetime")]
+    public DateTime? DOB { get; set; }
     public string State { get; set; }
     public string  City{ get; set; }
 
     public string Zip { get; set; }
 
     public string SelectedUserTypeId { get; set; }
+
 }

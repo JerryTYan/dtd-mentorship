@@ -4,6 +4,7 @@ using DTD_Mentorship_Project.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DTD_Mentorship_Project.Migrations
 {
     [DbContext(typeof(DBContext))]
-    partial class DBContextModelSnapshot : ModelSnapshot
+    [Migration("20231219000510_AddEligibility")]
+    partial class AddEligibility
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -134,7 +137,8 @@ namespace DTD_Mentorship_Project.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("DOB")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("Degree")
                         .HasMaxLength(200)
@@ -151,10 +155,6 @@ namespace DTD_Mentorship_Project.Migrations
                     b.Property<string>("FirstName")
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
-
-                    b.Property<DateTime>("FormattedDOB")
-                        .HasMaxLength(200)
-                        .HasColumnType("datetime2");
 
                     b.Property<int>("IdentityId")
                         .HasColumnType("int");

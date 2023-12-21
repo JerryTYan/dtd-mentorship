@@ -245,58 +245,6 @@
 </main>
 
 
-<!-- Add this script to get Geolocation Data from google api -->
-<!-- Add this script to your Razor Page or include it in your site-wide JavaScript -->
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        console.log('Script is running.');
-        const inputField = document.getElementById('Addresses');
-
-        if (inputField) {
-            inputField.addEventListener('input', async () => {
-                console.log('Input Field Regstered');
-                const inputValue = inputField.value.trim();
-                const suggestionsList = document.getElementById('suggestions');
-
-                if (inputValue.length > 0) {
-                    const response = await fetch(`/Models/GeocodingService/SuggestCitiesAndZips?input=${encodeURIComponent(inputValue)}`);
-
-                    if (response.ok) {
-                        console.log('Response Ok.');
-                        const suggestions = await response.json();
-
-                        suggestionsList.innerHTML = '';
-
-                        suggestions.forEach(suggestion => {
-                            const li = document.createElement('li');
-                            li.textContent = suggestion;
-                            li.addEventListener('click', () => {
-                                inputField.value = suggestion;
-                                const parts = suggestion.split(', ');
-                                document.querySelector('input[asp-for="City"]').value = parts[0];
-                                const stateZip = parts[1].split(' ');
-                                document.querySelector('input[asp-for="State"]').value = stateZip[0];
-                                document.querySelector('input[asp-for="Zip"]').value = stateZip[1];
-                                suggestionsList.innerHTML = '';
-                            });
-                            suggestionsList.appendChild(li);
-                        });
-                    } else {
-                        console.error('Failed to fetch suggestions:', response.status, response.statusText);
-                    }
-                } else {
-                    suggestionsList.innerHTML = '';
-                }
-            });
-        } else {
-            console.error('Input field not found.');
-        }
-    });
-</script>
-
-
-
-
 <!--Create Date picker-->
 <script>
     jQuery(function ($) {

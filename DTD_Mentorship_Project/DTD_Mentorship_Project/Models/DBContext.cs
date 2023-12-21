@@ -3,9 +3,10 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using DTD_Mentorship_Project;
 
-namespace DTD_Mentorship_Project.Models;
-
+namespace DTD_Mentorship_Project.Models
+{
 public partial class DBContext : DbContext
 {
     public DBContext(DbContextOptions<DBContext> options)
@@ -103,7 +104,7 @@ public partial class DBContext : DbContext
             entity.Property(e => e.State).HasMaxLength(200);
             entity.Property(e => e.Zip).HasMaxLength(200);
             entity.Property(e => e.Company).HasMaxLength(200);
-            entity.Property(e => e.DOB).HasMaxLength(200);
+            entity.Property(e => e.DOB).HasColumnType("datetime");
             entity.Property(e => e.FieldofWork).HasMaxLength(200);
             entity.Property(e => e.SelectedUserTypeId).HasMaxLength(200);
 
@@ -133,4 +134,5 @@ public partial class DBContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+}
 }

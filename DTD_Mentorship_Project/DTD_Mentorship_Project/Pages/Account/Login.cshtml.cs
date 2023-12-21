@@ -3,13 +3,15 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
 using DTD_Mentorship_Project.Models;
+using Microsoft.Extensions.Logging; // Add this import
 using System.Globalization;
+using BCrypt.Net;
 
 namespace DTD_Mentorship_Project.Pages
 {
     public class LoginModel : PageModel
     {
-        private readonly ILogger _logger;
+        private readonly ILogger<LoginModel> _logger; // Corrected the ILogger type
         private readonly DBContext _dbContext;
 
 
@@ -34,34 +36,27 @@ namespace DTD_Mentorship_Project.Pages
                 var email = FormData.Email;
                 var password = FormData.Password;
 
-                var user = _dbContext.Users.SingleOrDefault(user => user.Email == email && user.Password == password);
-                var identity = _dbContext.Identities.SingleOrDefault(identity => identity.Id == user.IdentityId);
+                var user = _dbContext.Users.SingleOrDefault(u => u.Email == email);
 
-                var identity_name = identity.IdentityName;   
-
-                //var user = _dbContext.Users.ToList();
-
-
-
-                if (user != null)
+                if (user != null && BCrypt.Net.BCrypt.Verify(password, user.Password))
                 {
-                    _logger.LogInformation("User found: {User}", user.LastName);
-                    _logger.LogInformation("Id found: {IdName}", identity_name);
+                    // Authentication successful
 
+                    // TODO: Implement authentication logic (e.g., set a cookie, create a session)
+                    // For demonstration purposes, you can store the UserId in TempData
+                    TempData["UserId"] = user.UserId;
 
+                    _logger.LogInformation("Email: {Email}, Password: {Password}", email, password);
+
+                    return RedirectToPage("/Profile/Dashboard");
                 }
                 else
                 {
+                    // Authentication failed
+                    ModelState.AddModelError(string.Empty, "Invalid email or password");
                     _logger.LogInformation("No user found for email: {Email}", email);
                 }
-
-                // TODO: Add authentication logic here
-
-                _logger.LogInformation("Email: {Email}, Password: {Password}", email, password);
-
-                return RedirectToPage("/Profile/Dashboard");
             }
-
             return Page();
         }
     }
