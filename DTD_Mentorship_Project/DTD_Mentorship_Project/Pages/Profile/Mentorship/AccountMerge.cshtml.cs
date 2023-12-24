@@ -7,6 +7,7 @@ namespace DTD_Mentorship_Project.Pages
     {
         public void OnGet()
         {
+            var email = HttpContext.Session.GetString("UserEmail") ?? "";
         }
     }
 }

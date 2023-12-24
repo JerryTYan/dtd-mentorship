@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -6,10 +8,27 @@ using Microsoft.Extensions.DependencyInjection;
 using DTD_Mentorship_Project.Pages;
 using DTD_Mentorship_Project.Models;
 using DTD_Mentorship_Project;
-
+using System.Text.Json;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Hosting;
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure kestrel for HTTPS
+builder.Services.AddSession(options => {
+    options.IdleTimeout = TimeSpan.FromMinutes(540);
+});
+
+// builder.Services.AddMediatR();
+builder.Services.AddDbContext<DTD_Mentorship_Project.Models.DBContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SQLAZURECONNSTR_DTDDB"));
+});
+
+
+
+//configure kestrel for HTTPS
 builder.WebHost.UseKestrel(options =>
 {
     options.ListenAnyIP(5101);  // HTTP port
@@ -18,6 +37,9 @@ builder.WebHost.UseKestrel(options =>
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Logging.AddConsole();
+
 
 var app = builder.Build();
 
@@ -30,15 +52,15 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseSession();
 app.UseRouting();
 
 app.UseAuthorization();
 
-// Redirect the root URL to /Profile/Dashboard
+// Redirect the root URL to /Account/Registration
 app.MapGet("/", context =>
 {
-    context.Response.Redirect("/Profile/Dashboard");
+    context.Response.Redirect("/Account/Eligibility");
     return Task.CompletedTask;
 });
 

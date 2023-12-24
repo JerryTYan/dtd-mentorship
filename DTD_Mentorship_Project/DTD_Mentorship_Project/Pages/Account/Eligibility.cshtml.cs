@@ -1,24 +1,43 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using DTD_Mentorship_Project; // Namespace where your models are defined
-using System.Diagnostics;
-using System.Net.Http;
-using System.Text.Json;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
+using DTD_Mentorship_Project.Models;
+using Newtonsoft.Json; // Add this using statement for JSON serialization
 
 namespace DTD_Mentorship_Project.Pages
 {
     public class Eligibility : PageModel
     {
+        private readonly DBContext _bdContext;
+        private readonly ILogger<Eligibility> _logger;
+
+        public Eligibility(DBContext bdContext, ILogger<Eligibility> logger)
+        {
+            _bdContext = bdContext;
+            _logger = logger;
+        }
+
+        [BindProperty]
+        public User Users { get; set; }
+
         [BindProperty]
         [Required(ErrorMessage = "Identify yourself. The SelectedUserTypeId field is required.")]
         [Range(1, int.MaxValue, ErrorMessage = "Please select a valid user type.")]
         public int SelectedUserTypeId { get; set; }
 
         [BindProperty]
+        [Required(ErrorMessage = "First Name is required.")]
+        public string FirstName { get; set; } = "";
+
+        [BindProperty]
+        [Required(ErrorMessage = "Last Name is required.")]
+        public string LastName { get; set; } = "";
+
+
+        [BindProperty]
         [Required(ErrorMessage = "Street Address where you reside is required.")]
-        public string Address { get; set; } = "";
+        public virtual ICollection<DTD_Mentorship_Project.Models.Address> Addresses { get; set; } = new List<DTD_Mentorship_Project.Models.Address>();
 
         [BindProperty]
         [Required(ErrorMessage = "City is required.")]
@@ -30,6 +49,7 @@ namespace DTD_Mentorship_Project.Pages
 
         [BindProperty]
         [Required(ErrorMessage = "Zip is required.")]
+        [RegularExpression(@"^\d{5}(?:[-\s]\d{4})?$", ErrorMessage = "Invalid ZIP code format.")]
         public string Zip { get; set; } = "";
 
         [BindProperty]
@@ -52,7 +72,7 @@ namespace DTD_Mentorship_Project.Pages
 
         [BindProperty]
         [Required(ErrorMessage = "Availability is required.")]
-        public string Availability { get; set; } = "";
+        public DateTime? Availability { get; set; }
 
         [BindProperty]
         [Required(ErrorMessage = "You must agree to the Terms and Conditions.")]
@@ -67,7 +87,8 @@ namespace DTD_Mentorship_Project.Pages
             // Initialization logic for GET request
         }
 
-        public IActionResult OnPost()
+
+        public async Task<IActionResult> OnPost()
         {
             if (!ModelState.IsValid)
             {
@@ -76,25 +97,35 @@ namespace DTD_Mentorship_Project.Pages
 			}
             TempData["EligibilityConfirmed"] = true;
 
-            Success = "Your Form was Submitted Correctly!";
+            TempData["EligibilityData"] = JsonConvert.SerializeObject(new User
+            {
+                SelectedUserTypeId = SelectedUserTypeId.ToString(),
+                FirstName = FirstName,
+                LastName = LastName,
+                Addresses = Addresses,
+                City = City,
+                State = State,
+                Zip = Zip,
+                DOB = DOB,
+                FieldofWork = FieldofWork,
+                Degree = Degree,
+                Company = Company,
+                Availability = Availability,
+            });
+            return RedirectToPage("/Account/Registration");
+        }
 
-            Address = "";
-            City = "";
-            State = "";
-            Zip = "";
-            FieldofWork = "";
-            Degree = "";
-            Company = "";
-            Availability = "";
+            private bool IsValidStreetAddress(string streetAddress)
+            {
+                // Regex pattern for at least 1-5 digits followed by a space and a string
+                var pattern = @"^\d{1,5}\s\w+";
+                return Regex.IsMatch(streetAddress, pattern);
+            }
+        }
 
-            ModelState.Clear();
 
-			return Page();
-
-		}
-
-		// Custom validation attribute for DOB
-		public class DOBNotLessThan18Attribute : ValidationAttribute
+        // Custom validation attribute for DOB
+        public class DOBNotLessThan18Attribute : ValidationAttribute
         {
             protected override ValidationResult IsValid(object value, ValidationContext validationContext)
             {
@@ -114,4 +145,3 @@ namespace DTD_Mentorship_Project.Pages
             }
         }
     }
-}

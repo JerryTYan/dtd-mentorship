@@ -60,3 +60,7 @@ DTD_Mentorship_Project/.vs/
 DTD_Mentorship_Project/DTD_Mentorship_Project/DTD_Mentorship_Project.csproj.user
 
 * text=auto
+/DTD_Mentorship_Project/DB/DB.dbmdl
+/DTD_Mentorship_Project/DB/DB.jfm
+DTD_Mentorship_Project/DTD_Mentorship_Project/obj/project.nuget.cache
+DTD_Mentorship_Project/DTD_Mentorship_Project/obj/project.assets.json

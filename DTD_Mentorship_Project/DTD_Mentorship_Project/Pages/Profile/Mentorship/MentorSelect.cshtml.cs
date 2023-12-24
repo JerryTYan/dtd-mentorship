@@ -1,54 +1,68 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using DTD_Mentorship_Project.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace DTD_Mentorship_Project.Pages
 {
 
-    public class MentorModel
-    {
-        public string? Name { get; set; }
-        public string? Description { get; set; }
-        public string? Title { get; set; }
-        public string? Area { get; set; }
-        public string? Image { get; set; }
-    }
+    
     public class MentorSelectModel : PageModel
     {
+        private readonly ILogger<MentorSelectModel> _logger;
+        private readonly DBContext _dbContext;
+        
+        public MentorSelectModel(Models.DBContext db, ILogger<MentorSelectModel> logger)
+        {
+            _logger = logger;
+            _dbContext = db;
+        }
+
 
         //do some sorting or query beforehand to put the mentors into UX, Cyber, IT, need to make this process dynamic for
         //the different types
-        public List<MentorModel>? Mentors_UX { get; set; }
-        public List<MentorModel>? Mentors_CB { get; set; }
-        public List<MentorModel>? Mentors_IT { get; set; }
+        public List<Models.User>? Mentors_UX { get; set; }
+        public List<Models.User>? Mentors_CB { get; set; }
+        public List<Models.User>? Mentors_IT { get; set; }
 
 
         public void OnGet()
         {
-            Mentors_UX = new List<MentorModel> {
-                new MentorModel { Name = "Joe Weather", Description = "I like UX", Title = "Lead UX Designer", Area = "UX", Image = "http://placekitten.com/200/300"  },
-                new MentorModel { Name = "Sarah West", Description = "I also like UX", Title = "UX Manager", Area = "UX", Image = "http://placekitten.com/200/300" },
-                new MentorModel { Name = "Ghoe Peather", Description = "I like UX", Title = "Lead UX Designer", Area = "UX", Image = "http://placekitten.com/200/300"  },
-                new MentorModel { Name = "Marah Lest", Description = "I also like UX", Title = "UX Manager", Area = "UX", Image = "http://placekitten.com/200/300" },
-                new MentorModel { Name = "Toe Meather", Description = "I like UX", Title = "Lead UX Designer", Area = "UX", Image = "http://placekitten.com/200/300"  },
-                new MentorModel { Name = "Darah Vest", Description = "I also like UX", Title = "UX Manager", Area = "UX", Image = "http://placekitten.com/200/300" },
-            };
+           Mentors_CB = (from user in _dbContext.Users
+                         join userarea in _dbContext.UserAreas on user.UserId equals userarea.UserId
+                         join area in _dbContext.Areas on userarea.AreaId equals area.AreaId
+                         where area.AreaId == 3 && user.IdentityId == 9
+                         select user).ToList();
 
-            Mentors_CB = new List<MentorModel> {
-                new MentorModel { Name = "Joe Weather", Description = "I like Cyber", Title = "Lead Cyber Designer", Area = "Cybersecurity", Image = "http://placekitten.com/200/300"  },
-                new MentorModel { Name = "Sarah West", Description = "I also like Cyber", Title = "Cyber Manager", Area = "Cybersecurity", Image = "http://placekitten.com/200/300" },
-                new MentorModel { Name = "Ghoe Peather", Description = "I like Cyber", Title = "Lead Cyber Designer", Area = "Cybersecurity", Image = "http://placekitten.com/200/300"  },
-                new MentorModel { Name = "Marah Lest", Description = "I also like Cyber", Title = "Cyber Manager", Area = "Cybersecurity", Image = "http://placekitten.com/200/300" },
-                new MentorModel { Name = "Toe Meather", Description = "I like Cyber", Title = "Lead Cyber Designer", Area = "Cybersecurity", Image = "http://placekitten.com/200/300"  },
-                new MentorModel { Name = "Darah Vest", Description = "I also like Cyber", Title = "Cyber Manager", Area = "Cybersecurity", Image = "http://placekitten.com/200/300" },
-            };
-            Mentors_IT = new List<MentorModel> {
-                new MentorModel { Name = "Joe Weather", Description = "I like IT", Title = "Lead IT Designer", Area = "IT Support", Image = "http://placekitten.com/200/300"  },
-                new MentorModel { Name = "Sarah West", Description = "I also like IT", Title = "IT Manager", Area = "IT Support", Image = "http://placekitten.com/200/300" },
-                new MentorModel { Name = "Ghoe Peather", Description = "I like IT", Title = "Lead IT Designer", Area = "IT Support", Image = "http://placekitten.com/200/300"  },
-                new MentorModel { Name = "Marah Lest", Description = "I also like IT", Title = "IT Manager", Area = "IT Support", Image = "http://placekitten.com/200/300" },
-                new MentorModel { Name = "Toe Meather", Description = "I like IT", Title = "Lead IT Designer", Area = "IT Support", Image = "http://placekitten.com/200/300"  },
-                new MentorModel { Name = "Darah Vest", Description = "I also like IT", Title = "IT Manager", Area = "IT Support", Image = "http://placekitten.com/200/300" },
-            };
+            Mentors_UX = (from user in _dbContext.Users
+                          join userarea in _dbContext.UserAreas on user.UserId equals userarea.UserId
+                          join area in _dbContext.Areas on userarea.AreaId equals area.AreaId
+                          where area.AreaId == 2 && user.IdentityId == 9
+                          select user).ToList();
+
+            Mentors_IT = (from user in _dbContext.Users
+                          join userarea in _dbContext.UserAreas on user.UserId equals userarea.UserId
+                          join area in _dbContext.Areas on userarea.AreaId equals area.AreaId
+                          where area.AreaId == 4 && user.IdentityId == 9
+                          select user).ToList();
+
+           /* if (!Mentors_CB.IsNullOrEmpty())
+            {
+                foreach(var item in Mentors_CB)
+                {
+                    _logger.LogInformation("User found: {User}", item.FirstName);
+                    _logger.LogInformation("Id found: {IdName}", item.UserId);
+
+                }
+              
+
+            }
+            else
+            {
+                _logger.LogInformation("No user found");
+            }
+*/
 
 
         }
