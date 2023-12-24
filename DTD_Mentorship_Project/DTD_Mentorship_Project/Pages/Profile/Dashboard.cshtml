@@ -7,13 +7,27 @@
     <div class="row">
         <div class="col-12 align-self-center">
             <!-- Profile Section -->
+
             <div class="row mt-4 mt-md-0">
                 <div class="col-4 col-md-3 mb-4 text-center">
-                    <img class="card-img-top rounded" src="https://members.deletethedivide.org/assets/images/user.png" alt="user image">
-                    <a href="/Profile/AvatarList"><small class="d-block mt-2">Choose Avatar</small></a>
+                    @if (!string.IsNullOrEmpty(Model.Image))
+                    {
+                        <img class="card-img-top rounded" src="@Model.Image" alt="user image" id="avatarPreview">
+                    }
+                    else
+                    {
+                        <img class="card-img-top rounded" src="https://members.deletethedivide.org/assets/images/user.png" alt="user image">
+                    }
+                    <form method="post" enctype="multipart/form-data" asp-page-handler="UploadAvatar" id="uploadForm">
+                        <label for="fileInput" class="invisible-btn btn">
+                            <span style="color: red;">Update Avatar</span>
+
+                        </label>
+                        <input type="file" name="avatarFile" accept="image/*" id="fileInput" style="display: none;" onchange="displaySelectedImage(this)">
+                    </form>
                 </div>
                 <div class="col-8 col-md-9 mb-4">
-                    <h5 class="featured mt-0 mb-2">@Model.Name</h5>
+                    <h5 class="featured mt-0 mb-2" style="color: red">@Model.FullName</h5>
                     <ul class="dtd-li">
                         <li>@Model.School</li>
                         <li>@Model.District</li>
@@ -100,4 +114,33 @@
         checkDes('pathwayDetail', 'pathwayID');
         validateMenteeCount();
     });
+</script>
+
+<script>
+    function displaySelectedImage(input) {
+        var file = input.files[0];
+        if (file) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('avatarPreview').src = e.target.result;
+
+                // Use AJAX to submit the form
+                var formData = new FormData(document.getElementById('uploadForm'));
+                $.ajax({
+                    url: '/Profile/Dashboard?handler=UploadAvatar',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function () {
+                        // Handle success if needed
+                    },
+                    error: function () {
+                        // Handle error if needed
+                    }
+                });
+            };
+            reader.readAsDataURL(file);
+        }
+    }
 </script>

@@ -38,24 +38,29 @@ namespace DTD_Mentorship_Project.Pages
 
                 var user = _dbContext.Users.SingleOrDefault(u => u.Email == email);
 
-                if (user != null && BCrypt.Net.BCrypt.Verify(password, user.Password))
+                if (user != null)
                 {
-                    // Authentication successful
 
-                    // TODO: Implement authentication logic (e.g., set a cookie, create a session)
-                    // For demonstration purposes, you can store the UserId in TempData
-                    TempData["UserId"] = user.UserId;
+                    if (user != null && BCrypt.Net.BCrypt.Verify(password, user.Password))
+                    {
+                        // Authentication successful
 
-                    _logger.LogInformation("Email: {Email}, Password: {Password}", email, password);
+                        // TODO: Implement authentication logic (e.g., set a cookie, create a session)
+                        // For demonstration purposes, you can store the UserId in TempData
+                        TempData["UserId"] = user.UserId;
 
-                    return RedirectToPage("/Profile/Dashboard");
+                        _logger.LogInformation("Email: {Email}, Password: {Password}", email, password);
+
+                        return RedirectToPage("/Profile/Dashboard");
+                    }
+                    else
+                    {
+                        // Authentication failed
+                        ModelState.AddModelError(string.Empty, "Invalid email or password");
+                        _logger.LogInformation("No user found for email: {Email}", email);
+                    }
                 }
-                else
-                {
-                    // Authentication failed
-                    ModelState.AddModelError(string.Empty, "Invalid email or password");
-                    _logger.LogInformation("No user found for email: {Email}", email);
-                }
+
             }
             return Page();
         }
