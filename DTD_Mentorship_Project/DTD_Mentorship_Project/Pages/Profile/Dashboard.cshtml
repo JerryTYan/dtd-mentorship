@@ -1,6 +1,9 @@
 @page "/Profile/Dashboard"
 @model DashboardModel
 
+
+
+
 <!-- Main -->
 <main>
     <!-- Text -->
@@ -12,7 +15,7 @@
                 <div class="col-4 col-md-3 mb-4 text-center">
                     @if (!string.IsNullOrEmpty(Model.Image))
                     {
-                        <img class="card-img-top rounded" src="@Model.Image" alt="user image" id="avatarPreview">
+                        <img class="avatar-img card-img-top rounded" src="@Model.Image" alt="user image">
                     }
                     else
                     {
@@ -21,10 +24,11 @@
                     <form method="post" enctype="multipart/form-data" asp-page-handler="UploadAvatar" id="uploadForm">
                         <label for="fileInput" class="invisible-btn btn">
                             <span style="color: red;">Update Avatar</span>
-
                         </label>
-                        <input type="file" name="avatarFile" accept="image/*" id="fileInput" style="display: none;" onchange="displaySelectedImage(this)">
+                        <input type="file" name="avatarFile" accept="image/*" id="fileInput" style="display: none;">
+                        <button type="submit" class="btn btn-primary">Upload</button>
                     </form>
+
                 </div>
                 <div class="col-8 col-md-9 mb-4">
                     <h5 class="featured mt-0 mb-2" style="color: red">@Model.FullName</h5>
@@ -89,9 +93,8 @@
         </div>
     </div>
 </main>
-
-<script>
-    function showConfirmationPopup(menteeName) {
+<!--<script>
+    window.showConfirmationPopup = function (menteeName) {
         var reason = prompt("Why do you want to remove " + menteeName + "?");
         if (reason) {
             // The user entered a reason, perform the removal logic here
@@ -99,7 +102,7 @@
         }
     }
 
-    function validateMenteeCount() {
+    window.validateMenteeCount = function () {
         var selectedMax = parseInt(document.getElementById('maxMentees').value);
         var currentMenteeCount = @Model.CurrentMentees.Count;
 
@@ -110,37 +113,5 @@
         }
     }
 
-    $(document).ready(() => {
-        checkDes('pathwayDetail', 'pathwayID');
-        validateMenteeCount();
-    });
 </script>
-
-<script>
-    function displaySelectedImage(input) {
-        var file = input.files[0];
-        if (file) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                document.getElementById('avatarPreview').src = e.target.result;
-
-                // Use AJAX to submit the form
-                var formData = new FormData(document.getElementById('uploadForm'));
-                $.ajax({
-                    url: '/Profile/Dashboard?handler=UploadAvatar',
-                    type: 'POST',
-                    data: formData,
-                    processData: false,
-                    contentType: false,
-                    success: function () {
-                        // Handle success if needed
-                    },
-                    error: function () {
-                        // Handle error if needed
-                    }
-                });
-            };
-            reader.readAsDataURL(file);
-        }
-    }
-</script>
+-->

@@ -84,9 +84,9 @@ namespace DTD_Mentorship_Project.Pages.Profile
         }
 
 
-        public async Task<IActionResult> OnPost(IFormFile avatarFile)
+        public async Task<IActionResult> OnPost()
         {
-            if (avatarFile != null && avatarFile.Length > 0)
+            if (AvatarFile != null && AvatarFile.Length > 0)
             {
                 try
                 {
@@ -98,12 +98,12 @@ namespace DTD_Mentorship_Project.Pages.Profile
                     {
                         // Save the uploaded file to wwwroot/images directory
                         var uploadPath = Path.Combine(_hostEnvironment.WebRootPath, "images");
-                        var fileName = $"{user.UserId}_avatar_{DateTime.Now:yyyyMMddHHmmssfff}{Path.GetExtension(avatarFile.FileName)}";
+                        var fileName = $"{user.UserId}_avatar_{DateTime.Now:yyyyMMddHHmmssfff}{Path.GetExtension(AvatarFile.FileName)}";
                         var filePath = Path.Combine(uploadPath, fileName);
 
                         using (var stream = new FileStream(filePath, FileMode.Create))
                         {
-                            await avatarFile.CopyToAsync(stream);
+                            await AvatarFile.CopyToAsync(stream);
                         }
 
                         // Update the user's avatar path in the database
@@ -118,6 +118,7 @@ namespace DTD_Mentorship_Project.Pages.Profile
             }
             return RedirectToPage("/Profile/Dashboard");
         }
+
     }
 }
 
