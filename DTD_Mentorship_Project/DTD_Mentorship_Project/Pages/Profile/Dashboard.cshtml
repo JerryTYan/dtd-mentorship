@@ -15,23 +15,22 @@
                 <div class="col-4 col-md-3 mb-4 text-center">
                     @if (!string.IsNullOrEmpty(Model.Image))
                     {
-                        <img class="avatar-img card-img-top rounded" src="@Model.Image" alt="user image">
+                        <img class="avatar-img card-img-top rounded-circle" src="@Model.Image" alt="user image">
                     }
                     else
                     {
                         <img class="card-img-top rounded" src="https://members.deletethedivide.org/assets/images/user.png" alt="user image">
-                    }
+                    
                     <form method="post" enctype="multipart/form-data" asp-page-handler="UploadAvatar" id="uploadForm">
                         <label for="fileInput" class="invisible-btn btn">
                             <span style="color: red;">Update Avatar</span>
                         </label>
-                        <input type="file" name="avatarFile" accept="image/*" id="fileInput" style="display: none;">
-                        <button type="submit" class="btn btn-primary">Upload</button>
-                    </form>
-
+                        <input type="file" name="avatarFile" accept="image/*" id="fileInput" style="display: none;" onchange="validateAndSubmit()">
+                        </form>
+                    }
                 </div>
                 <div class="col-8 col-md-9 mb-4">
-                    <h5 class="featured mt-0 mb-2" style="color: red">@Model.FullName</h5>
+                    <h5 class="featured mt-0 mb-2" style="color:#cca300">@Model.FullName</h5>
                     <ul class="dtd-li">
                         <li>@Model.School</li>
                         <li>@Model.District</li>
@@ -93,6 +92,24 @@
         </div>
     </div>
 </main>
+
+<script>
+    function validateAndSubmit() {
+        var fileInput = document.getElementById('fileInput');
+        var errorMessage = document.getElementById('error-message');
+        // You can add additional validation logic here if needed
+        // For example, checking file size, type, etc.
+
+        if (fileInput.files.length > 0) {
+            // You can submit the form programmatically
+            document.getElementById('uploadForm').submit();
+        } else {
+            // Display an error message or perform any other action
+            errorMessage.style.display = 'block';
+        }
+    }
+</script>
+
 <!--<script>
     window.showConfirmationPopup = function (menteeName) {
         var reason = prompt("Why do you want to remove " + menteeName + "?");
