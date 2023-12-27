@@ -15,7 +15,7 @@
                 <div class="col-4 col-md-3 mb-4 text-center">
                     @if (!string.IsNullOrEmpty(Model.Image))
                     {
-                        <img class="avatar-img card-img-top rounded-circle" src="@Model.Image" alt="user image">
+                        <img class="avatar-img card-img-top rounded-circle " src="@Model.Image" alt="user image">
                     }
                     else
                     {
@@ -40,55 +40,72 @@
             </div>
 
             <!-- About Me Section -->
-            <div class="container">
-                <h3 class="mb2">About Me</h3>
-                <ul class="list-group">
-                    <li class="list-group-item p-3 odd">
-                        @Model.AboutMe
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Mentees Section -->
-            <div class="container">
-                <h3 class="mb2">Current Mentees</h3>
-            </div>
-
-            <div class="container">
-                <h4 class="mb4">Your Maximum Number of Mentees</h4>
-                <div class="d-flex align-items-center">
-                    <select id="maxMentees" class="form-control mr-2">
-                        @for (int i = 1; i <= 10; i++)
-                        {
-                            <option value="@i">@i</option>
-                        }
-                    </select>
-                    <button class="btn btn-primary" onclick="validateMenteeCount()">Save</button>
-                </div>
-                <p id="error-message" style="color: red; display: none;">Please remove some mentees before reducing the maximum number.</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-12 col-sm-12 mb-12" style="padding-top: 25px;">
-                    @foreach (var mentee in Model.CurrentMentees)
-                    {
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="@mentee.Image" class="card-img" alt="Mentee Image">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">@mentee.Name</h5>
-                                    <p class="card-text">@mentee.GetShortDescription()</p>
-                                    <button class="btn btn-danger" onclick="showConfirmationPopup('@mentee.Name')">Remove</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div method ="post" class="container">
+                <h3 class="mb-2">About Me</h3>
+                <form method="post" asp-page-handler="UpdateAboutMe">
+                    @if (Model.IsEditMode && string.IsNullOrEmpty(Model.AboutMe))
+                {
+                        <textarea class="form-control" style="background-color: #ffad33; border: 1px solid #ced4da;" rows="5" asp-for="EditedAboutMe"></textarea>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                        <a asp-page-handler="ToggleEditMode" class="btn btn-secondary">Cancel</a>
                     }
-                </div>
+                else
+                {
+                    <!-- Display Mode -->
+                    <div class="card p-3 odd">
+                        <blockquote class="blockquote mb-0">
+                            <p class="mb-0" style="font-size: 18px; color: #ced4da; line-height: 1.6;">@Model.AboutMe</p>
+                        </blockquote>
+                            <button type="submit" class="btn btn-link text-primary" asp-page-handler="ToggleEditMode">Edit</button>
+                    </div>
+                }
+                </form>
             </div>
+
+             @* Mentees Section *@
+             <div class="container">
+                 <h3 class="mb2">Current Mentees</h3>
+            
+
+             <div class="container">
+                 <h4 class="mb4">Your Maximum Number of Mentees</h4>
+                 <div class="d-flex align-items-center">
+                     <select id="maxMentees" class="form-control mr-2">
+                         @for (int i = 1; i <= 10; i++)
+                         {
+                             <option value="@i">@i</option>
+                         }
+                     </select>
+                     <button class="btn btn-primary" onclick="validateMenteeCount()">Save</button>
+                 </div>
+                 <p id="error-message" style="color: red; display: none;">Please remove some mentees before reducing the maximum number.</p>
+             </div>
+
+             <div class="row">
+                 <div class="col-md-12 col-sm-12 mb-12" style="padding-top: 25px;">
+                     @if (Model.CurrentMentees != null)
+                        {
+                            @foreach (var mentee in Model.CurrentMentees)
+                            {
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4">
+                                            <img src="@mentee.Image" class="card-img" alt="Mentee Image">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">@mentee.Name</h5>
+                                                <p class="card-text">@mentee.GetShortDescription()</p>
+                                                <button class="btn btn-danger" onclick="showConfirmationPopup('@mentee.Name')">Remove</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+             </div>
+             </div> 
         </div>
     </div>
 </main>
@@ -110,7 +127,7 @@
     }
 </script>
 
-<!--<script>
+@*<script>
     window.showConfirmationPopup = function (menteeName) {
         var reason = prompt("Why do you want to remove " + menteeName + "?");
         if (reason) {
@@ -131,4 +148,4 @@
     }
 
 </script>
--->
+*@
