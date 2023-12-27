@@ -52,13 +52,13 @@ public partial class DBContext : DbContext
                 .HasConstraintName("FK_Address_UserId");
         });
 
-       /* modelBuilder.Entity<Area>(entity =>
+        modelBuilder.Entity<Area>(entity =>
         {
             entity.ToTable("Area");
 
             entity.Property(e => e.AreaId).ValueGeneratedNever();
             entity.Property(e => e.AreaName).HasMaxLength(200);
-        }); */
+        }); 
 
         modelBuilder.Entity<Identity>(entity =>
         {
