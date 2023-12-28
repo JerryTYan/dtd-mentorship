@@ -2,7 +2,6 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DTD_Mentorship_Project.Models;
 
@@ -27,28 +26,26 @@ public partial class User
     public string Degree { get; set; }
 
     public DateTime? Availability { get; set; }
-    public ICollection<Address> Addresses { get; set; }
 
-    public virtual Identity Identity { get; set; }
+    public int? AddressId { get; set; }
+
+    public DateTime? Dob { get; set; }
+
+    public string City { get; set; }
+
+    public string State { get; set; }
+
+    public string Zip { get; set; }
+
+    public string Company { get; set; }
+
+    public string FieldOfWork { get; set; }
+
+    public virtual Address Address { get; set; }
 
     public virtual ICollection<MentorMentee> MentorMenteeMentees { get; set; } = new List<MentorMentee>();
 
     public virtual ICollection<MentorMentee> MentorMenteeMentors { get; set; } = new List<MentorMentee>();
 
     public virtual ICollection<UserArea> UserAreas { get; set; } = new List<UserArea>();
-
-    //Added required fieilds
-
-    public string Company { get; set; }
-    public string  FieldofWork { get; set; }
-
-    [Column(TypeName = "datetime")]
-    public DateTime? DOB { get; set; }
-    public string State { get; set; }
-    public string  City{ get; set; }
-
-    public string Zip { get; set; }
-
-    public string SelectedUserTypeId { get; set; }
-
 }

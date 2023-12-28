@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using DTD_Mentorship_Project.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 
 namespace DTD_Mentorship_Project.Pages
 {

@@ -4,6 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 using DTD_Mentorship_Project.Models;
 using Newtonsoft.Json; // Add this using statement for JSON serialization
+using System;
+using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
 namespace DTD_Mentorship_Project.Pages
 {
@@ -37,7 +40,9 @@ namespace DTD_Mentorship_Project.Pages
 
         [BindProperty]
         [Required(ErrorMessage = "Street Address where you reside is required.")]
-        public virtual ICollection<DTD_Mentorship_Project.Models.Address> Addresses { get; set; } = new List<DTD_Mentorship_Project.Models.Address>();
+        [RegularExpression(@"^\d{1,5}\s\w+", ErrorMessage = "Invalid Street Address Format.")]
+        public string StreetAddress { get; set; } = "";
+
 
         [BindProperty]
         [Required(ErrorMessage = "City is required.")]
@@ -93,34 +98,29 @@ namespace DTD_Mentorship_Project.Pages
             if (!ModelState.IsValid)
             {
                 Error = "Please correct field(s) as required!";
-				return Page(); // Return the page with validation errors
-			}
+                return Page(); // Return the page with validation errors
+            }
             TempData["EligibilityConfirmed"] = true;
+
 
             TempData["EligibilityData"] = JsonConvert.SerializeObject(new User
             {
-                SelectedUserTypeId = SelectedUserTypeId.ToString(),
+                IdentityId = SelectedUserTypeId,
                 FirstName = FirstName,
                 LastName = LastName,
-                Addresses = Addresses,
                 City = City,
                 State = State,
                 Zip = Zip,
-                DOB = DOB,
-                FieldofWork = FieldofWork,
+                Dob = DOB,
+                FieldOfWork = FieldofWork,
                 Degree = Degree,
                 Company = Company,
                 Availability = Availability,
             });
-            return RedirectToPage("/Account/Registration");
-        }
 
-            private bool IsValidStreetAddress(string streetAddress)
-            {
-                // Regex pattern for at least 1-5 digits followed by a space and a string
-                var pattern = @"^\d{1,5}\s\w+";
-                return Regex.IsMatch(streetAddress, pattern);
-            }
+            TempData["UserStreetAddress"] = StreetAddress;
+
+            return RedirectToPage("/Account/Registration");
         }
 
 
@@ -144,4 +144,5 @@ namespace DTD_Mentorship_Project.Pages
                 return ValidationResult.Success;
             }
         }
+    }
     }

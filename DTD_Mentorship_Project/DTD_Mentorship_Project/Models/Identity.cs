@@ -10,6 +10,4 @@ public partial class Identity
     public int Id { get; set; }
 
     public string IdentityName { get; set; }
-
-    public virtual ICollection<User> Users { get; set; } = new List<User>();
 }

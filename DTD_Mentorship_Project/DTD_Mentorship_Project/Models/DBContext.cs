@@ -3,10 +3,9 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using DTD_Mentorship_Project;
 
-namespace DTD_Mentorship_Project.Models
-{
+namespace DTD_Mentorship_Project.Models;
+
 public partial class DBContext : DbContext
 {
     public DBContext(DbContextOptions<DBContext> options)
@@ -34,22 +33,10 @@ public partial class DBContext : DbContext
         {
             entity.ToTable("Address");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
-            entity.Property(e => e.City)
-                .HasMaxLength(200)
-                .IsUnicode(false);
-            entity.Property(e => e.State)
-                .HasMaxLength(200)
-                .IsUnicode(false);
-            entity.Property(e => e.StreetAddress)
-                .HasMaxLength(200)
-                .IsUnicode(false)
-                .HasColumnName("StreetAddress");
-            entity.Property(e => e.ZipCode).HasColumnName("ZipCode");
-
-            entity.HasOne(d => d.User).WithMany(p => p.Addresses)
-                .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK_Address_UserId");
+            entity.Property(e => e.City).HasMaxLength(200);
+            entity.Property(e => e.State).HasMaxLength(200);
+            entity.Property(e => e.StreetAddress).HasMaxLength(200);
+            entity.Property(e => e.ZipCode).HasMaxLength(200);
         });
 
         modelBuilder.Entity<Area>(entity =>
@@ -58,18 +45,17 @@ public partial class DBContext : DbContext
 
             entity.Property(e => e.AreaId).ValueGeneratedNever();
             entity.Property(e => e.AreaName).HasMaxLength(200);
-        }); 
+        });
 
         modelBuilder.Entity<Identity>(entity =>
         {
             entity.ToTable("Identity");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.IdentityName)
                 .IsRequired()
                 .HasMaxLength(200)
                 .IsUnicode(false)
-                .HasColumnName("IdentityName");
+                .HasColumnName("Identity_Name");
         });
 
         modelBuilder.Entity<MentorMentee>(entity =>
@@ -92,27 +78,28 @@ public partial class DBContext : DbContext
             entity.ToTable("User");
 
             entity.Property(e => e.Availability).HasColumnType("datetime");
+            entity.Property(e => e.City).HasMaxLength(200);
+            entity.Property(e => e.Company).HasMaxLength(200);
             entity.Property(e => e.Degree).HasMaxLength(200);
-            entity.Property(e => e.Email).HasMaxLength(200);
+            entity.Property(e => e.Dob)
+                .HasColumnType("datetime")
+                .HasColumnName("DOB");
+            entity.Property(e => e.Email)
+                .IsRequired()
+                .HasMaxLength(200);
+            entity.Property(e => e.FieldOfWork).HasMaxLength(200);
             entity.Property(e => e.FirstName).HasMaxLength(200);
             entity.Property(e => e.Image).HasMaxLength(200);
             entity.Property(e => e.LastName).HasMaxLength(200);
-            entity.Property(e => e.Password).HasMaxLength(200);
-
-            //Eligibility properties
-            entity.Property(e => e.City).HasMaxLength(200);
+            entity.Property(e => e.Password)
+                .IsRequired()
+                .HasMaxLength(200);
             entity.Property(e => e.State).HasMaxLength(200);
             entity.Property(e => e.Zip).HasMaxLength(200);
-            entity.Property(e => e.Company).HasMaxLength(200);
-            entity.Property(e => e.DOB).HasColumnType("datetime");
-            entity.Property(e => e.FieldofWork).HasMaxLength(200);
-            entity.Property(e => e.SelectedUserTypeId).HasMaxLength(200);
 
-
-            entity.HasOne(d => d.Identity).WithMany(p => p.Users)
-                .HasForeignKey(d => d.IdentityId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_User_IdentityId");
+            entity.HasOne(d => d.Address).WithMany(p => p.Users)
+                .HasForeignKey(d => d.AddressId)
+                .HasConstraintName("FK_User_Address");
         });
 
         modelBuilder.Entity<UserArea>(entity =>
@@ -134,5 +121,4 @@ public partial class DBContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-}
 }

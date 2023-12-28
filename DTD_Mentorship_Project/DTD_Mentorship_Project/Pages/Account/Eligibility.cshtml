@@ -53,14 +53,14 @@
                                 <option selected="selected" value="0">Select One</option>
                                 <option value="1">Youth (Ages 12 – 17)</option>
                                 <option value="2">Young Adult (Ages 18 – 24)</option>
-                                <option value="8">Adult (Ages 25 - 59)</option>
-                                <option value="9">Older Adult (Ages 60+)</option>
-                                <option value="3">Organization Participant or Member</option>
-                                <option value="4">Small Business Owner</option>
-                                <option value="5">Educator</option>
-                                <option value="6">Partner</option>
-                                <option value="7">Mentor</option>
-                                <option value="8">Other</option>
+                                <option value="3">Adult (Ages 25 - 59)</option>
+                                <option value="4">Older Adult (Ages 60+)</option>
+                                <option value="5">Organization Participant or Member</option>
+                                <option value="6">Small Business Owner</option>
+                                <option value="7">Educator</option>
+                                <option value="8">Partner</option>
+                                <option value="9">Mentor</option>
+                                <option value="10">Other</option>
                             </select>
                             <span class="text-danger font-weight-bold" asp-validation-for="SelectedUserTypeId"></span>
                         </div>
@@ -103,9 +103,9 @@
 
                                 <div class="form-group col-12 py-1">
                                     <label >Address</label>
-                                    <input  asp-for="Addresses" id="Addresses">
+                                    <input  asp-for="StreetAddress" id="Addresses">
                                     <ul id="suggestions"></ul>
-                                    <span class="text-danger font-weight-bold" asp-validation-for="Addresses"></span>
+                                    <span class="text-danger font-weight-bold" asp-validation-for="StreetAddress"></span>
                                 </div>
 
                                 <div class="form-group col-12 col-md-6">

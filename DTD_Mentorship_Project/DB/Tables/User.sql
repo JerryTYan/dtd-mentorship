@@ -10,11 +10,15 @@
     [IdentityId] INT NOT NULL, 
     [Degree] NVARCHAR(200) NULL, 
     [Availability] DATETIME NULL,
+	[AddressId] INT NULL,
 
 	[DOB] DATETIME NULL,
-	[SelectedUserTypeId] NVARCHAR(200) NOT NULL,
 	[City] NVARCHAR(200) NULL,
 	[State] NVARCHAR(200) NULL,
+	[Zip] NVARCHAR(200) NULL,
 	[Company] NVARCHAR(200) NULL,
+
+	[FieldOfWork] NVARCHAR(200) NULL, 
+    CONSTRAINT [FK_User_Address] FOREIGN KEY ([AddressId]) REFERENCES [Address]([Id]),
 
 )

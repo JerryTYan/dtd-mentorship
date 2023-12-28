@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
 using DTD_Mentorship_Project.Models;
 using Newtonsoft.Json; // Add this using statement for JSON deserialization
+using System;
+using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 
 namespace DTD_Mentorship_Project.Pages
 {
@@ -26,7 +29,7 @@ namespace DTD_Mentorship_Project.Pages
 	{
 
         //Initialize DB context
-        private readonly DBContext _bdContext;
+        private readonly DBContext _dbContext;
         private readonly ILogger _logger;
 
         [BindProperty]
@@ -34,7 +37,7 @@ namespace DTD_Mentorship_Project.Pages
 
         public RegistrationModel(DBContext bdContext, ILogger<RegistrationModel> logger)
         {
-            _bdContext = bdContext;
+            _dbContext = bdContext;
             _logger = logger;
         }
 
@@ -56,10 +59,11 @@ namespace DTD_Mentorship_Project.Pages
                 if (!string.IsNullOrEmpty(eligibilityDataJson))
                 {
                     var eligibilityData = JsonConvert.DeserializeObject<User>(eligibilityDataJson);
+                    string userAddress = TempData["UserStreetAddress"] as string;
 
                     _logger.LogInformation("Email: {Email}, Password: {Password}, Confirm: {Confirm}", email, password, confirm);
                     // Save both eligibility and registration data to the database
-                    SaveDataToDatabase(eligibilityData, email, password);
+                    SaveDataToDatabase(eligibilityData, email, password, userAddress);
 
                     return RedirectToPage("/Account/Login");
                 }
@@ -84,29 +88,43 @@ namespace DTD_Mentorship_Project.Pages
 
 		}
 
-        private void SaveDataToDatabase(User eligibilityData, string email, string password)
+        private void SaveDataToDatabase(User eligibilityData, string email, string password, string streetAddress)
         {
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(FormData.Password);
+
             // Save eligibilityData and registration data to the database using  DbContext (_bdContext)
-            _bdContext.Users.Add(new User
-             {
-                 //Save registration data to DB
-                 SelectedUserTypeId = eligibilityData.SelectedUserTypeId.ToString(),
-                 FirstName = eligibilityData.FirstName,
-                 LastName = eligibilityData.LastName,
-                 Addresses = eligibilityData.Addresses,
-                 City = eligibilityData.City,
-                 State = eligibilityData.State,
-                 Zip = eligibilityData.Zip,
-                 DOB = eligibilityData.DOB,
-                 FieldofWork = eligibilityData.FieldofWork,
-                 Degree = eligibilityData.Degree,
-                 Company = eligibilityData.Company,
-                 Availability = eligibilityData.Availability,
-                 Email =email, 
-                 Password = hashedPassword,
-             });
-            _bdContext.SaveChanges();
+            _dbContext.Users.Add(new User
+            {
+                //Save registration data to DB
+                IdentityId = eligibilityData.IdentityId,
+                FirstName = eligibilityData.FirstName,
+                LastName = eligibilityData.LastName,
+                City = eligibilityData.City,
+                State = eligibilityData.State,
+                Zip = eligibilityData.Zip,
+                Dob = eligibilityData.Dob,
+                FieldOfWork = eligibilityData.FieldOfWork,
+                Degree = eligibilityData.Degree,
+                Company = eligibilityData.Company,
+                Availability = eligibilityData.Availability,
+                Email = email,
+                Password = hashedPassword,
+                Address = new Address
+                {
+                    StreetAddress = streetAddress,
+                    City = eligibilityData.City,
+                    State = eligibilityData.State,
+                    ZipCode = eligibilityData.Zip
+                },
+                //NEED TO ADD DROP DOWN TO SPECIFY THE WORK AREA OF FOCUS
+                //ex. CYBER SECURITY, SOFTWARE ENGINEERING, OTHER, ETC. 
+                //GIVE NUMERICAL VALUE TO SELECTIOn
+                //HAVE THE FIELD OF WORK AREA BE THEIR SPECIFIC TITLE
+            }) ;
+         
+
+            
+            _dbContext.SaveChanges();
         }
 
     }
