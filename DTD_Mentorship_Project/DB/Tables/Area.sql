@@ -1,5 +1,5 @@
-﻿CREATE TABLE [dbo].[Area]
+﻿CREATE TABLE [dbo].[FieldOfWork]
 (
-	[AreaId] INT NOT NULL PRIMARY KEY,
-	[AreaName] NVARCHAR(200)
+	[FieldOfWorkId] INT NOT NULL PRIMARY KEY,
+	[FieldOfWorkName] NVARCHAR(200)
 )

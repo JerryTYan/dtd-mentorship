@@ -66,12 +66,12 @@
   <ItemGroup>
     <Build Include="Tables\User.sql" />
     <Build Include="Tables\Area.sql" />
-    <Build Include="Tables\UserArea.sql" />
     <Build Include="Tables\MentorMentee.sql" />
     <Build Include="Tables\Address.sql" />
     <None Include="Seeds\userareas.sql" />
     <None Include="Seeds\areas.sql" />
     <Build Include="Tables\Identity.sql" />
+    <Build Include="Tables\Availability.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Seeds\users.sql" />
