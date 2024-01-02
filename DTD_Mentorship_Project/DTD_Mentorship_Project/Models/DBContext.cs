@@ -15,15 +15,15 @@ public partial class DBContext : DbContext
 
     public virtual DbSet<Address> Addresses { get; set; }
 
-    public virtual DbSet<Area> Areas { get; set; }
+    public virtual DbSet<Availability> Availabilities { get; set; }
+
+    public virtual DbSet<FieldOfWork> FieldOfWorks { get; set; }
 
     public virtual DbSet<Identity> Identities { get; set; }
 
     public virtual DbSet<MentorMentee> MentorMentees { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
-
-    public virtual DbSet<UserArea> UserAreas { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -39,12 +39,24 @@ public partial class DBContext : DbContext
             entity.Property(e => e.ZipCode).HasMaxLength(200);
         });
 
-        modelBuilder.Entity<Area>(entity =>
+        modelBuilder.Entity<Availability>(entity =>
         {
-            entity.ToTable("Area");
+            entity.ToTable("Availability");
 
-            entity.Property(e => e.AreaId).ValueGeneratedNever();
-            entity.Property(e => e.AreaName).HasMaxLength(200);
+            entity.Property(e => e.UserId).HasColumnName("UserID");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Availabilities)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_User_ID");
+        });
+
+        modelBuilder.Entity<FieldOfWork>(entity =>
+        {
+            entity.ToTable("FieldOfWork");
+
+            entity.Property(e => e.FieldOfWorkId).ValueGeneratedNever();
+            entity.Property(e => e.FieldOfWorkName).HasMaxLength(200);
         });
 
         modelBuilder.Entity<Identity>(entity =>
@@ -77,44 +89,23 @@ public partial class DBContext : DbContext
         {
             entity.ToTable("User");
 
-            entity.Property(e => e.Availability).HasColumnType("datetime");
-            entity.Property(e => e.City).HasMaxLength(200);
             entity.Property(e => e.Company).HasMaxLength(200);
+            entity.Property(e => e.CurrentPosition).HasMaxLength(200);
+            entity.Property(e => e.DateOfBirth).HasColumnType("datetime");
             entity.Property(e => e.Degree).HasMaxLength(200);
-            entity.Property(e => e.Dob)
-                .HasColumnType("datetime")
-                .HasColumnName("DOB");
-            entity.Property(e => e.Email)
-                .IsRequired()
-                .HasMaxLength(200);
-            entity.Property(e => e.FieldOfWork).HasMaxLength(200);
+            entity.Property(e => e.Email).HasMaxLength(200);
+            entity.Property(e => e.FieldOfWorkId)
+                .HasMaxLength(200)
+                .HasColumnName("FieldOfWorkID");
             entity.Property(e => e.FirstName).HasMaxLength(200);
             entity.Property(e => e.Image).HasMaxLength(200);
             entity.Property(e => e.LastName).HasMaxLength(200);
-            entity.Property(e => e.Password)
-                .IsRequired()
-                .HasMaxLength(200);
-            entity.Property(e => e.State).HasMaxLength(200);
-            entity.Property(e => e.Zip).HasMaxLength(200);
+            entity.Property(e => e.Password).HasMaxLength(200);
+            entity.Property(e => e.School).HasMaxLength(200);
 
             entity.HasOne(d => d.Address).WithMany(p => p.Users)
                 .HasForeignKey(d => d.AddressId)
                 .HasConstraintName("FK_User_Address");
-        });
-
-        modelBuilder.Entity<UserArea>(entity =>
-        {
-            entity.ToTable("UserArea");
-
-            entity.HasOne(d => d.Area).WithMany(p => p.UserAreas)
-                .HasForeignKey(d => d.AreaId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_UserArea_Area");
-
-            entity.HasOne(d => d.User).WithMany(p => p.UserAreas)
-                .HasForeignKey(d => d.UserId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_UserArea_User");
         });
 
         OnModelCreatingPartial(modelBuilder);

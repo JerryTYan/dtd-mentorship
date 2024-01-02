@@ -17,35 +17,31 @@ public partial class User
 
     public string Password { get; set; }
 
-    public bool OngoingMentorship { get; set; }
+    public bool? OngoingMentorship { get; set; }
 
     public string Image { get; set; }
 
-    public int IdentityId { get; set; }
+    public int? IdentityId { get; set; }
 
     public string Degree { get; set; }
 
-    public DateTime? Availability { get; set; }
-
     public int? AddressId { get; set; }
 
-    public DateTime? Dob { get; set; }
-
-    public string City { get; set; }
-
-    public string State { get; set; }
-
-    public string Zip { get; set; }
+    public DateTime? DateOfBirth { get; set; }
 
     public string Company { get; set; }
 
-    public string FieldOfWork { get; set; }
+    public string FieldOfWorkId { get; set; }
+
+    public string School { get; set; }
+
+    public string CurrentPosition { get; set; }
 
     public virtual Address Address { get; set; }
+
+    public virtual ICollection<Availability> Availabilities { get; set; } = new List<Availability>();
 
     public virtual ICollection<MentorMentee> MentorMenteeMentees { get; set; } = new List<MentorMentee>();
 
     public virtual ICollection<MentorMentee> MentorMenteeMentors { get; set; } = new List<MentorMentee>();
-
-    public virtual ICollection<UserArea> UserAreas { get; set; } = new List<UserArea>();
 }

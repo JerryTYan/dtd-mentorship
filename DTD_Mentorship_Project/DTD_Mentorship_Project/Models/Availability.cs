@@ -5,15 +5,17 @@ using System.Collections.Generic;
 
 namespace DTD_Mentorship_Project.Models;
 
-public partial class UserArea
+public partial class Availability
 {
-    public int UserAreaId { get; set; }
-
-    public int AreaId { get; set; }
+    public int Id { get; set; }
 
     public int UserId { get; set; }
 
-    public virtual Area Area { get; set; }
+    public int? DayOfWeek { get; set; }
+
+    public TimeSpan? FromTime { get; set; }
+
+    public TimeSpan? ToTime { get; set; }
 
     public virtual User User { get; set; }
 }
