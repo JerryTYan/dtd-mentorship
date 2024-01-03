@@ -57,12 +57,6 @@ namespace DTD_Mentorship_Project.Pages
                 {
                     var eligibilityData = JsonConvert.DeserializeObject<User>(eligibilityDataJson);
 
-                    if (IsEmailAlreadyRegistered(email))
-                    {
-                        ModelState.AddModelError("FormData.Email", "This email is already registered.");
-                        return Page();
-                    }
-
                     _logger.LogInformation("Email: {Email}, Password: {Password}, Confirm: {Confirm}", email, password, confirm);
                     // Save both eligibility and registration data to the database
                     SaveDataToDatabase(eligibilityData, email, password);
@@ -89,12 +83,6 @@ namespace DTD_Mentorship_Project.Pages
 			return Page();
 
 		}
-
-        private bool IsEmailAlreadyRegistered(string email)
-        {
-            // Check if the email is already present in the database
-            return _bdContext.Users.Any(u => u.Email == email);
-        }
 
         private void SaveDataToDatabase(User eligibilityData, string email, string password)
         {

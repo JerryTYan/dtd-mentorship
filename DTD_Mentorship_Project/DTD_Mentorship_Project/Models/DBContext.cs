@@ -52,13 +52,13 @@ public partial class DBContext : DbContext
                 .HasConstraintName("FK_Address_UserId");
         });
 
-        modelBuilder.Entity<Area>(entity =>
+       /* modelBuilder.Entity<Area>(entity =>
         {
             entity.ToTable("Area");
 
             entity.Property(e => e.AreaId).ValueGeneratedNever();
             entity.Property(e => e.AreaName).HasMaxLength(200);
-        }); 
+        }); */
 
         modelBuilder.Entity<Identity>(entity =>
         {
@@ -107,8 +107,6 @@ public partial class DBContext : DbContext
             entity.Property(e => e.DOB).HasColumnType("datetime");
             entity.Property(e => e.FieldofWork).HasMaxLength(200);
             entity.Property(e => e.SelectedUserTypeId).HasMaxLength(200);
-            entity.Property(e => e.AboutMe).HasMaxLength(200);
-
 
 
             entity.HasOne(d => d.Identity).WithMany(p => p.Users)

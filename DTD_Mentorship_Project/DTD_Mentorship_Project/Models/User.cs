@@ -51,7 +51,4 @@ public partial class User
 
     public string SelectedUserTypeId { get; set; }
 
-    public string AboutMe { get; set; }
-
-
 }

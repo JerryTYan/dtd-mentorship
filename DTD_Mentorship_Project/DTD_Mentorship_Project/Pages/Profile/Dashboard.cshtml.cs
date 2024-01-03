@@ -28,19 +28,14 @@ namespace DTD_Mentorship_Project.Pages.Profile
         public string School { get; set; }
         public string District { get; set; }
         public int Progress { get; set; }
-
         public List<Mentee> CurrentMentees { get; set; }
+        public string AboutMe { get; set; }
         public string Image { get; set; } // Add this property for the image path
 
 
         [BindProperty]
         public IFormFile AvatarFile { get; set; }
-   
-        public string AboutMe { get; set; }
 
-        public bool IsEditMode { get; set; }
-        [BindProperty]
-        public string EditedAboutMe { get; set; }
 
         public DashboardModel(DBContext dbContext, ILogger<DashboardModel> logger, IWebHostEnvironment hostEnvironment)
         {
@@ -67,19 +62,18 @@ namespace DTD_Mentorship_Project.Pages.Profile
                     School = user.Company;
                     District = user.City;
                     Image = user.Image;
-                    AboutMe = user.AboutMe;
                 }
 
-                
-                // Fetch other dashboard data (e.g., current mentees) in a similar manner
-                // Ensure CurrentMentees is initialized
-                CurrentMentees = new List<Mentee>();
 
                 // Fetch other dashboard data (e.g., current mentees) in a similar manner
-                CurrentMentees.Add(new Mentee { Name = "Mentee 1", Description = "Description for Mentee 1", Title = "Title 1", Area = "Area 1", Image = "path/to/image1.jpg" });
-                CurrentMentees.Add(new Mentee { Name = "Mentee 2", Description = "Description for Mentee 2", Title = "Title 2", Area = "Area 2", Image = "path/to/image2.jpg" });
-                // Add more mentees here
-                IsEditMode = false;
+                CurrentMentees = new List<Mentee>
+                {
+                    new Mentee { Name = "Mentee 1", Description = "Description for Mentee 1", Title = "Title 1", Area = "Area 1", Image = "path/to/image1.jpg" },
+                    new Mentee { Name = "Mentee 2", Description = "Description for Mentee 2", Title = "Title 2", Area = "Area 2", Image = "path/to/image2.jpg" },
+                    // Add more mentees here
+                };
+
+                AboutMe = "Hello, I'm John Doe, the only person who can trip over a wireless network! ...";
                 return Page();
             }
             catch (Exception ex)
@@ -89,41 +83,6 @@ namespace DTD_Mentorship_Project.Pages.Profile
             }
         }
 
-        public void OnPostToggleEditMode()
-        {
-                IsEditMode = !IsEditMode; // Toggle edit mode
-        }
-        public async Task<IActionResult> OnPostUpdateAboutMe()
-        {
-
-            try
-            {
-                // Retrieve the most currently authenticated user
-                var userId = await _dbContext.Users.MaxAsync(u => (int?)u.UserId);
-
-                // Query the database for the user with the specified ID
-                var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.UserId == userId);
-
-                if (user != null)
-                {
-                    // Update the "About Me" content in the database
-                    user.AboutMe = EditedAboutMe;
-                    await _dbContext.SaveChangesAsync();
-                }
-
-                // Set IsEditMode to false after updating AboutMe
-
-                AboutMe = EditedAboutMe;
-                IsEditMode = false;
-
-                return RedirectToPage();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Error updating 'About Me': {ex.Message}");
-                return RedirectToPage("/Error");
-            }
-        }
 
         public async Task<IActionResult> OnPost()
         {
