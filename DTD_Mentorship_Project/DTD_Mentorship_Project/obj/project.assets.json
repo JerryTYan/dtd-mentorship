@@ -8785,11 +8785,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\e685557\\git_branches\\mentorship_page\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
+      "projectUniqueName": "C:\\Users\\e685557\\git_branches\\DTD_Backend\\Mentor_Backend\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
       "projectName": "DTD_Mentorship_Project",
-      "projectPath": "C:\\Users\\e685557\\git_branches\\mentorship_page\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
+      "projectPath": "C:\\Users\\e685557\\git_branches\\DTD_Backend\\Mentor_Backend\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\DTD_Mentorship_Project.csproj",
       "packagesPath": "C:\\Users\\e685557\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\e685557\\git_branches\\mentorship_page\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
+      "outputPath": "C:\\Users\\e685557\\git_branches\\DTD_Backend\\Mentor_Backend\\DTD_Mentorship_Project\\DTD_Mentorship_Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

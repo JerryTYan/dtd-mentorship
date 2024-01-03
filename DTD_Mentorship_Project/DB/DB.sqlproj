@@ -65,7 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\User.sql" />
-    <Build Include="Tables\Area.sql" />
+    <Build Include="Tables\FieldOfWork.sql" />
     <Build Include="Tables\MentorMentee.sql" />
     <Build Include="Tables\Address.sql" />
     <None Include="Seeds\userareas.sql" />
