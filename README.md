@@ -11,10 +11,6 @@ The platform includes the following key **proposed** features:
 
 - **Profile Creation**: Users can create and customize their profiles, which include their professional background, areas of expertise, and availability.
   
-- **Matchmaking System**: An intelligent matchmaking system that suggests potential mentor-mentee pairings based on common interests and goals.
-
-- **Resource Sharing**: A resource hub where mentors can share articles, videos, and other educational materials.
-
-- **Live Sessions**: Integrated tools to schedule and conduct live sessions, including webinars, one-on-one meetings, and group discussions.
+- **Search System**: A search system that suggests potential mentor-mentee pairings based on filtering options.
 
 - **Feedback Mechanism**: Both mentors and mentees can provide feedback on their experiences, which will help improve the platform and ensure quality
